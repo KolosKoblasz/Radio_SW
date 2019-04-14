@@ -1,0 +1,10 @@
+
+
+OPTION psf_version = 2.1;
+
+BEGIN DRIVER DDS_Control
+	OPTION supported_peripherals = (DDS_Control);
+	OPTION copyfiles = all;
+	OPTION VERSION = 1.0;
+	OPTION NAME = DDS_Control;
+END DRIVER

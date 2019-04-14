@@ -1,72 +1,55 @@
 `timescale 1ns / 1ps
-//////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
-// Create Date: 01/15/2019 08:50:05 AM
-// Design Name: 
-// Module Name: DDS
-// Project Name: 
-// Target Devices: 
-// Tool Versions: 
-// Description: 
-// 
-// Dependencies: 
-// 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
-// 
-//////////////////////////////////////////////////////////////////////////////////
+
 
 
 module DDS(
-    input                clk,
+    input                AXI_clk,
+    input                DAC_clk,
     input                rst_n,
     input                en,           //Can be used for external synchronisation
     input         [31:0] FreqCntrl,    //It's value determines the output sine's frequency
-    input         [31:0] PhaseCntrlA,  //This determines the initial phase of the Sine A
-    input         [31:0] PhaseCntrlB,  //This determines the initial phase of the Sine B
-    input signed  [15:0] AmplCntrlA,   //Controls
-    input signed  [15:0] AmplCntrlB,   //  
-    input         [ 1:0] DataPathSelect, //bit 0 equals 0 => Sine A from DirectValue[15:0]
+    input         [31:0] PhaseCntrl,   //This determines the initial phase of the Sine A
+    input signed  [15:0] AmplCntrl,    //This determines the amplitude of the Sine A
+    
+    input                DataPathSelect, //bit 0 equals 0 => Sine A from DirectValue[15:0]
                                          //bit 0 equals 1 => Sine A from LUT
-                                         //bit 1 equals 0 => Sine B from DirectValue[31:16]
-                                         //bit 1 equals 1 => Sine B from LUT
+
     input         [31:0] DirectValue,    //This value can be written from AXI registers,
-                                         // directly sets DAC output value to a fix value
-    input                LUTWe,          //Set 1 to write LUTData[15:0] to LUTAddress[15:0] 
-    input         [31:0] LUTAddress,     //Selects which memory reg will be written
+                                         //directly sets DAC output value to a fix value
+    input                LUTWriteEn,        //Set 1 to write LUTData[15:0] to LUTAddress[15:0] 
+    input         [31:0] LUTaddress,     //Selects which memory reg will be written
     input         [31:0] LUTData,        //Waveform memory data samples
-    output signed [15:0] SampleOutA,     //DDS output A
-    output signed [15:0] SampleOutB      //DDS output B
+    output signed [15:0] SampleOut       //DDS output 
+
     );
     
-    parameter DataWidth = 16;    //BitWidth of the LUT can be changed comfortably
-    parameter AddressWidth = 16; //Resolution of the LUT can be changed comfortably 
+    parameter RAM_WIDTH = 16;    //BitWidth of the LUT can be changed comfortably
+    parameter RAM_DEPTH = 2**16; //Resolution of the LUT can be changed comfortably 
+    parameter RAM_PERFORMANCE = "HIGH_PERFORMANCE";
     
+    wire [RAM_WIDTH - 1 : 0] RdData;
+
     /**********************************************************************/
     reg [23:0] Accu; //Accumulator register of the DDS. This register is incremented by the frequency control word.
                      //The more frequently overflows the higher the output frequency
    
-    always @ (posedge clk)
+    always @ (posedge DAC_clk)
     begin 
-        if (rst_n ==  0) begin
-        
+        if (rst_n ==  0) 
+        begin        
             Accu <= 0;
         end
         
         else begin
         
-            if (en ==  1) begin //Output generation starts when this signal is logic high
-            
+            if (en ==  1)
+            begin //Output generation starts when this signal is logic high            
                 Accu <= Accu + FreqCntrl[23:0] ;
             end
             
-            else begin
-            
-                Accu <= 0;
-           
+            else 
+            begin            
+                Accu <= 0;           
             end
         end
      end
@@ -74,125 +57,110 @@ module DDS(
     
     /**********************************************************************/
     //These registers control the A and B port's initial phase. E.g. generating I and Q sine components
-     reg [23:0] PhaseAddressA;
-     reg [23:0] PhaseAddressB;
+     reg [23:0] PhaseAddress;
 
-     always @ (posedge clk)
+
+     always @ (posedge DAC_clk)
      begin 
-         if (rst_n ==  0) begin
-         
-             PhaseAddressA <= 0;
-             PhaseAddressB <= 0;
+         if (rst_n ==  0) 
+         begin         
+             PhaseAddress <= 0;
          end
          
-         else begin
-         
-            PhaseAddressA <= Accu + PhaseCntrlA[23:0];
-            PhaseAddressB <= Accu + PhaseCntrlB[23:0];
+         else 
+         begin         
+            PhaseAddress <= Accu + PhaseCntrl[23:0];
          end
       end
      /**********************************************************************/
      
      // These signals are used to address the LUT with the appropriate phase address value
      //Attention! Only the upper 16 bits of the 24 bit wide registers must be used
-     wire [AddressWidth-1:0] RdAddressA ;
-     wire [AddressWidth-1:0] RdAddressB ;
-          
-     assign RdAddressA = PhaseAddressA[AddressWidth+8-1:8];
-     assign RdAddressB = PhaseAddressB[AddressWidth+8-1:8];
-     
-     
-     wire [DataWidth-1:0] LUTDataOutA;
-     wire [DataWidth-1:0] LUTDataOutB;
+     wire [clogb2(RAM_DEPTH-1)-1:0] RdAddress ;
+               
+     assign RdAddress = PhaseAddress[23:8];
+
     
     //This is the instantiation of the blockram based Look Up Table    
      DualPortBRAM #(
-     .DATA_WIDTH(DataWidth),
-     .ADDRESS_WIDTH(AddressWidth)
+     .RAM_WIDTH(RAM_WIDTH),           // Specify RAM data width
+     .RAM_DEPTH(RAM_DEPTH),           // Specify RAM depth (number of entries)
+     .RAM_PERFORMANCE(RAM_PERFORMANCE)// Select "HIGH_PERFORMANCE" or "LOW_LATENCY" 
      )
      LUT(
-         .clk(clk),
-         .we(LUTWe),
-         .WrAddr(LUTAddress[AddressWidth-1:0]),
-         .WrData(LUTData[DataWidth-1:0]),
-         .RdAddrA(RdAddressA),
-         .RdDataA(LUTDataOutA),
-         .RdAddrB(RdAddressB),
-         .RdDataB(LUTDataOutB)
+    .WrClk(AXI_clk),        // Write clock
+    .RdClk(DAC_clk),        // Read clock
+    .WriteEn(LUTWriteEn),// Write enable     
+    .rst_n(rst_n), 
+    .WrAddress(LUTaddress[RAM_WIDTH-1:0]),  // Write address bus, width determined from RAM_DEPTH
+    .RdAddress(RdAddress),                  // Read address bus, width determined from RAM_DEPTH
+    .WrData(LUTData[RAM_WIDTH-1:0]),        // RAM input data
+    .RdData(RdData)                         // RAM Output data with 2 clock cycle latency
       );
      /**********************************************************************/
      
      /**********************************************************************/
      //Output multiplexer for signal selection 
      //See port header for selection logic description
-     reg [DataWidth-1:0]SampleMuxA;
-     reg [DataWidth-1:0]SampleMuxB;
+     reg [RAM_WIDTH-1:0]SampleMux;
+
      
-     always @ (posedge clk)
+     always @ (posedge DAC_clk)
      begin 
-         if (rst_n ==  0) begin
-             SampleMuxA <= 0;
-             SampleMuxB <= 0;
-             
+         if (rst_n ==  0) 
+         begin
+             SampleMux <= 0;              
          end
         
          else 
          begin 
             
-            if(DataPathSelect[0] == 0)
+            if(DataPathSelect == 0)
             begin
-                SampleMuxA <= DirectValue[DataWidth-1:0];
+                SampleMux <= DirectValue[RAM_WIDTH-1:0];
             end
-            else
-                SampleMuxA <= LUTDataOutA;
+            
+            else                
             begin
+                SampleMux <= RdData;
             end       
             
-            if(DataPathSelect[1] == 0)
-            begin
-                SampleMuxB <= DirectValue[2*DataWidth-1:DataWidth];//Pay attention for bit selecting rules
-            end
-            else
-                SampleMuxB <= LUTDataOutB;
-            begin
-            end    
-             
          end
      end 
      
      /**********************************************************************/
      //Creating signed signals for multiplication
      
-     wire signed [DataWidth-1:0] SampleMuxA_s;
-     wire signed [DataWidth-1:0] SampleMuxB_s;
+     wire signed [RAM_WIDTH-1:0] SampleMux_s;
+ 
+     assign SampleMux_s = SampleMux;
      
-     assign SampleMuxA_s = SampleMuxA;
-     assign SampleMuxB_s = SampleMuxB;
-     
-     reg signed [2*DataWidth-1:0] MultResA;
-     reg signed [2*DataWidth-1:0] MultResB;
+     reg signed [2*RAM_WIDTH-1:0] MultRes;
      
      //Multipling The amplitude control word with the Multiplexers' output
      
-     always @ (posedge clk)
+     always @ (posedge DAC_clk)
+     begin 
+          if (rst_n ==  0) begin
+              MultRes <= 0;       
+          end
+         
+          else 
           begin 
-              if (rst_n ==  0) begin
-                  MultResA <= 0;
-                  MultResB <= 0;
-                  
-              end
-             
-              else 
-              begin 
-                 MultResA <= SampleMuxA_s * AmplCntrlA;
-                 MultResB <= SampleMuxB_s * AmplCntrlB;
-              end 
+             MultRes <= SampleMux_s * AmplCntrl;   
           end 
+      end 
     
     //Selecting the top 16 bits of the sclaing's result
-    assign SampleOutA = MultResA[2*DataWidth-1:DataWidth];
-    assign SampleOutB = MultResB[2*DataWidth-1:DataWidth];
+    assign SampleOut = MultRes[2*RAM_WIDTH-1:RAM_WIDTH];
+
     
+       //  The following function calculates the address width based on specified RAM depth
+    function integer clogb2;
+      input integer depth;
+        for (clogb2=0; depth>0; clogb2=clogb2+1)
+          depth = depth >> 1;
+    endfunction
     
 endmodule
 
