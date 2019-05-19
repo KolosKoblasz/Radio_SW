@@ -11,67 +11,85 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="2448306000000fs"></ZoomStartTime>
-      <ZoomEndTime time="3089306000001fs"></ZoomEndTime>
-      <Cursor1Time time="3540000000000fs"></Cursor1Time>
+      <ZoomStartTime time="4001000000000fs"></ZoomStartTime>
+      <ZoomEndTime time="9002000000001fs"></ZoomEndTime>
+      <Cursor1Time time="10001000000000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="175"></NameColumnWidth>
-      <ValueColumnWidth column_width="122"></ValueColumnWidth>
+      <NameColumnWidth column_width="206"></NameColumnWidth>
+      <ValueColumnWidth column_width="138"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="18" />
-   <wvobject fp_name="/tb_DDS_Modulations/DDS_inst/en" type="logic">
-      <obj_property name="ElementShortName">en</obj_property>
-      <obj_property name="ObjectShortName">en</obj_property>
+   <WVObjectSize size="23" />
+   <wvobject fp_name="/tb_DDS_Modulations/AXI_clk" type="logic">
+      <obj_property name="ElementShortName">AXI_clk</obj_property>
+      <obj_property name="ObjectShortName">AXI_clk</obj_property>
    </wvobject>
-   <wvobject fp_name="/tb_DDS_Modulations/DDS_inst/clk" type="logic">
-      <obj_property name="ElementShortName">clk</obj_property>
-      <obj_property name="ObjectShortName">clk</obj_property>
+   <wvobject fp_name="/tb_DDS_Modulations/DAC_clk" type="logic">
+      <obj_property name="ElementShortName">DAC_clk</obj_property>
+      <obj_property name="ObjectShortName">DAC_clk</obj_property>
    </wvobject>
-   <wvobject fp_name="/tb_DDS_Modulations/DDS_inst/rst_n" type="logic">
+   <wvobject fp_name="/tb_DDS_Modulations/rst_n" type="logic">
       <obj_property name="ElementShortName">rst_n</obj_property>
       <obj_property name="ObjectShortName">rst_n</obj_property>
    </wvobject>
-   <wvobject fp_name="/tb_DDS_Modulations/DDS_inst/DataPathSelect" type="array">
-      <obj_property name="ElementShortName">DataPathSelect[1:0]</obj_property>
-      <obj_property name="ObjectShortName">DataPathSelect[1:0]</obj_property>
-      <obj_property name="isExpanded"></obj_property>
+   <wvobject fp_name="/tb_DDS_Modulations/en" type="logic">
+      <obj_property name="ElementShortName">en</obj_property>
+      <obj_property name="ObjectShortName">en</obj_property>
    </wvobject>
-   <wvobject fp_name="/tb_DDS_Modulations/DDS_inst/LUTData" type="array">
-      <obj_property name="ElementShortName">LUTData[31:0]</obj_property>
-      <obj_property name="ObjectShortName">LUTData[31:0]</obj_property>
+   <wvobject fp_name="/tb_DDS_Modulations/FreqCntrl" type="array">
+      <obj_property name="ElementShortName">FreqCntrl[31:0]</obj_property>
+      <obj_property name="ObjectShortName">FreqCntrl[31:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/tb_DDS_Modulations/DDS_inst/LUTAddress" type="array">
-      <obj_property name="ElementShortName">LUTAddress[31:0]</obj_property>
-      <obj_property name="ObjectShortName">LUTAddress[31:0]</obj_property>
+   <wvobject fp_name="/tb_DDS_Modulations/PhaseCntrl" type="array">
+      <obj_property name="ElementShortName">PhaseCntrl[31:0]</obj_property>
+      <obj_property name="ObjectShortName">PhaseCntrl[31:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/tb_DDS_Modulations/DDS_inst/LUTWe" type="logic">
+   <wvobject fp_name="/tb_DDS_Modulations/AmplCntrl" type="array">
+      <obj_property name="ElementShortName">AmplCntrl[15:0]</obj_property>
+      <obj_property name="ObjectShortName">AmplCntrl[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_DDS_Modulations/DataPathSelect" type="logic">
+      <obj_property name="ElementShortName">DataPathSelect</obj_property>
+      <obj_property name="ObjectShortName">DataPathSelect</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_DDS_Modulations/DirectValue" type="array">
+      <obj_property name="ElementShortName">DirectValue[31:0]</obj_property>
+      <obj_property name="ObjectShortName">DirectValue[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_DDS_Modulations/LUTWe" type="logic">
       <obj_property name="ElementShortName">LUTWe</obj_property>
       <obj_property name="ObjectShortName">LUTWe</obj_property>
    </wvobject>
-   <wvobject fp_name="/tb_DDS_Modulations/DDS_inst/AmplCntrlA" type="array">
-      <obj_property name="ElementShortName">AmplCntrlA[15:0]</obj_property>
-      <obj_property name="ObjectShortName">AmplCntrlA[15:0]</obj_property>
+   <wvobject fp_name="/tb_DDS_Modulations/LUTAddress" type="array">
+      <obj_property name="ElementShortName">LUTAddress[31:0]</obj_property>
+      <obj_property name="ObjectShortName">LUTAddress[31:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/tb_DDS_Modulations/DDS_inst/AmplCntrlB" type="array">
-      <obj_property name="ElementShortName">AmplCntrlB[15:0]</obj_property>
-      <obj_property name="ObjectShortName">AmplCntrlB[15:0]</obj_property>
+   <wvobject fp_name="/tb_DDS_Modulations/LUTData" type="array">
+      <obj_property name="ElementShortName">LUTData[31:0]</obj_property>
+      <obj_property name="ObjectShortName">LUTData[31:0]</obj_property>
    </wvobject>
-   <wvobject type="divider" fp_name="divider242">
-      <obj_property name="label">New Divider 1</obj_property>
-      <obj_property name="DisplayName">label</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb_DDS_Modulations/SimCaseCounter" type="array">
-      <obj_property name="ElementShortName">SimCaseCounter[31:0]</obj_property>
-      <obj_property name="ObjectShortName">SimCaseCounter[31:0]</obj_property>
-      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb_DDS_Modulations/DDS_inst/FreqCntrl" type="array">
-      <obj_property name="ElementShortName">FreqCntrl[31:0]</obj_property>
-      <obj_property name="ObjectShortName">FreqCntrl[31:0]</obj_property>
+   <wvobject fp_name="/tb_DDS_Modulations/SampleOut" type="array">
+      <obj_property name="ElementShortName">SampleOut[15:0]</obj_property>
+      <obj_property name="ObjectShortName">SampleOut[15:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
       <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
       <obj_property name="CellHeight">100</obj_property>
-      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_DDS_Modulations/SampleOut" type="array">
+      <obj_property name="ElementShortName">SampleOut[15:0]</obj_property>
+      <obj_property name="ObjectShortName">SampleOut[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_DDS_Modulations/modul_sin_mem" type="array">
+      <obj_property name="ElementShortName">modul_sin_mem[255:0][15:0]</obj_property>
+      <obj_property name="ObjectShortName">modul_sin_mem[255:0][15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_DDS_Modulations/modul_tri_mem" type="array">
+      <obj_property name="ElementShortName">modul_tri_mem[255:0][15:0]</obj_property>
+      <obj_property name="ObjectShortName">modul_tri_mem[255:0][15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_DDS_Modulations/i" type="array">
+      <obj_property name="ElementShortName">i[31:0]</obj_property>
+      <obj_property name="ObjectShortName">i[31:0]</obj_property>
    </wvobject>
    <wvobject fp_name="/tb_DDS_Modulations/k" type="array">
       <obj_property name="ElementShortName">k[31:0]</obj_property>
@@ -81,26 +99,20 @@
       <obj_property name="ElementShortName">j[31:0]</obj_property>
       <obj_property name="ObjectShortName">j[31:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/tb_DDS_Modulations/DDS_inst/SampleOutA" type="array">
-      <obj_property name="ElementShortName">SampleOutA[15:0]</obj_property>
-      <obj_property name="ObjectShortName">SampleOutA[15:0]</obj_property>
+   <wvobject fp_name="/tb_DDS_Modulations/file_id_1" type="array">
+      <obj_property name="ElementShortName">file_id_1[31:0]</obj_property>
+      <obj_property name="ObjectShortName">file_id_1[31:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/tb_DDS_Modulations/DDS_inst/SampleOutB" type="array">
-      <obj_property name="ElementShortName">SampleOutB[15:0]</obj_property>
-      <obj_property name="ObjectShortName">SampleOutB[15:0]</obj_property>
+   <wvobject fp_name="/tb_DDS_Modulations/SimCaseCounter" type="array">
+      <obj_property name="ElementShortName">SimCaseCounter[31:0]</obj_property>
+      <obj_property name="ObjectShortName">SimCaseCounter[31:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/tb_DDS_Modulations/DDS_inst/SampleOutA" type="array">
-      <obj_property name="ElementShortName">SampleOutA[15:0]</obj_property>
-      <obj_property name="ObjectShortName">SampleOutA[15:0]</obj_property>
-      <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
-      <obj_property name="CellHeight">100</obj_property>
-      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   <wvobject fp_name="/tb_DDS_Modulations/AddrWidth" type="array">
+      <obj_property name="ElementShortName">AddrWidth[31:0]</obj_property>
+      <obj_property name="ObjectShortName">AddrWidth[31:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/tb_DDS_Modulations/DDS_inst/SampleOutB" type="array">
-      <obj_property name="ElementShortName">SampleOutB[15:0]</obj_property>
-      <obj_property name="ObjectShortName">SampleOutB[15:0]</obj_property>
-      <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
-      <obj_property name="CellHeight">100</obj_property>
-      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   <wvobject fp_name="/tb_DDS_Modulations/ModSampleNum" type="array">
+      <obj_property name="ElementShortName">ModSampleNum[31:0]</obj_property>
+      <obj_property name="ObjectShortName">ModSampleNum[31:0]</obj_property>
    </wvobject>
 </wave_config>

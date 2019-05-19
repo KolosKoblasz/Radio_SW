@@ -76,15 +76,15 @@ DDS DDS_inst(
  initial//Initialize DDS LUT
  begin
  #10;
-    $readmemh("D:\\radio\\DSP\\SineForLUT.txt",temp_mem); 
+    $readmemh("D:\\DIY\\Radio_SW\\InterEnvironmentFiles\\SineForLUT.txt",temp_mem); 
  #10;
  
  #10;
-    $readmemh("D:\\radio\\DSP\\Modulation_Sin.txt",modul_sin_mem); 
+    $readmemh("D:\\DIY\\Radio_SW\\InterEnvironmentFiles\\Modulation_Sin.txt",modul_sin_mem); 
  #10;
  
  #10;
-    $readmemh("D:\\radio\\DSP\\Modulation_Triang.txt",modul_tri_mem); 
+    $readmemh("D:\\DIY\\Radio_SW\\InterEnvironmentFiles\\Modulation_Triang.txt",modul_tri_mem); 
  #10;
  
  for(i=0; i<2**AddrWidth; i=i+1)
@@ -132,8 +132,8 @@ DDS DDS_inst(
     //Signal at full strength
     FreqCntrl = 50000;
     //PhaseCntrlA = 0;
-    file_id_1 = $fopen("D:\\radio\\DSP\\AOutSineDDS.txt","w");
-    file_id_2 = $fopen("D:\\radio\\DSP\\BOutSineDDS.txt","w");
+    file_id_1 = $fopen("D:\\DIY\\Radio_SW\\InterEnvironmentFiles\\AOutSineDDS.txt","w");
+    file_id_2 = $fopen("D:\\DIY\\Radio_SW\\InterEnvironmentFiles\\BOutSineDDS.txt","w");
     
 	SimCaseCounter = 10;//just show what we have initially
 	#(20*10000);

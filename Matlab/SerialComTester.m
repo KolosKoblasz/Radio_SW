@@ -3,20 +3,19 @@
  
 Gizmo = GizmoSerialControl ;%Instantiate control object
 
-%Gizmo.SetDDSFreq(14.789e6)
-%Gizmo.Configure_DDS_LUT();
+Gizmo.SetDAC_SamplingFrequency(10e6);
 
-%Gizmo.ADC_Get_OverDrive();
-
-%Gizmo.DDS_Freq
-Gizmo.SetDAC_SamplingFrequency(80e6);
+Gizmo.Configure_DDS_LUT('Path');
+Gizmo.SetDDS_Freq(1);
+Gizmo.SetDDS_Phase_A(0);
+Gizmo.SetDDS_Ampl_A(1);
+Gizmo.DDS_SelectDataPath(0);%1:DDS,0:DirectValue
+Gizmo.DDS_Enable();
 
 Mode = 0;
 Sleep = 0;
 Gizmo.Config_DAC(Mode, Sleep)
 
-Mode = 1;
-Sleep = 1;
-Gizmo.Config_DAC(Mode, Sleep)
+
 
 Gizmo.CloseSerialPort;

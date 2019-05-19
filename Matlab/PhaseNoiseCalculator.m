@@ -3,7 +3,8 @@
 clear all;
 close all;
 
-Path = 'D:\radio\DSP\AOutSineDDS.txt';
+Path = '..\InterEnvironmentFiles\AOutSineDDS.txt';%Relative Path
+
 Data = ReadVivadoDataFile(Path);
 
 DecimationFactor = 1;

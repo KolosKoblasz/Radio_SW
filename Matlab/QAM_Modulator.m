@@ -247,40 +247,51 @@ end
 %%
 
 %% Modulated signal plot
- figure();
+ figure(); 
  subplot(2,1,1)
  plot(t,ISignal);
+ title('Modulated signal Q');
+ 
  subplot(2,1,2)
  plot(t,QSignal);
+ title('Modulated signal Q');
 %  
-%% Demodulated signal plot
+%% Down Convertion plot
  figure();
  subplot(2,1,1)
  plot(t,IRxSignal);
+ title('Down Converted signal I');
+ 
  subplot(2,1,2)
  plot(t,QRxSignal);
+ title('Down Converted signal Q');
  
  %% Filtered Demodulated signal Baseband signal plot
   
  figure();
  subplot(2,2,1)
  plot(t,I);
+ title('Filtered Demodulated signal I');
  subplot(2,2,2)
  plot(t, I_BB);
+ title(' Modulated BB signal I');
+ 
  subplot(2,2,3)
  plot(t,Q);
+ title('Filtered Demodulated signal Q');
  subplot(2,2,4)
  plot(t, Q_BB);
+ title(' Modulated BB signal Q');
  %%
-  %Constellation diagram
+ %Constellation diagram
  
-  figure()
-    title('Condtellation Diagram(t)')
-    xlabel('I')
-    ylabel('Q')
-    scatter(ITxSymbol,QTxSymbol,'.','b')
-    hold;
-    scatter(IRxSymbol,QRxSymbol,'.','r');
+ figure()
+ xlabel('I')
+ ylabel('Q')
+ scatter(ITxSymbol,QTxSymbol,'.','b');
+ hold;
+ scatter(IRxSymbol,QRxSymbol,'.','r');
+ title('Constellation Diagram');
 %  
 % figure();
 % subplot(2,1,1)

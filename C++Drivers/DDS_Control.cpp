@@ -19,8 +19,8 @@ ClassDDS_Control::ClassDDS_Control()
 	Frequency		= 0;
 	Phase			= 0;
 	Amplitude		= 0;
-	DataPathSelect 	= 0;
 	DirectValue		= 0;
+	DataPathSelect 	= 0;
 	Enable			= 0;
 
 	IP_Control_regVal	= 0;
@@ -94,6 +94,34 @@ void ClassDDS_Control::SetAmplitude(uint32_t DesiredAmplitude)
 	Xil_Out32(Address,Amplitude_regVal);
 }
 
+void ClassDDS_Control::SetDataPath(uint8_t DataPath)
+{
+	uint32_t Address;
+
+	DataPathSelect 	= DataPath;
+
+	CalculateRegValues();
+
+	Address = XPAR_DDS_CONTROL_0_S00_AXI_BASEADDR + IP_CONTROL_REG;
+
+	Xil_Out32(Address,IP_Control_regVal);
+}
+
+void ClassDDS_Control::SetDDS_Enable(uint8_t En)
+{
+	uint32_t Address;
+
+	Enable			= En;
+
+	CalculateRegValues();
+
+	Address = XPAR_DDS_CONTROL_0_S00_AXI_BASEADDR + IP_CONTROL_REG;
+
+	Xil_Out32(Address,IP_Control_regVal);
+}
+
+
+
 void ClassDDS_Control::ConfigureLUT(int16_t * SampleArray, int16_t StartAddress, int16_t Length)
 {
 
@@ -104,8 +132,8 @@ void ClassDDS_Control::ConfigureLUT(int16_t * SampleArray, int16_t StartAddress,
 	uint32_t Address_RegAdr = XPAR_DDS_CONTROL_0_S00_AXI_BASEADDR + LUT_ADDRESS_REG;
 	uint32_t Data_RegAdr 	= XPAR_DDS_CONTROL_0_S00_AXI_BASEADDR + LUT_DATA_REG;
 
-	int16_t Data = 0;
-	int16_t Address = 0;
+	int16_t  Data             = 0;
+	int16_t  Address          = 0;
 	uint32_t IP_Ctrl_reg_temp = 0;
 
 
@@ -128,7 +156,7 @@ void ClassDDS_Control::ConfigureLUT(int16_t * SampleArray, int16_t StartAddress,
 		usleep(1);//Make sure the BRAM had enough time to not read in Data
 
 		Address = StartAddress + i;
-		Xil_Out16(Address_RegAdr,Address);//WWrite the LUT's current address into the address register
+		Xil_Out16(Address_RegAdr,Address);//Write the LUT's current address into the address register
 
 		Data = SampleArray[i];
 		Xil_Out16(Data_RegAdr,Data);//Write the LUT's current data into the data register
@@ -148,22 +176,21 @@ void ClassDDS_Control::CalculateRegValues()
 {
 	double temp;
 
-	temp = (Frequency * (double)(2<<DDS_ACC_REG_WIDTH))/(double)DAC_Clock.GetSamplingFreq();
-	Frequency_regVal = (uint32_t)temp;
+	//temp = (Frequency * (double)(2<<DDS_ACC_REG_WIDTH))/(double)DAC_Clock.GetSamplingFreq();
+	//Frequency_regVal = (uint32_t)temp;
+	Frequency_regVal = (uint32_t)Frequency;
 
 	temp = (Phase/360.0)*(double)(2<<16);	//Generating a number which propotional to the phase shift in 16bit (LUT depth)
-	temp = temp << 8; //The 23:8 bits of the register are used in DDS.v
-	Phase_regVal = (uint32_t)temp;
+
+	Phase_regVal = (uint32_t)temp << 8;//The 23:8 bits of the register are used in DDS.v
+
+	temp = Amplitude * (double)0xFFFF;
+	Amplitude_regVal	= (uint32_t)temp;
 
 
-	Amplitude		= 0;
-	DataPathSelect 	= 0;
-	DirectValue		= 0;
-	Enable			= 0;
+	IP_Control_regVal = ((uint32_t)DataPathSelect << 1) || Enable;
 
-	IP_Control_regVal	= 0;
 
-	Amplitude_regVal	= 0;
 }
 
 

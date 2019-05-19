@@ -14,7 +14,7 @@
 #include "xgpio.h"
 #include "ClockingWizzard.h"
 #include "DAC_Control.h"
-
+#include "DDS_Control.h"
 //Instruction List
 
 static const uint16_t DUMMY 			= 0;

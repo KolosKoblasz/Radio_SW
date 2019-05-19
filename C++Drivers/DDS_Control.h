@@ -38,6 +38,8 @@ public:
 	void SetPhase(double DesiredPhase);
 	void SetAmplitude(uint32_t DesiredAmplitude);
 	void SetDirectValue(uint32_t Value);
+	void SetDataPath(uint8_t DataPath);
+	void SetDDS_Enable(uint8_t En);
 	void ConfigureLUT(int16_t * SampleArray, int16_t StartAddress, int16_t Length);
 	void CalculateRegValues();
 

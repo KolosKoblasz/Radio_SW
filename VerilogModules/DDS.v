@@ -17,7 +17,7 @@ module DDS(
     input         [31:0] DirectValue,    //This value can be written from AXI registers,
                                          //directly sets DAC output value to a fix value
     input                LUTWriteEn,        //Set 1 to write LUTData[15:0] to LUTAddress[15:0] 
-    input         [31:0] LUTaddress,     //Selects which memory reg will be written
+    input         [31:0] LUTAddress,     //Selects which memory reg will be written
     input         [31:0] LUTData,        //Waveform memory data samples
     output signed [15:0] SampleOut       //DDS output 
 
@@ -92,7 +92,7 @@ module DDS(
     .RdClk(DAC_clk),        // Read clock
     .WriteEn(LUTWriteEn),// Write enable     
     .rst_n(rst_n), 
-    .WrAddress(LUTaddress[RAM_WIDTH-1:0]),  // Write address bus, width determined from RAM_DEPTH
+    .WrAddress(LUTAddress[RAM_WIDTH-1:0]),  // Write address bus, width determined from RAM_DEPTH
     .RdAddress(RdAddress),                  // Read address bus, width determined from RAM_DEPTH
     .WrData(LUTData[RAM_WIDTH-1:0]),        // RAM input data
     .RdData(RdData)                         // RAM Output data with 2 clock cycle latency
@@ -141,14 +141,15 @@ module DDS(
      
      always @ (posedge DAC_clk)
      begin 
-          if (rst_n ==  0) begin
+          if (rst_n ==  0)
+           begin
               MultRes <= 0;       
-          end
+           end
          
           else 
-          begin 
+           begin 
              MultRes <= SampleMux_s * AmplCntrl;   
-          end 
+           end 
       end 
     
     //Selecting the top 16 bits of the sclaing's result

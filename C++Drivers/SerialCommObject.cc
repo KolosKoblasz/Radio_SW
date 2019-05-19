@@ -12,7 +12,7 @@ using namespace std;
 extern XGpio Gpio;
 extern ClassClockingWizzardControl DAC_Clock;
 extern ClassDAC_Control DAC_Control;
-
+extern ClassDDS_Control DDS_Control;
 
 	SerialCommObject::SerialCommObject()
 	{
@@ -93,10 +93,9 @@ extern ClassDAC_Control DAC_Control;
 				{
 					double DDS_Frequency;
 					DDS_Frequency = ReceiveByteArrayConvertToDouble();
-					/*TO DO
-					 *
-					 * Handle DDS frequency control word change by suitable driver*/
-					dummy = DDS_Frequency;
+
+					DDS_Control.SetFrequency(DDS_Frequency);
+
 					break;
 				}
 
@@ -104,9 +103,8 @@ extern ClassDAC_Control DAC_Control;
 				{
 					double DDS_Phase_A;
 					DDS_Phase_A = ReceiveByteArrayConvertToDouble();
-					/*TO DO
-					 *
-					 * Handle DDS frequency control word change by suitable driver*/
+
+					DDS_Control.SetPhase(DDS_Phase_A);
 
 					break;
 				}
@@ -126,9 +124,8 @@ extern ClassDAC_Control DAC_Control;
 				{
 					double DDS_Amplitude_A;
 					DDS_Amplitude_A = ReceiveByteArrayConvertToDouble();
-					/*TO DO
-					 *
-					 * Handle DDS frequency control word change by suitable driver*/
+
+					DDS_Control.SetAmplitude(DDS_Amplitude_A);
 
 					break;
 				}
@@ -147,9 +144,8 @@ extern ClassDAC_Control DAC_Control;
 				case ENABLE_DDS:
 				{
 
-					/*TO DO
-					 *
-					 * */
+					DDS_Control.SetDDS_Enable(1);
+
 
 					break;
 				}
@@ -157,9 +153,7 @@ extern ClassDAC_Control DAC_Control;
 				case DISABLE_DDS:
 				{
 
-					/*TO DO
-					 *
-					 * */
+					DDS_Control.SetDDS_Enable(0);
 
 					break;
 				}
@@ -168,9 +162,8 @@ extern ClassDAC_Control DAC_Control;
 				{
 					uint8_t DDS_DataPathSelect;
 					DDS_DataPathSelect = ReceiveByteArrayConvertToUnsignedInt8();
-					/*TO DO
-					 *
-					 * */
+
+					DDS_Control.SetDataPath(DDS_DataPathSelect);
 
 					break;
 				}
@@ -178,20 +171,16 @@ extern ClassDAC_Control DAC_Control;
 				case CONFIGURE_DDS_LUT:
 				{
 					//Read 64 times 1024 samples =>2^16
-					for(uint32_t k = 0; k < 64 ; k++)
+					for(uint32_t k = 0; k < 64; k++)
 					{
-						for(uint32_t i = 0; i < 1024 ; i++)
+						for(uint32_t i = 0; i < 1024; i++)
 						{
 							TempDataArray[i] = ReceiveByteArrayConvertToInt16();
 						}
 
 
 						//Store every 1024 block into DDS BRAM through AXI-Lite (UART is the bottle neck so for configuration it will be fine)
-						for(uint32_t i = 0; i < 1024 ; i++)
-						{
-
-							XGpio_DiscreteWrite(&Gpio, 1, (uint32_t)TempDataArray[i]>>8);//Change for DDS address and don't shift it
-						}
+						DDS_Control.ConfigureLUT(TempDataArray,k*1024,1024);
 
 
 					}

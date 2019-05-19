@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="TopBlockDesign_DDS_0_0_synth_1" LaunchDir="D:/DIY/Radio_SW/VivadoProjectFolder/myproject/myproject.runs/TopBlockDesign_DDS_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="TopBlockDesign_DDS_Control_0_0_synth_1" LaunchDir="D:/DIY/Radio_SW/VivadoProjectFolder/myproject/myproject.runs/TopBlockDesign_DDS_Control_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="TopBlockDesign_axi_gpio_0_0_synth_1" LaunchDir="D:/DIY/Radio_SW/VivadoProjectFolder/myproject/myproject.runs/TopBlockDesign_axi_gpio_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="TopBlockDesign_xbar_0_synth_1" LaunchDir="D:/DIY/Radio_SW/VivadoProjectFolder/myproject/myproject.runs/TopBlockDesign_xbar_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="TopBlockDesign_clk_wiz_0_0_synth_1" LaunchDir="D:/DIY/Radio_SW/VivadoProjectFolder/myproject/myproject.runs/TopBlockDesign_clk_wiz_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="TopBlockDesign_proc_sys_reset_0_0_synth_1" LaunchDir="D:/DIY/Radio_SW/VivadoProjectFolder/myproject/myproject.runs/TopBlockDesign_proc_sys_reset_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="TopBlockDesign_processing_system7_0_0_synth_1" LaunchDir="D:/DIY/Radio_SW/VivadoProjectFolder/myproject/myproject.runs/TopBlockDesign_processing_system7_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="TopBlockDesign_auto_pc_0_synth_1" LaunchDir="D:/DIY/Radio_SW/VivadoProjectFolder/myproject/myproject.runs/TopBlockDesign_auto_pc_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="synth_1" LaunchDir="D:/DIY/Radio_SW/VivadoProjectFolder/myproject/myproject.runs/synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado">
+		<Parent Id="TopBlockDesign_DDS_0_0_synth_1"/>
+		<Parent Id="TopBlockDesign_DDS_Control_0_0_synth_1"/>
+		<Parent Id="TopBlockDesign_axi_gpio_0_0_synth_1"/>
+		<Parent Id="TopBlockDesign_xbar_0_synth_1"/>
+		<Parent Id="TopBlockDesign_clk_wiz_0_0_synth_1"/>
+		<Parent Id="TopBlockDesign_proc_sys_reset_0_0_synth_1"/>
+		<Parent Id="TopBlockDesign_processing_system7_0_0_synth_1"/>
+		<Parent Id="TopBlockDesign_auto_pc_0_synth_1"/>
+	</Run>
+	<Parameters>
+		<Parameter Name="runs.monitorLSFJobs" Val="true" Type="bool"/>
+	</Parameters>
+</Runs>
+

@@ -19,7 +19,7 @@ function Data = ReadVivadoDataFile( Path )
 
     fclose(fid);
 
-    dataSignedDecArray=dataSignedDecArray./2^(15);%rescaling the 16 bit signed values to
+    dataSignedDecArray=dataSignedDecArray./2^(15);%rescaling the 16 bit signed values
 
     Data = dataSignedDecArray;
 

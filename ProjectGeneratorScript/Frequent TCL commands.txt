@@ -1,0 +1,2 @@
+cd D:/DIY/Radio_SW/VivadoProjectFolder
+source build.tcl

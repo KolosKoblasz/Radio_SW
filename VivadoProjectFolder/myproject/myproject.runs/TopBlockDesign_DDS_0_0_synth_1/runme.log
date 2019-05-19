@@ -1,0 +1,554 @@
+
+*** Running vivado
+    with args -log TopBlockDesign_DDS_0_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source TopBlockDesign_DDS_0_0.tcl
+
+
+****** Vivado v2018.3 (64-bit)
+  **** SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+  **** IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source TopBlockDesign_DDS_0_0.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+CRITICAL WARNING: [IP_Flow 19-4648] Error loading IP definition ADC_AXIS_M_v1.0 (BOSCH.COM:user:ADC_AXIS_M:1.0): This component is not valid; it has a subcoreRef defined to be the same as its parent.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/DIY/Radio_SW/IP_Repo'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.3/data/ip'.
+update_ip_catalog: Time (s): cpu = 00:00:03 ; elapsed = 00:00:09 . Memory (MB): peak = 248.504 ; gain = 6.996
+Command: synth_design -top TopBlockDesign_DDS_0_0 -part xc7z020clg484-1 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 5848 
+WARNING: [Synth 8-2611] redeclaration of ansi port RdData is not allowed [D:/DIY/Radio_SW/VerilogModules/DualPortBRAM.v:39]
+WARNING: [Synth 8-2507] parameter declaration becomes local in DualPortBRAM with formal parameter declaration list [D:/DIY/Radio_SW/VerilogModules/DualPortBRAM.v:27]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 377.836 ; gain = 115.352
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'TopBlockDesign_DDS_0_0' [d:/DIY/Radio_SW/VivadoProjectFolder/myproject/myproject.srcs/sources_1/bd/TopBlockDesign/ip/TopBlockDesign_DDS_0_0/synth/TopBlockDesign_DDS_0_0.v:58]
+INFO: [Synth 8-6157] synthesizing module 'DDS' [D:/DIY/Radio_SW/VerilogModules/DDS.v:5]
+	Parameter RAM_WIDTH bound to: 16 - type: integer 
+	Parameter RAM_DEPTH bound to: 65536 - type: integer 
+	Parameter RAM_PERFORMANCE bound to: HIGH_PERFORMANCE - type: string 
+WARNING: [Synth 8-6104] Input port 'depth' has an internal driver [D:/DIY/Radio_SW/VerilogModules/DDS.v:163]
+WARNING: [Synth 8-6104] Input port 'depth' has an internal driver [D:/DIY/Radio_SW/VerilogModules/DDS.v:163]
+WARNING: [Synth 8-6104] Input port 'depth' has an internal driver [D:/DIY/Radio_SW/VerilogModules/DDS.v:163]
+WARNING: [Synth 8-6104] Input port 'depth' has an internal driver [D:/DIY/Radio_SW/VerilogModules/DDS.v:163]
+WARNING: [Synth 8-6104] Input port 'depth' has an internal driver [D:/DIY/Radio_SW/VerilogModules/DDS.v:163]
+WARNING: [Synth 8-6104] Input port 'depth' has an internal driver [D:/DIY/Radio_SW/VerilogModules/DDS.v:163]
+WARNING: [Synth 8-6104] Input port 'depth' has an internal driver [D:/DIY/Radio_SW/VerilogModules/DDS.v:163]
+WARNING: [Synth 8-6104] Input port 'depth' has an internal driver [D:/DIY/Radio_SW/VerilogModules/DDS.v:163]
+WARNING: [Synth 8-6104] Input port 'depth' has an internal driver [D:/DIY/Radio_SW/VerilogModules/DDS.v:163]
+WARNING: [Synth 8-6104] Input port 'depth' has an internal driver [D:/DIY/Radio_SW/VerilogModules/DDS.v:163]
+WARNING: [Synth 8-6104] Input port 'depth' has an internal driver [D:/DIY/Radio_SW/VerilogModules/DDS.v:163]
+WARNING: [Synth 8-6104] Input port 'depth' has an internal driver [D:/DIY/Radio_SW/VerilogModules/DDS.v:163]
+WARNING: [Synth 8-6104] Input port 'depth' has an internal driver [D:/DIY/Radio_SW/VerilogModules/DDS.v:163]
+WARNING: [Synth 8-6104] Input port 'depth' has an internal driver [D:/DIY/Radio_SW/VerilogModules/DDS.v:163]
+WARNING: [Synth 8-6104] Input port 'depth' has an internal driver [D:/DIY/Radio_SW/VerilogModules/DDS.v:163]
+WARNING: [Synth 8-6104] Input port 'depth' has an internal driver [D:/DIY/Radio_SW/VerilogModules/DDS.v:163]
+INFO: [Synth 8-6157] synthesizing module 'DualPortBRAM' [D:/DIY/Radio_SW/VerilogModules/DualPortBRAM.v:3]
+	Parameter RAM_WIDTH bound to: 16 - type: integer 
+	Parameter RAM_DEPTH bound to: 65536 - type: integer 
+	Parameter RAM_PERFORMANCE bound to: HIGH_PERFORMANCE - type: string 
+	Parameter INIT_FILE bound to: (null) - type: string 
+WARNING: [Synth 8-6104] Input port 'depth' has an internal driver [D:/DIY/Radio_SW/VerilogModules/DualPortBRAM.v:93]
+WARNING: [Synth 8-6104] Input port 'depth' has an internal driver [D:/DIY/Radio_SW/VerilogModules/DualPortBRAM.v:93]
+WARNING: [Synth 8-6104] Input port 'depth' has an internal driver [D:/DIY/Radio_SW/VerilogModules/DualPortBRAM.v:93]
+WARNING: [Synth 8-6104] Input port 'depth' has an internal driver [D:/DIY/Radio_SW/VerilogModules/DualPortBRAM.v:93]
+WARNING: [Synth 8-6104] Input port 'depth' has an internal driver [D:/DIY/Radio_SW/VerilogModules/DualPortBRAM.v:93]
+WARNING: [Synth 8-6104] Input port 'depth' has an internal driver [D:/DIY/Radio_SW/VerilogModules/DualPortBRAM.v:93]
+WARNING: [Synth 8-6104] Input port 'depth' has an internal driver [D:/DIY/Radio_SW/VerilogModules/DualPortBRAM.v:93]
+WARNING: [Synth 8-6104] Input port 'depth' has an internal driver [D:/DIY/Radio_SW/VerilogModules/DualPortBRAM.v:93]
+WARNING: [Synth 8-6104] Input port 'depth' has an internal driver [D:/DIY/Radio_SW/VerilogModules/DualPortBRAM.v:93]
+WARNING: [Synth 8-6104] Input port 'depth' has an internal driver [D:/DIY/Radio_SW/VerilogModules/DualPortBRAM.v:93]
+WARNING: [Synth 8-6104] Input port 'depth' has an internal driver [D:/DIY/Radio_SW/VerilogModules/DualPortBRAM.v:93]
+WARNING: [Synth 8-6104] Input port 'depth' has an internal driver [D:/DIY/Radio_SW/VerilogModules/DualPortBRAM.v:93]
+WARNING: [Synth 8-6104] Input port 'depth' has an internal driver [D:/DIY/Radio_SW/VerilogModules/DualPortBRAM.v:93]
+WARNING: [Synth 8-6104] Input port 'depth' has an internal driver [D:/DIY/Radio_SW/VerilogModules/DualPortBRAM.v:93]
+WARNING: [Synth 8-6104] Input port 'depth' has an internal driver [D:/DIY/Radio_SW/VerilogModules/DualPortBRAM.v:93]
+WARNING: [Synth 8-6104] Input port 'depth' has an internal driver [D:/DIY/Radio_SW/VerilogModules/DualPortBRAM.v:93]
+WARNING: [Synth 8-6104] Input port 'depth' has an internal driver [D:/DIY/Radio_SW/VerilogModules/DualPortBRAM.v:93]
+WARNING: [Synth 8-6104] Input port 'depth' has an internal driver [D:/DIY/Radio_SW/VerilogModules/DualPortBRAM.v:93]
+WARNING: [Synth 8-6104] Input port 'depth' has an internal driver [D:/DIY/Radio_SW/VerilogModules/DualPortBRAM.v:93]
+WARNING: [Synth 8-6104] Input port 'depth' has an internal driver [D:/DIY/Radio_SW/VerilogModules/DualPortBRAM.v:93]
+WARNING: [Synth 8-6104] Input port 'depth' has an internal driver [D:/DIY/Radio_SW/VerilogModules/DualPortBRAM.v:93]
+WARNING: [Synth 8-6104] Input port 'depth' has an internal driver [D:/DIY/Radio_SW/VerilogModules/DualPortBRAM.v:93]
+WARNING: [Synth 8-6104] Input port 'depth' has an internal driver [D:/DIY/Radio_SW/VerilogModules/DualPortBRAM.v:93]
+WARNING: [Synth 8-6104] Input port 'depth' has an internal driver [D:/DIY/Radio_SW/VerilogModules/DualPortBRAM.v:93]
+WARNING: [Synth 8-6104] Input port 'depth' has an internal driver [D:/DIY/Radio_SW/VerilogModules/DualPortBRAM.v:93]
+WARNING: [Synth 8-6104] Input port 'depth' has an internal driver [D:/DIY/Radio_SW/VerilogModules/DualPortBRAM.v:93]
+WARNING: [Synth 8-6104] Input port 'depth' has an internal driver [D:/DIY/Radio_SW/VerilogModules/DualPortBRAM.v:93]
+WARNING: [Synth 8-6104] Input port 'depth' has an internal driver [D:/DIY/Radio_SW/VerilogModules/DualPortBRAM.v:93]
+WARNING: [Synth 8-6104] Input port 'depth' has an internal driver [D:/DIY/Radio_SW/VerilogModules/DualPortBRAM.v:93]
+WARNING: [Synth 8-6104] Input port 'depth' has an internal driver [D:/DIY/Radio_SW/VerilogModules/DualPortBRAM.v:93]
+WARNING: [Synth 8-6104] Input port 'depth' has an internal driver [D:/DIY/Radio_SW/VerilogModules/DualPortBRAM.v:93]
+WARNING: [Synth 8-6104] Input port 'depth' has an internal driver [D:/DIY/Radio_SW/VerilogModules/DualPortBRAM.v:93]
+WARNING: [Synth 8-6104] Input port 'depth' has an internal driver [D:/DIY/Radio_SW/VerilogModules/DualPortBRAM.v:93]
+WARNING: [Synth 8-6104] Input port 'depth' has an internal driver [D:/DIY/Radio_SW/VerilogModules/DualPortBRAM.v:93]
+WARNING: [Synth 8-6104] Input port 'depth' has an internal driver [D:/DIY/Radio_SW/VerilogModules/DualPortBRAM.v:93]
+WARNING: [Synth 8-6104] Input port 'depth' has an internal driver [D:/DIY/Radio_SW/VerilogModules/DualPortBRAM.v:93]
+WARNING: [Synth 8-6104] Input port 'depth' has an internal driver [D:/DIY/Radio_SW/VerilogModules/DualPortBRAM.v:93]
+WARNING: [Synth 8-6104] Input port 'depth' has an internal driver [D:/DIY/Radio_SW/VerilogModules/DualPortBRAM.v:93]
+WARNING: [Synth 8-6104] Input port 'depth' has an internal driver [D:/DIY/Radio_SW/VerilogModules/DualPortBRAM.v:93]
+WARNING: [Synth 8-6104] Input port 'depth' has an internal driver [D:/DIY/Radio_SW/VerilogModules/DualPortBRAM.v:93]
+WARNING: [Synth 8-6104] Input port 'depth' has an internal driver [D:/DIY/Radio_SW/VerilogModules/DualPortBRAM.v:93]
+WARNING: [Synth 8-6104] Input port 'depth' has an internal driver [D:/DIY/Radio_SW/VerilogModules/DualPortBRAM.v:93]
+WARNING: [Synth 8-6104] Input port 'depth' has an internal driver [D:/DIY/Radio_SW/VerilogModules/DualPortBRAM.v:93]
+WARNING: [Synth 8-6104] Input port 'depth' has an internal driver [D:/DIY/Radio_SW/VerilogModules/DualPortBRAM.v:93]
+WARNING: [Synth 8-6104] Input port 'depth' has an internal driver [D:/DIY/Radio_SW/VerilogModules/DualPortBRAM.v:93]
+WARNING: [Synth 8-6104] Input port 'depth' has an internal driver [D:/DIY/Radio_SW/VerilogModules/DualPortBRAM.v:93]
+WARNING: [Synth 8-6104] Input port 'depth' has an internal driver [D:/DIY/Radio_SW/VerilogModules/DualPortBRAM.v:93]
+WARNING: [Synth 8-6104] Input port 'depth' has an internal driver [D:/DIY/Radio_SW/VerilogModules/DualPortBRAM.v:93]
+WARNING: [Synth 8-6104] Input port 'depth' has an internal driver [D:/DIY/Radio_SW/VerilogModules/DualPortBRAM.v:93]
+WARNING: [Synth 8-6104] Input port 'depth' has an internal driver [D:/DIY/Radio_SW/VerilogModules/DualPortBRAM.v:93]
+WARNING: [Synth 8-6104] Input port 'depth' has an internal driver [D:/DIY/Radio_SW/VerilogModules/DualPortBRAM.v:93]
+WARNING: [Synth 8-6104] Input port 'depth' has an internal driver [D:/DIY/Radio_SW/VerilogModules/DualPortBRAM.v:93]
+WARNING: [Synth 8-6104] Input port 'depth' has an internal driver [D:/DIY/Radio_SW/VerilogModules/DualPortBRAM.v:93]
+WARNING: [Synth 8-6104] Input port 'depth' has an internal driver [D:/DIY/Radio_SW/VerilogModules/DualPortBRAM.v:93]
+WARNING: [Synth 8-6104] Input port 'depth' has an internal driver [D:/DIY/Radio_SW/VerilogModules/DualPortBRAM.v:93]
+WARNING: [Synth 8-6104] Input port 'depth' has an internal driver [D:/DIY/Radio_SW/VerilogModules/DualPortBRAM.v:93]
+WARNING: [Synth 8-6104] Input port 'depth' has an internal driver [D:/DIY/Radio_SW/VerilogModules/DualPortBRAM.v:93]
+WARNING: [Synth 8-6104] Input port 'depth' has an internal driver [D:/DIY/Radio_SW/VerilogModules/DualPortBRAM.v:93]
+WARNING: [Synth 8-6104] Input port 'depth' has an internal driver [D:/DIY/Radio_SW/VerilogModules/DualPortBRAM.v:93]
+WARNING: [Synth 8-6104] Input port 'depth' has an internal driver [D:/DIY/Radio_SW/VerilogModules/DualPortBRAM.v:93]
+WARNING: [Synth 8-6104] Input port 'depth' has an internal driver [D:/DIY/Radio_SW/VerilogModules/DualPortBRAM.v:93]
+WARNING: [Synth 8-6104] Input port 'depth' has an internal driver [D:/DIY/Radio_SW/VerilogModules/DualPortBRAM.v:93]
+WARNING: [Synth 8-6104] Input port 'depth' has an internal driver [D:/DIY/Radio_SW/VerilogModules/DualPortBRAM.v:93]
+WARNING: [Synth 8-6104] Input port 'depth' has an internal driver [D:/DIY/Radio_SW/VerilogModules/DualPortBRAM.v:93]
+INFO: [Synth 8-6155] done synthesizing module 'DualPortBRAM' (1#1) [D:/DIY/Radio_SW/VerilogModules/DualPortBRAM.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'DDS' (2#1) [D:/DIY/Radio_SW/VerilogModules/DDS.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'TopBlockDesign_DDS_0_0' (3#1) [d:/DIY/Radio_SW/VivadoProjectFolder/myproject/myproject.srcs/sources_1/bd/TopBlockDesign/ip/TopBlockDesign_DDS_0_0/synth/TopBlockDesign_DDS_0_0.v:58]
+WARNING: [Synth 8-3331] design DDS has unconnected port FreqCntrl[31]
+WARNING: [Synth 8-3331] design DDS has unconnected port FreqCntrl[30]
+WARNING: [Synth 8-3331] design DDS has unconnected port FreqCntrl[29]
+WARNING: [Synth 8-3331] design DDS has unconnected port FreqCntrl[28]
+WARNING: [Synth 8-3331] design DDS has unconnected port FreqCntrl[27]
+WARNING: [Synth 8-3331] design DDS has unconnected port FreqCntrl[26]
+WARNING: [Synth 8-3331] design DDS has unconnected port FreqCntrl[25]
+WARNING: [Synth 8-3331] design DDS has unconnected port FreqCntrl[24]
+WARNING: [Synth 8-3331] design DDS has unconnected port PhaseCntrl[31]
+WARNING: [Synth 8-3331] design DDS has unconnected port PhaseCntrl[30]
+WARNING: [Synth 8-3331] design DDS has unconnected port PhaseCntrl[29]
+WARNING: [Synth 8-3331] design DDS has unconnected port PhaseCntrl[28]
+WARNING: [Synth 8-3331] design DDS has unconnected port PhaseCntrl[27]
+WARNING: [Synth 8-3331] design DDS has unconnected port PhaseCntrl[26]
+WARNING: [Synth 8-3331] design DDS has unconnected port PhaseCntrl[25]
+WARNING: [Synth 8-3331] design DDS has unconnected port PhaseCntrl[24]
+WARNING: [Synth 8-3331] design DDS has unconnected port DirectValue[31]
+WARNING: [Synth 8-3331] design DDS has unconnected port DirectValue[30]
+WARNING: [Synth 8-3331] design DDS has unconnected port DirectValue[29]
+WARNING: [Synth 8-3331] design DDS has unconnected port DirectValue[28]
+WARNING: [Synth 8-3331] design DDS has unconnected port DirectValue[27]
+WARNING: [Synth 8-3331] design DDS has unconnected port DirectValue[26]
+WARNING: [Synth 8-3331] design DDS has unconnected port DirectValue[25]
+WARNING: [Synth 8-3331] design DDS has unconnected port DirectValue[24]
+WARNING: [Synth 8-3331] design DDS has unconnected port DirectValue[23]
+WARNING: [Synth 8-3331] design DDS has unconnected port DirectValue[22]
+WARNING: [Synth 8-3331] design DDS has unconnected port DirectValue[21]
+WARNING: [Synth 8-3331] design DDS has unconnected port DirectValue[20]
+WARNING: [Synth 8-3331] design DDS has unconnected port DirectValue[19]
+WARNING: [Synth 8-3331] design DDS has unconnected port DirectValue[18]
+WARNING: [Synth 8-3331] design DDS has unconnected port DirectValue[17]
+WARNING: [Synth 8-3331] design DDS has unconnected port DirectValue[16]
+WARNING: [Synth 8-3331] design DDS has unconnected port LUTAddress[31]
+WARNING: [Synth 8-3331] design DDS has unconnected port LUTAddress[30]
+WARNING: [Synth 8-3331] design DDS has unconnected port LUTAddress[29]
+WARNING: [Synth 8-3331] design DDS has unconnected port LUTAddress[28]
+WARNING: [Synth 8-3331] design DDS has unconnected port LUTAddress[27]
+WARNING: [Synth 8-3331] design DDS has unconnected port LUTAddress[26]
+WARNING: [Synth 8-3331] design DDS has unconnected port LUTAddress[25]
+WARNING: [Synth 8-3331] design DDS has unconnected port LUTAddress[24]
+WARNING: [Synth 8-3331] design DDS has unconnected port LUTAddress[23]
+WARNING: [Synth 8-3331] design DDS has unconnected port LUTAddress[22]
+WARNING: [Synth 8-3331] design DDS has unconnected port LUTAddress[21]
+WARNING: [Synth 8-3331] design DDS has unconnected port LUTAddress[20]
+WARNING: [Synth 8-3331] design DDS has unconnected port LUTAddress[19]
+WARNING: [Synth 8-3331] design DDS has unconnected port LUTAddress[18]
+WARNING: [Synth 8-3331] design DDS has unconnected port LUTAddress[17]
+WARNING: [Synth 8-3331] design DDS has unconnected port LUTAddress[16]
+WARNING: [Synth 8-3331] design DDS has unconnected port LUTData[31]
+WARNING: [Synth 8-3331] design DDS has unconnected port LUTData[30]
+WARNING: [Synth 8-3331] design DDS has unconnected port LUTData[29]
+WARNING: [Synth 8-3331] design DDS has unconnected port LUTData[28]
+WARNING: [Synth 8-3331] design DDS has unconnected port LUTData[27]
+WARNING: [Synth 8-3331] design DDS has unconnected port LUTData[26]
+WARNING: [Synth 8-3331] design DDS has unconnected port LUTData[25]
+WARNING: [Synth 8-3331] design DDS has unconnected port LUTData[24]
+WARNING: [Synth 8-3331] design DDS has unconnected port LUTData[23]
+WARNING: [Synth 8-3331] design DDS has unconnected port LUTData[22]
+WARNING: [Synth 8-3331] design DDS has unconnected port LUTData[21]
+WARNING: [Synth 8-3331] design DDS has unconnected port LUTData[20]
+WARNING: [Synth 8-3331] design DDS has unconnected port LUTData[19]
+WARNING: [Synth 8-3331] design DDS has unconnected port LUTData[18]
+WARNING: [Synth 8-3331] design DDS has unconnected port LUTData[17]
+WARNING: [Synth 8-3331] design DDS has unconnected port LUTData[16]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 492.246 ; gain = 229.762
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 492.246 ; gain = 229.762
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 492.246 ; gain = 229.762
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7z020clg484-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 759.602 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 759.602 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.110 . Memory (MB): peak = 760.992 ; gain = 1.391
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:29 ; elapsed = 00:00:33 . Memory (MB): peak = 760.992 ; gain = 498.508
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg484-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:29 ; elapsed = 00:00:33 . Memory (MB): peak = 760.992 ; gain = 498.508
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:29 ; elapsed = 00:00:33 . Memory (MB): peak = 760.992 ; gain = 498.508
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:30 ; elapsed = 00:00:34 . Memory (MB): peak = 760.992 ; gain = 498.508
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     24 Bit       Adders := 1     
++---Registers : 
+	               24 Bit    Registers := 1     
+	               16 Bit    Registers := 3     
++---RAMs : 
+	            1024K Bit         RAMs := 1     
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module DualPortBRAM 
+Detailed RTL Component Info : 
++---Registers : 
+	               16 Bit    Registers := 2     
++---RAMs : 
+	            1024K Bit         RAMs := 1     
+Module DDS 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     24 Bit       Adders := 1     
++---Registers : 
+	               24 Bit    Registers := 1     
+	               16 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+DSP Report: Generating DSP inst/MultRes_reg, operation Mode is: (A2*B)'.
+DSP Report: register inst/SampleMux_reg is absorbed into DSP inst/MultRes_reg.
+DSP Report: register inst/MultRes_reg is absorbed into DSP inst/MultRes_reg.
+DSP Report: operator inst/MultRes0 is absorbed into DSP inst/MultRes_reg.
+WARNING: [Synth 8-3331] design TopBlockDesign_DDS_0_0 has unconnected port FreqCntrl[31]
+WARNING: [Synth 8-3331] design TopBlockDesign_DDS_0_0 has unconnected port FreqCntrl[30]
+WARNING: [Synth 8-3331] design TopBlockDesign_DDS_0_0 has unconnected port FreqCntrl[29]
+WARNING: [Synth 8-3331] design TopBlockDesign_DDS_0_0 has unconnected port FreqCntrl[28]
+WARNING: [Synth 8-3331] design TopBlockDesign_DDS_0_0 has unconnected port FreqCntrl[27]
+WARNING: [Synth 8-3331] design TopBlockDesign_DDS_0_0 has unconnected port FreqCntrl[26]
+WARNING: [Synth 8-3331] design TopBlockDesign_DDS_0_0 has unconnected port FreqCntrl[25]
+WARNING: [Synth 8-3331] design TopBlockDesign_DDS_0_0 has unconnected port FreqCntrl[24]
+WARNING: [Synth 8-3331] design TopBlockDesign_DDS_0_0 has unconnected port PhaseCntrl[31]
+WARNING: [Synth 8-3331] design TopBlockDesign_DDS_0_0 has unconnected port PhaseCntrl[30]
+WARNING: [Synth 8-3331] design TopBlockDesign_DDS_0_0 has unconnected port PhaseCntrl[29]
+WARNING: [Synth 8-3331] design TopBlockDesign_DDS_0_0 has unconnected port PhaseCntrl[28]
+WARNING: [Synth 8-3331] design TopBlockDesign_DDS_0_0 has unconnected port PhaseCntrl[27]
+WARNING: [Synth 8-3331] design TopBlockDesign_DDS_0_0 has unconnected port PhaseCntrl[26]
+WARNING: [Synth 8-3331] design TopBlockDesign_DDS_0_0 has unconnected port PhaseCntrl[25]
+WARNING: [Synth 8-3331] design TopBlockDesign_DDS_0_0 has unconnected port PhaseCntrl[24]
+WARNING: [Synth 8-3331] design TopBlockDesign_DDS_0_0 has unconnected port DirectValue[31]
+WARNING: [Synth 8-3331] design TopBlockDesign_DDS_0_0 has unconnected port DirectValue[30]
+WARNING: [Synth 8-3331] design TopBlockDesign_DDS_0_0 has unconnected port DirectValue[29]
+WARNING: [Synth 8-3331] design TopBlockDesign_DDS_0_0 has unconnected port DirectValue[28]
+WARNING: [Synth 8-3331] design TopBlockDesign_DDS_0_0 has unconnected port DirectValue[27]
+WARNING: [Synth 8-3331] design TopBlockDesign_DDS_0_0 has unconnected port DirectValue[26]
+WARNING: [Synth 8-3331] design TopBlockDesign_DDS_0_0 has unconnected port DirectValue[25]
+WARNING: [Synth 8-3331] design TopBlockDesign_DDS_0_0 has unconnected port DirectValue[24]
+WARNING: [Synth 8-3331] design TopBlockDesign_DDS_0_0 has unconnected port DirectValue[23]
+WARNING: [Synth 8-3331] design TopBlockDesign_DDS_0_0 has unconnected port DirectValue[22]
+WARNING: [Synth 8-3331] design TopBlockDesign_DDS_0_0 has unconnected port DirectValue[21]
+WARNING: [Synth 8-3331] design TopBlockDesign_DDS_0_0 has unconnected port DirectValue[20]
+WARNING: [Synth 8-3331] design TopBlockDesign_DDS_0_0 has unconnected port DirectValue[19]
+WARNING: [Synth 8-3331] design TopBlockDesign_DDS_0_0 has unconnected port DirectValue[18]
+WARNING: [Synth 8-3331] design TopBlockDesign_DDS_0_0 has unconnected port DirectValue[17]
+WARNING: [Synth 8-3331] design TopBlockDesign_DDS_0_0 has unconnected port DirectValue[16]
+WARNING: [Synth 8-3331] design TopBlockDesign_DDS_0_0 has unconnected port LUTAddress[31]
+WARNING: [Synth 8-3331] design TopBlockDesign_DDS_0_0 has unconnected port LUTAddress[30]
+WARNING: [Synth 8-3331] design TopBlockDesign_DDS_0_0 has unconnected port LUTAddress[29]
+WARNING: [Synth 8-3331] design TopBlockDesign_DDS_0_0 has unconnected port LUTAddress[28]
+INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-4652] Swapped enable and write-enable on 16 RAM instances of RAM inst/LUT/RAM_reg to conserve power
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:33 ; elapsed = 00:00:36 . Memory (MB): peak = 760.992 ; gain = 498.508
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Preliminary Mapping  Report (see note below)
++--------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name   | RTL Object | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++--------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|DualPortBRAM: | RAM_reg    | 64 K x 16(NO_CHANGE)   | W |   | 64 K x 16(WRITE_FIRST) |   | R | Port A and B     | 0      | 32     | 
++--------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+Note: The table above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. 
+
+DSP: Preliminary Mapping  Report (see note below)
++------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|DDS         | (A2*B)'     | 16     | 16     | -      | -      | 32     | 1    | 0    | -    | -    | -     | 1    | 0    | 
++------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:59 ; elapsed = 00:01:04 . Memory (MB): peak = 821.992 ; gain = 559.508
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:59 ; elapsed = 00:01:04 . Memory (MB): peak = 822.180 ; gain = 559.695
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Final Mapping  Report
++--------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name   | RTL Object | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++--------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|DualPortBRAM: | RAM_reg    | 64 K x 16(NO_CHANGE)   | W |   | 64 K x 16(WRITE_FIRST) |   | R | Port A and B     | 0      | 32     | 
++--------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:01:00 ; elapsed = 00:01:05 . Memory (MB): peak = 831.492 ; gain = 569.008
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6064] Net \inst/RdAddress [0] is driving 32 big block pins (URAM, BRAM and DSP loads). Created 4 replicas of its driver. 
+INFO: [Synth 8-6064] Net \inst/RdAddress [1] is driving 32 big block pins (URAM, BRAM and DSP loads). Created 4 replicas of its driver. 
+INFO: [Synth 8-6064] Net \inst/RdAddress [2] is driving 32 big block pins (URAM, BRAM and DSP loads). Created 4 replicas of its driver. 
+INFO: [Synth 8-6064] Net \inst/RdAddress [3] is driving 32 big block pins (URAM, BRAM and DSP loads). Created 4 replicas of its driver. 
+INFO: [Synth 8-6064] Net \inst/RdAddress [4] is driving 32 big block pins (URAM, BRAM and DSP loads). Created 4 replicas of its driver. 
+INFO: [Synth 8-6064] Net \inst/RdAddress [5] is driving 32 big block pins (URAM, BRAM and DSP loads). Created 4 replicas of its driver. 
+INFO: [Synth 8-6064] Net \inst/RdAddress [6] is driving 32 big block pins (URAM, BRAM and DSP loads). Created 4 replicas of its driver. 
+INFO: [Synth 8-6064] Net \inst/RdAddress [7] is driving 32 big block pins (URAM, BRAM and DSP loads). Created 4 replicas of its driver. 
+INFO: [Synth 8-6064] Net \inst/RdAddress [8] is driving 32 big block pins (URAM, BRAM and DSP loads). Created 4 replicas of its driver. 
+INFO: [Synth 8-6064] Net \inst/RdAddress [9] is driving 32 big block pins (URAM, BRAM and DSP loads). Created 4 replicas of its driver. 
+INFO: [Synth 8-6064] Net \inst/RdAddress [10] is driving 32 big block pins (URAM, BRAM and DSP loads). Created 4 replicas of its driver. 
+INFO: [Synth 8-6064] Net \inst/RdAddress [11] is driving 32 big block pins (URAM, BRAM and DSP loads). Created 4 replicas of its driver. 
+INFO: [Synth 8-6064] Net \inst/RdAddress [12] is driving 32 big block pins (URAM, BRAM and DSP loads). Created 4 replicas of its driver. 
+INFO: [Synth 8-6064] Net \inst/RdAddress [13] is driving 32 big block pins (URAM, BRAM and DSP loads). Created 4 replicas of its driver. 
+INFO: [Synth 8-6064] Net \inst/RdAddress [14] is driving 32 big block pins (URAM, BRAM and DSP loads). Created 4 replicas of its driver. 
+INFO: [Synth 8-6064] Net \inst/RdAddress [15] is driving 32 big block pins (URAM, BRAM and DSP loads). Created 4 replicas of its driver. 
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:01:02 ; elapsed = 00:01:07 . Memory (MB): peak = 831.492 ; gain = 569.008
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:02 ; elapsed = 00:01:07 . Memory (MB): peak = 831.492 ; gain = 569.008
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:02 ; elapsed = 00:01:08 . Memory (MB): peak = 831.492 ; gain = 569.008
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:02 ; elapsed = 00:01:08 . Memory (MB): peak = 831.492 ; gain = 569.008
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:02 ; elapsed = 00:01:08 . Memory (MB): peak = 831.492 ; gain = 569.008
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:02 ; elapsed = 00:01:08 . Memory (MB): peak = 831.492 ; gain = 569.008
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----------+------+
+|      |Cell       |Count |
++------+-----------+------+
+|1     |CARRY4     |    12|
+|2     |DSP48E1_1  |     1|
+|3     |LUT1       |     1|
+|4     |LUT2       |    49|
+|5     |LUT3       |    16|
+|6     |RAMB36E1   |    16|
+|7     |RAMB36E1_2 |    16|
+|8     |FDRE       |    88|
++------+-----------+------+
+
+Report Instance Areas: 
++------+---------+-------------+------+
+|      |Instance |Module       |Cells |
++------+---------+-------------+------+
+|1     |top      |             |   199|
+|2     |  inst   |DDS          |   199|
+|3     |    LUT  |DualPortBRAM |    33|
++------+---------+-------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:02 ; elapsed = 00:01:08 . Memory (MB): peak = 831.492 ; gain = 569.008
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 64 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:37 ; elapsed = 00:00:57 . Memory (MB): peak = 831.492 ; gain = 300.262
+Synthesis Optimization Complete : Time (s): cpu = 00:01:02 ; elapsed = 00:01:08 . Memory (MB): peak = 831.492 ; gain = 569.008
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 45 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 839.277 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+38 Infos, 183 Warnings, 1 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:05 ; elapsed = 00:01:13 . Memory (MB): peak = 839.277 ; gain = 590.363
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 839.277 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'D:/DIY/Radio_SW/VivadoProjectFolder/myproject/myproject.runs/TopBlockDesign_DDS_0_0_synth_1/TopBlockDesign_DDS_0_0.dcp' has been generated.
+INFO: [Coretcl 2-1174] Renamed 2 cell refs.
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 839.277 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'D:/DIY/Radio_SW/VivadoProjectFolder/myproject/myproject.runs/TopBlockDesign_DDS_0_0_synth_1/TopBlockDesign_DDS_0_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file TopBlockDesign_DDS_0_0_utilization_synth.rpt -pb TopBlockDesign_DDS_0_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sun May 19 21:35:47 2019...

@@ -11,22 +11,22 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="0fs"></ZoomStartTime>
-      <ZoomEndTime time="6500000000001fs"></ZoomEndTime>
-      <Cursor1Time time="4001000000000fs"></Cursor1Time>
+      <ZoomStartTime time="2663660000000fs"></ZoomStartTime>
+      <ZoomEndTime time="3294660000001fs"></ZoomEndTime>
+      <Cursor1Time time="3157660000000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="195"></NameColumnWidth>
-      <ValueColumnWidth column_width="122"></ValueColumnWidth>
+      <NameColumnWidth column_width="206"></NameColumnWidth>
+      <ValueColumnWidth column_width="138"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="26" />
-   <wvobject type="divider" fp_name="divider55">
-      <obj_property name="label">Analog Waveform</obj_property>
-      <obj_property name="DisplayName">label</obj_property>
+   <WVObjectSize size="19" />
+   <wvobject fp_name="/tb_DDS_Amplitude_Control/AXI_clk" type="logic">
+      <obj_property name="ElementShortName">AXI_clk</obj_property>
+      <obj_property name="ObjectShortName">AXI_clk</obj_property>
    </wvobject>
-   <wvobject fp_name="/tb_DDS_Amplitude_Control/clk" type="logic">
-      <obj_property name="ElementShortName">clk</obj_property>
-      <obj_property name="ObjectShortName">clk</obj_property>
+   <wvobject fp_name="/tb_DDS_Amplitude_Control/DAC_clk" type="logic">
+      <obj_property name="ElementShortName">DAC_clk</obj_property>
+      <obj_property name="ObjectShortName">DAC_clk</obj_property>
    </wvobject>
    <wvobject fp_name="/tb_DDS_Amplitude_Control/rst_n" type="logic">
       <obj_property name="ElementShortName">rst_n</obj_property>
@@ -36,114 +36,67 @@
       <obj_property name="ElementShortName">en</obj_property>
       <obj_property name="ObjectShortName">en</obj_property>
    </wvobject>
+   <wvobject fp_name="/tb_DDS_Amplitude_Control/SampleOut" type="array">
+      <obj_property name="ElementShortName">SampleOut[15:0]</obj_property>
+      <obj_property name="ObjectShortName">SampleOut[15:0]</obj_property>
+      <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
+      <obj_property name="CellHeight">100</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
    <wvobject fp_name="/tb_DDS_Amplitude_Control/FreqCntrl" type="array">
       <obj_property name="ElementShortName">FreqCntrl[31:0]</obj_property>
       <obj_property name="ObjectShortName">FreqCntrl[31:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/tb_DDS_Amplitude_Control/PhaseCntrlA" type="array">
-      <obj_property name="ElementShortName">PhaseCntrlA[31:0]</obj_property>
-      <obj_property name="ObjectShortName">PhaseCntrlA[31:0]</obj_property>
+   <wvobject fp_name="/tb_DDS_Amplitude_Control/PhaseCntrl" type="array">
+      <obj_property name="ElementShortName">PhaseCntrl[31:0]</obj_property>
+      <obj_property name="ObjectShortName">PhaseCntrl[31:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/tb_DDS_Amplitude_Control/PhaseCntrlB" type="array">
-      <obj_property name="ElementShortName">PhaseCntrlB[31:0]</obj_property>
-      <obj_property name="ObjectShortName">PhaseCntrlB[31:0]</obj_property>
+   <wvobject fp_name="/tb_DDS_Amplitude_Control/AmplCntrl" type="array">
+      <obj_property name="ElementShortName">AmplCntrl[15:0]</obj_property>
+      <obj_property name="ObjectShortName">AmplCntrl[15:0]</obj_property>
    </wvobject>
    <wvobject fp_name="/tb_DDS_Amplitude_Control/DataPathSelect" type="logic">
       <obj_property name="ElementShortName">DataPathSelect</obj_property>
       <obj_property name="ObjectShortName">DataPathSelect</obj_property>
    </wvobject>
-   <wvobject fp_name="/tb_DDS_Amplitude_Control/SampleOutA" type="array">
-      <obj_property name="ElementShortName">SampleOutA[15:0]</obj_property>
-      <obj_property name="ObjectShortName">SampleOutA[15:0]</obj_property>
+   <wvobject fp_name="/tb_DDS_Amplitude_Control/DirectValue" type="array">
+      <obj_property name="ElementShortName">DirectValue[31:0]</obj_property>
+      <obj_property name="ObjectShortName">DirectValue[31:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/tb_DDS_Amplitude_Control/SampleOutB" type="array">
-      <obj_property name="ElementShortName">SampleOutB[15:0]</obj_property>
-      <obj_property name="ObjectShortName">SampleOutB[15:0]</obj_property>
+   <wvobject fp_name="/tb_DDS_Amplitude_Control/LUTWe" type="logic">
+      <obj_property name="ElementShortName">LUTWe</obj_property>
+      <obj_property name="ObjectShortName">LUTWe</obj_property>
    </wvobject>
-   <wvobject type="divider" fp_name="divider120">
-      <obj_property name="label">Analog Arbitrary Waveforms</obj_property>
-      <obj_property name="DisplayName">label</obj_property>
+   <wvobject fp_name="/tb_DDS_Amplitude_Control/LUTAddress" type="array">
+      <obj_property name="ElementShortName">LUTAddress[31:0]</obj_property>
+      <obj_property name="ObjectShortName">LUTAddress[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_DDS_Amplitude_Control/LUTData" type="array">
+      <obj_property name="ElementShortName">LUTData[31:0]</obj_property>
+      <obj_property name="ObjectShortName">LUTData[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_DDS_Amplitude_Control/SampleOut" type="array">
+      <obj_property name="ElementShortName">SampleOut[15:0]</obj_property>
+      <obj_property name="ObjectShortName">SampleOut[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_DDS_Amplitude_Control/i" type="array">
+      <obj_property name="ElementShortName">i[31:0]</obj_property>
+      <obj_property name="ObjectShortName">i[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_DDS_Amplitude_Control/k" type="array">
+      <obj_property name="ElementShortName">k[31:0]</obj_property>
+      <obj_property name="ObjectShortName">k[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_DDS_Amplitude_Control/file_id_1" type="array">
+      <obj_property name="ElementShortName">file_id_1[31:0]</obj_property>
+      <obj_property name="ObjectShortName">file_id_1[31:0]</obj_property>
    </wvobject>
    <wvobject fp_name="/tb_DDS_Amplitude_Control/SimCaseCounter" type="array">
       <obj_property name="ElementShortName">SimCaseCounter[31:0]</obj_property>
       <obj_property name="ObjectShortName">SimCaseCounter[31:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/tb_DDS_Amplitude_Control/DDS_inst/MultResA" type="array">
-      <obj_property name="ElementShortName">MultResA[31:0]</obj_property>
-      <obj_property name="ObjectShortName">MultResA[31:0]</obj_property>
-      <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
-      <obj_property name="CellHeight">100</obj_property>
-      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb_DDS_Amplitude_Control/DDS_inst/MultResB" type="array">
-      <obj_property name="ElementShortName">MultResB[31:0]</obj_property>
-      <obj_property name="ObjectShortName">MultResB[31:0]</obj_property>
-      <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
-      <obj_property name="CellHeight">100</obj_property>
-      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb_DDS_Amplitude_Control/AmplCntrlA" type="array">
-      <obj_property name="ElementShortName">AmplCntrlA[15:0]</obj_property>
-      <obj_property name="ObjectShortName">AmplCntrlA[15:0]</obj_property>
-      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb_DDS_Amplitude_Control/AmplCntrlB" type="array">
-      <obj_property name="ElementShortName">AmplCntrlB[15:0]</obj_property>
-      <obj_property name="ObjectShortName">AmplCntrlB[15:0]</obj_property>
-      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb_DDS_Amplitude_Control/DDS_inst/SampleMuxA" type="array">
-      <obj_property name="ElementShortName">SampleMuxA[15:0]</obj_property>
-      <obj_property name="ObjectShortName">SampleMuxA[15:0]</obj_property>
-      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb_DDS_Amplitude_Control/DDS_inst/SampleMuxB" type="array">
-      <obj_property name="ElementShortName">SampleMuxB[15:0]</obj_property>
-      <obj_property name="ObjectShortName">SampleMuxB[15:0]</obj_property>
-      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb_DDS_Amplitude_Control/DDS_inst/SampleMuxA_s" type="array">
-      <obj_property name="ElementShortName">SampleMuxA_s[15:0]</obj_property>
-      <obj_property name="ObjectShortName">SampleMuxA_s[15:0]</obj_property>
-      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb_DDS_Amplitude_Control/DDS_inst/SampleMuxB_s" type="array">
-      <obj_property name="ElementShortName">SampleMuxB_s[15:0]</obj_property>
-      <obj_property name="ObjectShortName">SampleMuxB_s[15:0]</obj_property>
-      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb_DDS_Amplitude_Control/DDS_inst/MultResA" type="array">
-      <obj_property name="ElementShortName">MultResA[31:0]</obj_property>
-      <obj_property name="ObjectShortName">MultResA[31:0]</obj_property>
-      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb_DDS_Amplitude_Control/DDS_inst/MultResB" type="array">
-      <obj_property name="ElementShortName">MultResB[31:0]</obj_property>
-      <obj_property name="ObjectShortName">MultResB[31:0]</obj_property>
-      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb_DDS_Amplitude_Control/DDS_inst/SampleOutA" type="array">
-      <obj_property name="ElementShortName">SampleOutA[15:0]</obj_property>
-      <obj_property name="ObjectShortName">SampleOutA[15:0]</obj_property>
-      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb_DDS_Amplitude_Control/DDS_inst/SampleOutB" type="array">
-      <obj_property name="ElementShortName">SampleOutB[15:0]</obj_property>
-      <obj_property name="ObjectShortName">SampleOutB[15:0]</obj_property>
-      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb_DDS_Amplitude_Control/DDS_inst/SampleOutA" type="array">
-      <obj_property name="ElementShortName">SampleOutA[15:0]</obj_property>
-      <obj_property name="ObjectShortName">SampleOutA[15:0]</obj_property>
-      <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
-      <obj_property name="CellHeight">100</obj_property>
-      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb_DDS_Amplitude_Control/DDS_inst/SampleOutB" type="array">
-      <obj_property name="ElementShortName">SampleOutB[15:0]</obj_property>
-      <obj_property name="ObjectShortName">SampleOutB[15:0]</obj_property>
-      <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
-      <obj_property name="CellHeight">100</obj_property>
-      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   <wvobject fp_name="/tb_DDS_Amplitude_Control/AddrWidth" type="array">
+      <obj_property name="ElementShortName">AddrWidth[31:0]</obj_property>
+      <obj_property name="ObjectShortName">AddrWidth[31:0]</obj_property>
    </wvobject>
 </wave_config>
