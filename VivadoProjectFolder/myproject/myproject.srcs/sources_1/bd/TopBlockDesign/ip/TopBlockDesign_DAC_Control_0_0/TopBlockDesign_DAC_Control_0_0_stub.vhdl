@@ -1,10 +1,10 @@
 -- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
--- Date        : Sun May 19 21:31:08 2019
+-- Date        : Sun May 26 22:20:54 2019
 -- Host        : ace-PC running 64-bit Service Pack 1  (build 7601)
--- Command     : write_vhdl -force -mode synth_stub -rename_top TopBlockDesign_DAC_Control_0_0 -prefix
---               TopBlockDesign_DAC_Control_0_0_ TopBlockDesign_DAC_Control_0_0_stub.vhdl
+-- Command     : write_vhdl -force -mode synth_stub
+--               d:/DIY/Radio_SW/VivadoProjectFolder/myproject/myproject.srcs/sources_1/bd/TopBlockDesign/ip/TopBlockDesign_DAC_Control_0_0/TopBlockDesign_DAC_Control_0_0_stub.vhdl
 -- Design      : TopBlockDesign_DAC_Control_0_0
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7z020clg484-1

@@ -17,7 +17,6 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
-set_msg_config -id {Common 17-41} -limit 10000000
 set_msg_config -id {HDL-1065} -limit 10000
 create_project -in_memory -part xc7z020clg484-1
 
@@ -35,12 +34,13 @@ set_property ip_repo_paths d:/DIY/Radio_SW/IP_Repo [current_project]
 update_ip_catalog
 set_property ip_output_repo d:/DIY/Radio_SW/VivadoProjectFolder/myproject/RadioFirmware.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
-read_verilog -library xil_defaultlib D:/DIY/Radio_SW/VivadoProjectFolder/myproject/myproject.srcs/sources_1/bd/TopBlockDesign/hdl/TopBlockDesign_wrapper.v
+read_verilog -library xil_defaultlib D:/DIY/Radio_SW/VivadoProjectFolder/myproject/myproject.srcs/sources_1/imports/hdl/TopBlockDesign_wrapper.v
 add_files D:/DIY/Radio_SW/VivadoProjectFolder/myproject/myproject.srcs/sources_1/bd/TopBlockDesign/TopBlockDesign.bd
 set_property used_in_implementation false [get_files -all d:/DIY/Radio_SW/VivadoProjectFolder/myproject/myproject.srcs/sources_1/bd/TopBlockDesign/ip/TopBlockDesign_axi_gpio_0_0/TopBlockDesign_axi_gpio_0_0_board.xdc]
 set_property used_in_implementation false [get_files -all d:/DIY/Radio_SW/VivadoProjectFolder/myproject/myproject.srcs/sources_1/bd/TopBlockDesign/ip/TopBlockDesign_axi_gpio_0_0/TopBlockDesign_axi_gpio_0_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all d:/DIY/Radio_SW/VivadoProjectFolder/myproject/myproject.srcs/sources_1/bd/TopBlockDesign/ip/TopBlockDesign_axi_gpio_0_0/TopBlockDesign_axi_gpio_0_0.xdc]
 set_property used_in_implementation false [get_files -all d:/DIY/Radio_SW/VivadoProjectFolder/myproject/myproject.srcs/sources_1/bd/TopBlockDesign/ip/TopBlockDesign_xbar_0/TopBlockDesign_xbar_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/DIY/Radio_SW/VivadoProjectFolder/myproject/myproject.srcs/sources_1/bd/TopBlockDesign/ip/TopBlockDesign_auto_pc_0/TopBlockDesign_auto_pc_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all d:/DIY/Radio_SW/VivadoProjectFolder/myproject/myproject.srcs/sources_1/bd/TopBlockDesign/ip/TopBlockDesign_clk_wiz_0_0/TopBlockDesign_clk_wiz_0_0_board.xdc]
 set_property used_in_implementation false [get_files -all d:/DIY/Radio_SW/VivadoProjectFolder/myproject/myproject.srcs/sources_1/bd/TopBlockDesign/ip/TopBlockDesign_clk_wiz_0_0/TopBlockDesign_clk_wiz_0_0.xdc]
 set_property used_in_implementation false [get_files -all d:/DIY/Radio_SW/VivadoProjectFolder/myproject/myproject.srcs/sources_1/bd/TopBlockDesign/ip/TopBlockDesign_clk_wiz_0_0/TopBlockDesign_clk_wiz_0_0_ooc.xdc]
@@ -48,7 +48,6 @@ set_property used_in_implementation false [get_files -all d:/DIY/Radio_SW/Vivado
 set_property used_in_implementation false [get_files -all d:/DIY/Radio_SW/VivadoProjectFolder/myproject/myproject.srcs/sources_1/bd/TopBlockDesign/ip/TopBlockDesign_proc_sys_reset_0_0/TopBlockDesign_proc_sys_reset_0_0.xdc]
 set_property used_in_implementation false [get_files -all d:/DIY/Radio_SW/VivadoProjectFolder/myproject/myproject.srcs/sources_1/bd/TopBlockDesign/ip/TopBlockDesign_proc_sys_reset_0_0/TopBlockDesign_proc_sys_reset_0_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all d:/DIY/Radio_SW/VivadoProjectFolder/myproject/myproject.srcs/sources_1/bd/TopBlockDesign/ip/TopBlockDesign_processing_system7_0_0/TopBlockDesign_processing_system7_0_0.xdc]
-set_property used_in_implementation false [get_files -all d:/DIY/Radio_SW/VivadoProjectFolder/myproject/myproject.srcs/sources_1/bd/TopBlockDesign/ip/TopBlockDesign_auto_pc_0/TopBlockDesign_auto_pc_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all D:/DIY/Radio_SW/VivadoProjectFolder/myproject/myproject.srcs/sources_1/bd/TopBlockDesign/TopBlockDesign_ooc.xdc]
 
 # Mark all dcp files as not used in implementation to prevent them from being

@@ -1,10 +1,10 @@
 -- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
--- Date        : Sun May 19 21:31:09 2019
+-- Date        : Sun May 26 22:20:54 2019
 -- Host        : ace-PC running 64-bit Service Pack 1  (build 7601)
--- Command     : write_vhdl -force -mode funcsim -rename_top TopBlockDesign_DAC_Control_0_0 -prefix
---               TopBlockDesign_DAC_Control_0_0_ TopBlockDesign_DAC_Control_0_0_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim
+--               d:/DIY/Radio_SW/VivadoProjectFolder/myproject/myproject.srcs/sources_1/bd/TopBlockDesign/ip/TopBlockDesign_DAC_Control_0_0/TopBlockDesign_DAC_Control_0_0_sim_netlist.vhdl
 -- Design      : TopBlockDesign_DAC_Control_0_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -36,6 +36,8 @@ entity TopBlockDesign_DAC_Control_0_0_DAC_Control_v1_0_S00_AXI is
     s00_axi_bready : in STD_LOGIC;
     s00_axi_rready : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of TopBlockDesign_DAC_Control_0_0_DAC_Control_v1_0_S00_AXI : entity is "DAC_Control_v1_0_S00_AXI";
 end TopBlockDesign_DAC_Control_0_0_DAC_Control_v1_0_S00_AXI;
 
 architecture STRUCTURE of TopBlockDesign_DAC_Control_0_0_DAC_Control_v1_0_S00_AXI is
@@ -2217,6 +2219,8 @@ entity TopBlockDesign_DAC_Control_0_0_DAC_Control_v1_0 is
     s00_axi_bready : in STD_LOGIC;
     s00_axi_rready : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of TopBlockDesign_DAC_Control_0_0_DAC_Control_v1_0 : entity is "DAC_Control_v1_0";
 end TopBlockDesign_DAC_Control_0_0_DAC_Control_v1_0;
 
 architecture STRUCTURE of TopBlockDesign_DAC_Control_0_0_DAC_Control_v1_0 is

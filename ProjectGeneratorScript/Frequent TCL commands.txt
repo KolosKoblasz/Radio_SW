@@ -1,2 +1,9 @@
 cd D:/DIY/Radio_SW/VivadoProjectFolder
 source build.tcl
+
+cd ..
+cd BlockDesign
+write_bd_tcl -force -include_layout TopBlockDesign.tcl
+cd ..
+cd VivadoProjectFolder
+pwd
