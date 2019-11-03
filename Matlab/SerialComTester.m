@@ -9,7 +9,8 @@ Gizmo.Configure_DDS_LUT('Path');
 Gizmo.SetDDS_Freq(1);
 Gizmo.SetDDS_Phase_A(0);
 Gizmo.SetDDS_Ampl_A(1);
-Gizmo.DDS_SelectDataPath(0);%1:DDS,0:DirectValue
+Gizmo.DDS_SelectDataPath(1)%1:DDS,0:DirectValue
+Gizmo.SetDirectValue('0000')
 Gizmo.DDS_Enable();
 
 Mode = 0;
@@ -18,4 +19,4 @@ Gizmo.Config_DAC(Mode, Sleep)
 
 
 
-Gizmo.CloseSerialPort;
+%Gizmo.CloseSerialPort;

@@ -1,7 +1,7 @@
 -- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
--- Date        : Sun May 26 22:21:03 2019
+-- Date        : Sun Nov  3 17:08:07 2019
 -- Host        : ace-PC running 64-bit Service Pack 1  (build 7601)
 -- Command     : write_vhdl -force -mode funcsim -rename_top decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix -prefix
 --               decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ TopBlockDesign_DDS_0_0_sim_netlist.vhdl
@@ -16,9 +16,7 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_DualPortBRAM is
   port (
-    RSTP : out STD_LOGIC;
     RAM_Data : out STD_LOGIC_VECTOR ( 15 downto 0 );
-    rst_n : in STD_LOGIC;
     AXI_clk : in STD_LOGIC;
     DAC_clk : in STD_LOGIC;
     LUTAddress : in STD_LOGIC_VECTOR ( 15 downto 0 );
@@ -64,7 +62,6 @@ architecture STRUCTURE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_DualPortBRAM
   signal RAM_reg_0_8_n_1 : STD_LOGIC;
   signal RAM_reg_0_9_n_0 : STD_LOGIC;
   signal RAM_reg_0_9_n_1 : STD_LOGIC;
-  signal \^rstp\ : STD_LOGIC;
   signal NLW_RAM_reg_0_0_DBITERR_UNCONNECTED : STD_LOGIC;
   signal NLW_RAM_reg_0_0_INJECTDBITERR_UNCONNECTED : STD_LOGIC;
   signal NLW_RAM_reg_0_0_INJECTSBITERR_UNCONNECTED : STD_LOGIC;
@@ -704,7 +701,7 @@ architecture STRUCTURE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_DualPortBRAM
   attribute ram_slice_end of RAM_reg_0_9 : label is 9;
   attribute \MEM.PORTA.DATA_BIT_LAYOUT\ of RAM_reg_1_0 : label is "p0_d1";
   attribute \MEM.PORTB.DATA_BIT_LAYOUT\ of RAM_reg_1_0 : label is "p0_d1";
-  attribute METHODOLOGY_DRC_VIOS of RAM_reg_1_0 : label is "";
+  attribute METHODOLOGY_DRC_VIOS of RAM_reg_1_0 : label is "{SYNTH-6 {cell *THIS*}}";
   attribute RTL_RAM_BITS of RAM_reg_1_0 : label is 1048576;
   attribute RTL_RAM_NAME of RAM_reg_1_0 : label is "RAM";
   attribute bram_addr_begin of RAM_reg_1_0 : label is 32768;
@@ -717,7 +714,7 @@ architecture STRUCTURE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_DualPortBRAM
   attribute ram_slice_end of RAM_reg_1_0 : label is 0;
   attribute \MEM.PORTA.DATA_BIT_LAYOUT\ of RAM_reg_1_1 : label is "p0_d1";
   attribute \MEM.PORTB.DATA_BIT_LAYOUT\ of RAM_reg_1_1 : label is "p0_d1";
-  attribute METHODOLOGY_DRC_VIOS of RAM_reg_1_1 : label is "";
+  attribute METHODOLOGY_DRC_VIOS of RAM_reg_1_1 : label is "{SYNTH-6 {cell *THIS*}}";
   attribute RTL_RAM_BITS of RAM_reg_1_1 : label is 1048576;
   attribute RTL_RAM_NAME of RAM_reg_1_1 : label is "RAM";
   attribute bram_addr_begin of RAM_reg_1_1 : label is 32768;
@@ -730,7 +727,7 @@ architecture STRUCTURE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_DualPortBRAM
   attribute ram_slice_end of RAM_reg_1_1 : label is 1;
   attribute \MEM.PORTA.DATA_BIT_LAYOUT\ of RAM_reg_1_10 : label is "p0_d1";
   attribute \MEM.PORTB.DATA_BIT_LAYOUT\ of RAM_reg_1_10 : label is "p0_d1";
-  attribute METHODOLOGY_DRC_VIOS of RAM_reg_1_10 : label is "";
+  attribute METHODOLOGY_DRC_VIOS of RAM_reg_1_10 : label is "{SYNTH-6 {cell *THIS*}}";
   attribute RTL_RAM_BITS of RAM_reg_1_10 : label is 1048576;
   attribute RTL_RAM_NAME of RAM_reg_1_10 : label is "RAM";
   attribute bram_addr_begin of RAM_reg_1_10 : label is 32768;
@@ -743,7 +740,7 @@ architecture STRUCTURE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_DualPortBRAM
   attribute ram_slice_end of RAM_reg_1_10 : label is 10;
   attribute \MEM.PORTA.DATA_BIT_LAYOUT\ of RAM_reg_1_11 : label is "p0_d1";
   attribute \MEM.PORTB.DATA_BIT_LAYOUT\ of RAM_reg_1_11 : label is "p0_d1";
-  attribute METHODOLOGY_DRC_VIOS of RAM_reg_1_11 : label is "";
+  attribute METHODOLOGY_DRC_VIOS of RAM_reg_1_11 : label is "{SYNTH-6 {cell *THIS*}}";
   attribute RTL_RAM_BITS of RAM_reg_1_11 : label is 1048576;
   attribute RTL_RAM_NAME of RAM_reg_1_11 : label is "RAM";
   attribute bram_addr_begin of RAM_reg_1_11 : label is 32768;
@@ -756,7 +753,7 @@ architecture STRUCTURE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_DualPortBRAM
   attribute ram_slice_end of RAM_reg_1_11 : label is 11;
   attribute \MEM.PORTA.DATA_BIT_LAYOUT\ of RAM_reg_1_12 : label is "p0_d1";
   attribute \MEM.PORTB.DATA_BIT_LAYOUT\ of RAM_reg_1_12 : label is "p0_d1";
-  attribute METHODOLOGY_DRC_VIOS of RAM_reg_1_12 : label is "";
+  attribute METHODOLOGY_DRC_VIOS of RAM_reg_1_12 : label is "{SYNTH-6 {cell *THIS*}}";
   attribute RTL_RAM_BITS of RAM_reg_1_12 : label is 1048576;
   attribute RTL_RAM_NAME of RAM_reg_1_12 : label is "RAM";
   attribute bram_addr_begin of RAM_reg_1_12 : label is 32768;
@@ -769,7 +766,7 @@ architecture STRUCTURE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_DualPortBRAM
   attribute ram_slice_end of RAM_reg_1_12 : label is 12;
   attribute \MEM.PORTA.DATA_BIT_LAYOUT\ of RAM_reg_1_13 : label is "p0_d1";
   attribute \MEM.PORTB.DATA_BIT_LAYOUT\ of RAM_reg_1_13 : label is "p0_d1";
-  attribute METHODOLOGY_DRC_VIOS of RAM_reg_1_13 : label is "";
+  attribute METHODOLOGY_DRC_VIOS of RAM_reg_1_13 : label is "{SYNTH-6 {cell *THIS*}}";
   attribute RTL_RAM_BITS of RAM_reg_1_13 : label is 1048576;
   attribute RTL_RAM_NAME of RAM_reg_1_13 : label is "RAM";
   attribute bram_addr_begin of RAM_reg_1_13 : label is 32768;
@@ -782,7 +779,7 @@ architecture STRUCTURE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_DualPortBRAM
   attribute ram_slice_end of RAM_reg_1_13 : label is 13;
   attribute \MEM.PORTA.DATA_BIT_LAYOUT\ of RAM_reg_1_14 : label is "p0_d1";
   attribute \MEM.PORTB.DATA_BIT_LAYOUT\ of RAM_reg_1_14 : label is "p0_d1";
-  attribute METHODOLOGY_DRC_VIOS of RAM_reg_1_14 : label is "";
+  attribute METHODOLOGY_DRC_VIOS of RAM_reg_1_14 : label is "{SYNTH-6 {cell *THIS*}}";
   attribute RTL_RAM_BITS of RAM_reg_1_14 : label is 1048576;
   attribute RTL_RAM_NAME of RAM_reg_1_14 : label is "RAM";
   attribute bram_addr_begin of RAM_reg_1_14 : label is 32768;
@@ -795,7 +792,7 @@ architecture STRUCTURE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_DualPortBRAM
   attribute ram_slice_end of RAM_reg_1_14 : label is 14;
   attribute \MEM.PORTA.DATA_BIT_LAYOUT\ of RAM_reg_1_15 : label is "p0_d1";
   attribute \MEM.PORTB.DATA_BIT_LAYOUT\ of RAM_reg_1_15 : label is "p0_d1";
-  attribute METHODOLOGY_DRC_VIOS of RAM_reg_1_15 : label is "";
+  attribute METHODOLOGY_DRC_VIOS of RAM_reg_1_15 : label is "{SYNTH-6 {cell *THIS*}}";
   attribute RTL_RAM_BITS of RAM_reg_1_15 : label is 1048576;
   attribute RTL_RAM_NAME of RAM_reg_1_15 : label is "RAM";
   attribute bram_addr_begin of RAM_reg_1_15 : label is 32768;
@@ -808,7 +805,7 @@ architecture STRUCTURE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_DualPortBRAM
   attribute ram_slice_end of RAM_reg_1_15 : label is 15;
   attribute \MEM.PORTA.DATA_BIT_LAYOUT\ of RAM_reg_1_2 : label is "p0_d1";
   attribute \MEM.PORTB.DATA_BIT_LAYOUT\ of RAM_reg_1_2 : label is "p0_d1";
-  attribute METHODOLOGY_DRC_VIOS of RAM_reg_1_2 : label is "";
+  attribute METHODOLOGY_DRC_VIOS of RAM_reg_1_2 : label is "{SYNTH-6 {cell *THIS*}}";
   attribute RTL_RAM_BITS of RAM_reg_1_2 : label is 1048576;
   attribute RTL_RAM_NAME of RAM_reg_1_2 : label is "RAM";
   attribute bram_addr_begin of RAM_reg_1_2 : label is 32768;
@@ -821,7 +818,7 @@ architecture STRUCTURE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_DualPortBRAM
   attribute ram_slice_end of RAM_reg_1_2 : label is 2;
   attribute \MEM.PORTA.DATA_BIT_LAYOUT\ of RAM_reg_1_3 : label is "p0_d1";
   attribute \MEM.PORTB.DATA_BIT_LAYOUT\ of RAM_reg_1_3 : label is "p0_d1";
-  attribute METHODOLOGY_DRC_VIOS of RAM_reg_1_3 : label is "";
+  attribute METHODOLOGY_DRC_VIOS of RAM_reg_1_3 : label is "{SYNTH-6 {cell *THIS*}}";
   attribute RTL_RAM_BITS of RAM_reg_1_3 : label is 1048576;
   attribute RTL_RAM_NAME of RAM_reg_1_3 : label is "RAM";
   attribute bram_addr_begin of RAM_reg_1_3 : label is 32768;
@@ -834,7 +831,7 @@ architecture STRUCTURE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_DualPortBRAM
   attribute ram_slice_end of RAM_reg_1_3 : label is 3;
   attribute \MEM.PORTA.DATA_BIT_LAYOUT\ of RAM_reg_1_4 : label is "p0_d1";
   attribute \MEM.PORTB.DATA_BIT_LAYOUT\ of RAM_reg_1_4 : label is "p0_d1";
-  attribute METHODOLOGY_DRC_VIOS of RAM_reg_1_4 : label is "";
+  attribute METHODOLOGY_DRC_VIOS of RAM_reg_1_4 : label is "{SYNTH-6 {cell *THIS*}}";
   attribute RTL_RAM_BITS of RAM_reg_1_4 : label is 1048576;
   attribute RTL_RAM_NAME of RAM_reg_1_4 : label is "RAM";
   attribute bram_addr_begin of RAM_reg_1_4 : label is 32768;
@@ -847,7 +844,7 @@ architecture STRUCTURE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_DualPortBRAM
   attribute ram_slice_end of RAM_reg_1_4 : label is 4;
   attribute \MEM.PORTA.DATA_BIT_LAYOUT\ of RAM_reg_1_5 : label is "p0_d1";
   attribute \MEM.PORTB.DATA_BIT_LAYOUT\ of RAM_reg_1_5 : label is "p0_d1";
-  attribute METHODOLOGY_DRC_VIOS of RAM_reg_1_5 : label is "";
+  attribute METHODOLOGY_DRC_VIOS of RAM_reg_1_5 : label is "{SYNTH-6 {cell *THIS*}}";
   attribute RTL_RAM_BITS of RAM_reg_1_5 : label is 1048576;
   attribute RTL_RAM_NAME of RAM_reg_1_5 : label is "RAM";
   attribute bram_addr_begin of RAM_reg_1_5 : label is 32768;
@@ -860,7 +857,7 @@ architecture STRUCTURE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_DualPortBRAM
   attribute ram_slice_end of RAM_reg_1_5 : label is 5;
   attribute \MEM.PORTA.DATA_BIT_LAYOUT\ of RAM_reg_1_6 : label is "p0_d1";
   attribute \MEM.PORTB.DATA_BIT_LAYOUT\ of RAM_reg_1_6 : label is "p0_d1";
-  attribute METHODOLOGY_DRC_VIOS of RAM_reg_1_6 : label is "";
+  attribute METHODOLOGY_DRC_VIOS of RAM_reg_1_6 : label is "{SYNTH-6 {cell *THIS*}}";
   attribute RTL_RAM_BITS of RAM_reg_1_6 : label is 1048576;
   attribute RTL_RAM_NAME of RAM_reg_1_6 : label is "RAM";
   attribute bram_addr_begin of RAM_reg_1_6 : label is 32768;
@@ -873,7 +870,7 @@ architecture STRUCTURE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_DualPortBRAM
   attribute ram_slice_end of RAM_reg_1_6 : label is 6;
   attribute \MEM.PORTA.DATA_BIT_LAYOUT\ of RAM_reg_1_7 : label is "p0_d1";
   attribute \MEM.PORTB.DATA_BIT_LAYOUT\ of RAM_reg_1_7 : label is "p0_d1";
-  attribute METHODOLOGY_DRC_VIOS of RAM_reg_1_7 : label is "";
+  attribute METHODOLOGY_DRC_VIOS of RAM_reg_1_7 : label is "{SYNTH-6 {cell *THIS*}}";
   attribute RTL_RAM_BITS of RAM_reg_1_7 : label is 1048576;
   attribute RTL_RAM_NAME of RAM_reg_1_7 : label is "RAM";
   attribute bram_addr_begin of RAM_reg_1_7 : label is 32768;
@@ -886,7 +883,7 @@ architecture STRUCTURE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_DualPortBRAM
   attribute ram_slice_end of RAM_reg_1_7 : label is 7;
   attribute \MEM.PORTA.DATA_BIT_LAYOUT\ of RAM_reg_1_8 : label is "p0_d1";
   attribute \MEM.PORTB.DATA_BIT_LAYOUT\ of RAM_reg_1_8 : label is "p0_d1";
-  attribute METHODOLOGY_DRC_VIOS of RAM_reg_1_8 : label is "";
+  attribute METHODOLOGY_DRC_VIOS of RAM_reg_1_8 : label is "{SYNTH-6 {cell *THIS*}}";
   attribute RTL_RAM_BITS of RAM_reg_1_8 : label is 1048576;
   attribute RTL_RAM_NAME of RAM_reg_1_8 : label is "RAM";
   attribute bram_addr_begin of RAM_reg_1_8 : label is 32768;
@@ -899,7 +896,7 @@ architecture STRUCTURE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_DualPortBRAM
   attribute ram_slice_end of RAM_reg_1_8 : label is 8;
   attribute \MEM.PORTA.DATA_BIT_LAYOUT\ of RAM_reg_1_9 : label is "p0_d1";
   attribute \MEM.PORTB.DATA_BIT_LAYOUT\ of RAM_reg_1_9 : label is "p0_d1";
-  attribute METHODOLOGY_DRC_VIOS of RAM_reg_1_9 : label is "";
+  attribute METHODOLOGY_DRC_VIOS of RAM_reg_1_9 : label is "{SYNTH-6 {cell *THIS*}}";
   attribute RTL_RAM_BITS of RAM_reg_1_9 : label is 1048576;
   attribute RTL_RAM_NAME of RAM_reg_1_9 : label is "RAM";
   attribute bram_addr_begin of RAM_reg_1_9 : label is 32768;
@@ -911,19 +908,10 @@ architecture STRUCTURE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_DualPortBRAM
   attribute ram_slice_begin of RAM_reg_1_9 : label is 9;
   attribute ram_slice_end of RAM_reg_1_9 : label is 9;
 begin
-  RSTP <= \^rstp\;
-MultRes_reg_i_1: unisim.vcomponents.LUT1
-    generic map(
-      INIT => X"1"
-    )
-        port map (
-      I0 => rst_n,
-      O => \^rstp\
-    );
 RAM_reg_0_0: unisim.vcomponents.RAMB36E1
     generic map(
       DOA_REG => 0,
-      DOB_REG => 1,
+      DOB_REG => 0,
       EN_ECC_READ => false,
       EN_ECC_WRITE => false,
       INITP_00 => X"0000000000000000000000000000000000000000000000000000000000000000",
@@ -1117,11 +1105,11 @@ RAM_reg_0_0: unisim.vcomponents.RAMB36E1
       INJECTSBITERR => NLW_RAM_reg_0_0_INJECTSBITERR_UNCONNECTED,
       RDADDRECC(8 downto 0) => NLW_RAM_reg_0_0_RDADDRECC_UNCONNECTED(8 downto 0),
       REGCEAREGCE => '0',
-      REGCEB => '1',
+      REGCEB => '0',
       RSTRAMARSTRAM => '0',
       RSTRAMB => '0',
       RSTREGARSTREG => '0',
-      RSTREGB => \^rstp\,
+      RSTREGB => '0',
       SBITERR => NLW_RAM_reg_0_0_SBITERR_UNCONNECTED,
       WEA(3) => LUTWriteEn,
       WEA(2) => LUTWriteEn,
@@ -1132,7 +1120,7 @@ RAM_reg_0_0: unisim.vcomponents.RAMB36E1
 RAM_reg_0_1: unisim.vcomponents.RAMB36E1
     generic map(
       DOA_REG => 0,
-      DOB_REG => 1,
+      DOB_REG => 0,
       EN_ECC_READ => false,
       EN_ECC_WRITE => false,
       INITP_00 => X"0000000000000000000000000000000000000000000000000000000000000000",
@@ -1326,11 +1314,11 @@ RAM_reg_0_1: unisim.vcomponents.RAMB36E1
       INJECTSBITERR => NLW_RAM_reg_0_1_INJECTSBITERR_UNCONNECTED,
       RDADDRECC(8 downto 0) => NLW_RAM_reg_0_1_RDADDRECC_UNCONNECTED(8 downto 0),
       REGCEAREGCE => '0',
-      REGCEB => '1',
+      REGCEB => '0',
       RSTRAMARSTRAM => '0',
       RSTRAMB => '0',
       RSTREGARSTREG => '0',
-      RSTREGB => \^rstp\,
+      RSTREGB => '0',
       SBITERR => NLW_RAM_reg_0_1_SBITERR_UNCONNECTED,
       WEA(3) => LUTWriteEn,
       WEA(2) => LUTWriteEn,
@@ -1341,7 +1329,7 @@ RAM_reg_0_1: unisim.vcomponents.RAMB36E1
 RAM_reg_0_10: unisim.vcomponents.RAMB36E1
     generic map(
       DOA_REG => 0,
-      DOB_REG => 1,
+      DOB_REG => 0,
       EN_ECC_READ => false,
       EN_ECC_WRITE => false,
       INITP_00 => X"0000000000000000000000000000000000000000000000000000000000000000",
@@ -1535,11 +1523,11 @@ RAM_reg_0_10: unisim.vcomponents.RAMB36E1
       INJECTSBITERR => NLW_RAM_reg_0_10_INJECTSBITERR_UNCONNECTED,
       RDADDRECC(8 downto 0) => NLW_RAM_reg_0_10_RDADDRECC_UNCONNECTED(8 downto 0),
       REGCEAREGCE => '0',
-      REGCEB => '1',
+      REGCEB => '0',
       RSTRAMARSTRAM => '0',
       RSTRAMB => '0',
       RSTREGARSTREG => '0',
-      RSTREGB => \^rstp\,
+      RSTREGB => '0',
       SBITERR => NLW_RAM_reg_0_10_SBITERR_UNCONNECTED,
       WEA(3) => LUTWriteEn,
       WEA(2) => LUTWriteEn,
@@ -1550,7 +1538,7 @@ RAM_reg_0_10: unisim.vcomponents.RAMB36E1
 RAM_reg_0_11: unisim.vcomponents.RAMB36E1
     generic map(
       DOA_REG => 0,
-      DOB_REG => 1,
+      DOB_REG => 0,
       EN_ECC_READ => false,
       EN_ECC_WRITE => false,
       INITP_00 => X"0000000000000000000000000000000000000000000000000000000000000000",
@@ -1744,11 +1732,11 @@ RAM_reg_0_11: unisim.vcomponents.RAMB36E1
       INJECTSBITERR => NLW_RAM_reg_0_11_INJECTSBITERR_UNCONNECTED,
       RDADDRECC(8 downto 0) => NLW_RAM_reg_0_11_RDADDRECC_UNCONNECTED(8 downto 0),
       REGCEAREGCE => '0',
-      REGCEB => '1',
+      REGCEB => '0',
       RSTRAMARSTRAM => '0',
       RSTRAMB => '0',
       RSTREGARSTREG => '0',
-      RSTREGB => \^rstp\,
+      RSTREGB => '0',
       SBITERR => NLW_RAM_reg_0_11_SBITERR_UNCONNECTED,
       WEA(3) => LUTWriteEn,
       WEA(2) => LUTWriteEn,
@@ -1759,7 +1747,7 @@ RAM_reg_0_11: unisim.vcomponents.RAMB36E1
 RAM_reg_0_12: unisim.vcomponents.RAMB36E1
     generic map(
       DOA_REG => 0,
-      DOB_REG => 1,
+      DOB_REG => 0,
       EN_ECC_READ => false,
       EN_ECC_WRITE => false,
       INITP_00 => X"0000000000000000000000000000000000000000000000000000000000000000",
@@ -1953,11 +1941,11 @@ RAM_reg_0_12: unisim.vcomponents.RAMB36E1
       INJECTSBITERR => NLW_RAM_reg_0_12_INJECTSBITERR_UNCONNECTED,
       RDADDRECC(8 downto 0) => NLW_RAM_reg_0_12_RDADDRECC_UNCONNECTED(8 downto 0),
       REGCEAREGCE => '0',
-      REGCEB => '1',
+      REGCEB => '0',
       RSTRAMARSTRAM => '0',
       RSTRAMB => '0',
       RSTREGARSTREG => '0',
-      RSTREGB => \^rstp\,
+      RSTREGB => '0',
       SBITERR => NLW_RAM_reg_0_12_SBITERR_UNCONNECTED,
       WEA(3) => LUTWriteEn,
       WEA(2) => LUTWriteEn,
@@ -1968,7 +1956,7 @@ RAM_reg_0_12: unisim.vcomponents.RAMB36E1
 RAM_reg_0_13: unisim.vcomponents.RAMB36E1
     generic map(
       DOA_REG => 0,
-      DOB_REG => 1,
+      DOB_REG => 0,
       EN_ECC_READ => false,
       EN_ECC_WRITE => false,
       INITP_00 => X"0000000000000000000000000000000000000000000000000000000000000000",
@@ -2162,11 +2150,11 @@ RAM_reg_0_13: unisim.vcomponents.RAMB36E1
       INJECTSBITERR => NLW_RAM_reg_0_13_INJECTSBITERR_UNCONNECTED,
       RDADDRECC(8 downto 0) => NLW_RAM_reg_0_13_RDADDRECC_UNCONNECTED(8 downto 0),
       REGCEAREGCE => '0',
-      REGCEB => '1',
+      REGCEB => '0',
       RSTRAMARSTRAM => '0',
       RSTRAMB => '0',
       RSTREGARSTREG => '0',
-      RSTREGB => \^rstp\,
+      RSTREGB => '0',
       SBITERR => NLW_RAM_reg_0_13_SBITERR_UNCONNECTED,
       WEA(3) => LUTWriteEn,
       WEA(2) => LUTWriteEn,
@@ -2177,7 +2165,7 @@ RAM_reg_0_13: unisim.vcomponents.RAMB36E1
 RAM_reg_0_14: unisim.vcomponents.RAMB36E1
     generic map(
       DOA_REG => 0,
-      DOB_REG => 1,
+      DOB_REG => 0,
       EN_ECC_READ => false,
       EN_ECC_WRITE => false,
       INITP_00 => X"0000000000000000000000000000000000000000000000000000000000000000",
@@ -2371,11 +2359,11 @@ RAM_reg_0_14: unisim.vcomponents.RAMB36E1
       INJECTSBITERR => NLW_RAM_reg_0_14_INJECTSBITERR_UNCONNECTED,
       RDADDRECC(8 downto 0) => NLW_RAM_reg_0_14_RDADDRECC_UNCONNECTED(8 downto 0),
       REGCEAREGCE => '0',
-      REGCEB => '1',
+      REGCEB => '0',
       RSTRAMARSTRAM => '0',
       RSTRAMB => '0',
       RSTREGARSTREG => '0',
-      RSTREGB => \^rstp\,
+      RSTREGB => '0',
       SBITERR => NLW_RAM_reg_0_14_SBITERR_UNCONNECTED,
       WEA(3) => LUTWriteEn,
       WEA(2) => LUTWriteEn,
@@ -2386,7 +2374,7 @@ RAM_reg_0_14: unisim.vcomponents.RAMB36E1
 RAM_reg_0_15: unisim.vcomponents.RAMB36E1
     generic map(
       DOA_REG => 0,
-      DOB_REG => 1,
+      DOB_REG => 0,
       EN_ECC_READ => false,
       EN_ECC_WRITE => false,
       INITP_00 => X"0000000000000000000000000000000000000000000000000000000000000000",
@@ -2580,11 +2568,11 @@ RAM_reg_0_15: unisim.vcomponents.RAMB36E1
       INJECTSBITERR => NLW_RAM_reg_0_15_INJECTSBITERR_UNCONNECTED,
       RDADDRECC(8 downto 0) => NLW_RAM_reg_0_15_RDADDRECC_UNCONNECTED(8 downto 0),
       REGCEAREGCE => '0',
-      REGCEB => '1',
+      REGCEB => '0',
       RSTRAMARSTRAM => '0',
       RSTRAMB => '0',
       RSTREGARSTREG => '0',
-      RSTREGB => \^rstp\,
+      RSTREGB => '0',
       SBITERR => NLW_RAM_reg_0_15_SBITERR_UNCONNECTED,
       WEA(3) => LUTWriteEn,
       WEA(2) => LUTWriteEn,
@@ -2595,7 +2583,7 @@ RAM_reg_0_15: unisim.vcomponents.RAMB36E1
 RAM_reg_0_2: unisim.vcomponents.RAMB36E1
     generic map(
       DOA_REG => 0,
-      DOB_REG => 1,
+      DOB_REG => 0,
       EN_ECC_READ => false,
       EN_ECC_WRITE => false,
       INITP_00 => X"0000000000000000000000000000000000000000000000000000000000000000",
@@ -2789,11 +2777,11 @@ RAM_reg_0_2: unisim.vcomponents.RAMB36E1
       INJECTSBITERR => NLW_RAM_reg_0_2_INJECTSBITERR_UNCONNECTED,
       RDADDRECC(8 downto 0) => NLW_RAM_reg_0_2_RDADDRECC_UNCONNECTED(8 downto 0),
       REGCEAREGCE => '0',
-      REGCEB => '1',
+      REGCEB => '0',
       RSTRAMARSTRAM => '0',
       RSTRAMB => '0',
       RSTREGARSTREG => '0',
-      RSTREGB => \^rstp\,
+      RSTREGB => '0',
       SBITERR => NLW_RAM_reg_0_2_SBITERR_UNCONNECTED,
       WEA(3) => LUTWriteEn,
       WEA(2) => LUTWriteEn,
@@ -2804,7 +2792,7 @@ RAM_reg_0_2: unisim.vcomponents.RAMB36E1
 RAM_reg_0_3: unisim.vcomponents.RAMB36E1
     generic map(
       DOA_REG => 0,
-      DOB_REG => 1,
+      DOB_REG => 0,
       EN_ECC_READ => false,
       EN_ECC_WRITE => false,
       INITP_00 => X"0000000000000000000000000000000000000000000000000000000000000000",
@@ -2998,11 +2986,11 @@ RAM_reg_0_3: unisim.vcomponents.RAMB36E1
       INJECTSBITERR => NLW_RAM_reg_0_3_INJECTSBITERR_UNCONNECTED,
       RDADDRECC(8 downto 0) => NLW_RAM_reg_0_3_RDADDRECC_UNCONNECTED(8 downto 0),
       REGCEAREGCE => '0',
-      REGCEB => '1',
+      REGCEB => '0',
       RSTRAMARSTRAM => '0',
       RSTRAMB => '0',
       RSTREGARSTREG => '0',
-      RSTREGB => \^rstp\,
+      RSTREGB => '0',
       SBITERR => NLW_RAM_reg_0_3_SBITERR_UNCONNECTED,
       WEA(3) => LUTWriteEn,
       WEA(2) => LUTWriteEn,
@@ -3013,7 +3001,7 @@ RAM_reg_0_3: unisim.vcomponents.RAMB36E1
 RAM_reg_0_4: unisim.vcomponents.RAMB36E1
     generic map(
       DOA_REG => 0,
-      DOB_REG => 1,
+      DOB_REG => 0,
       EN_ECC_READ => false,
       EN_ECC_WRITE => false,
       INITP_00 => X"0000000000000000000000000000000000000000000000000000000000000000",
@@ -3207,11 +3195,11 @@ RAM_reg_0_4: unisim.vcomponents.RAMB36E1
       INJECTSBITERR => NLW_RAM_reg_0_4_INJECTSBITERR_UNCONNECTED,
       RDADDRECC(8 downto 0) => NLW_RAM_reg_0_4_RDADDRECC_UNCONNECTED(8 downto 0),
       REGCEAREGCE => '0',
-      REGCEB => '1',
+      REGCEB => '0',
       RSTRAMARSTRAM => '0',
       RSTRAMB => '0',
       RSTREGARSTREG => '0',
-      RSTREGB => \^rstp\,
+      RSTREGB => '0',
       SBITERR => NLW_RAM_reg_0_4_SBITERR_UNCONNECTED,
       WEA(3) => LUTWriteEn,
       WEA(2) => LUTWriteEn,
@@ -3222,7 +3210,7 @@ RAM_reg_0_4: unisim.vcomponents.RAMB36E1
 RAM_reg_0_5: unisim.vcomponents.RAMB36E1
     generic map(
       DOA_REG => 0,
-      DOB_REG => 1,
+      DOB_REG => 0,
       EN_ECC_READ => false,
       EN_ECC_WRITE => false,
       INITP_00 => X"0000000000000000000000000000000000000000000000000000000000000000",
@@ -3416,11 +3404,11 @@ RAM_reg_0_5: unisim.vcomponents.RAMB36E1
       INJECTSBITERR => NLW_RAM_reg_0_5_INJECTSBITERR_UNCONNECTED,
       RDADDRECC(8 downto 0) => NLW_RAM_reg_0_5_RDADDRECC_UNCONNECTED(8 downto 0),
       REGCEAREGCE => '0',
-      REGCEB => '1',
+      REGCEB => '0',
       RSTRAMARSTRAM => '0',
       RSTRAMB => '0',
       RSTREGARSTREG => '0',
-      RSTREGB => \^rstp\,
+      RSTREGB => '0',
       SBITERR => NLW_RAM_reg_0_5_SBITERR_UNCONNECTED,
       WEA(3) => LUTWriteEn,
       WEA(2) => LUTWriteEn,
@@ -3431,7 +3419,7 @@ RAM_reg_0_5: unisim.vcomponents.RAMB36E1
 RAM_reg_0_6: unisim.vcomponents.RAMB36E1
     generic map(
       DOA_REG => 0,
-      DOB_REG => 1,
+      DOB_REG => 0,
       EN_ECC_READ => false,
       EN_ECC_WRITE => false,
       INITP_00 => X"0000000000000000000000000000000000000000000000000000000000000000",
@@ -3625,11 +3613,11 @@ RAM_reg_0_6: unisim.vcomponents.RAMB36E1
       INJECTSBITERR => NLW_RAM_reg_0_6_INJECTSBITERR_UNCONNECTED,
       RDADDRECC(8 downto 0) => NLW_RAM_reg_0_6_RDADDRECC_UNCONNECTED(8 downto 0),
       REGCEAREGCE => '0',
-      REGCEB => '1',
+      REGCEB => '0',
       RSTRAMARSTRAM => '0',
       RSTRAMB => '0',
       RSTREGARSTREG => '0',
-      RSTREGB => \^rstp\,
+      RSTREGB => '0',
       SBITERR => NLW_RAM_reg_0_6_SBITERR_UNCONNECTED,
       WEA(3) => LUTWriteEn,
       WEA(2) => LUTWriteEn,
@@ -3640,7 +3628,7 @@ RAM_reg_0_6: unisim.vcomponents.RAMB36E1
 RAM_reg_0_7: unisim.vcomponents.RAMB36E1
     generic map(
       DOA_REG => 0,
-      DOB_REG => 1,
+      DOB_REG => 0,
       EN_ECC_READ => false,
       EN_ECC_WRITE => false,
       INITP_00 => X"0000000000000000000000000000000000000000000000000000000000000000",
@@ -3834,11 +3822,11 @@ RAM_reg_0_7: unisim.vcomponents.RAMB36E1
       INJECTSBITERR => NLW_RAM_reg_0_7_INJECTSBITERR_UNCONNECTED,
       RDADDRECC(8 downto 0) => NLW_RAM_reg_0_7_RDADDRECC_UNCONNECTED(8 downto 0),
       REGCEAREGCE => '0',
-      REGCEB => '1',
+      REGCEB => '0',
       RSTRAMARSTRAM => '0',
       RSTRAMB => '0',
       RSTREGARSTREG => '0',
-      RSTREGB => \^rstp\,
+      RSTREGB => '0',
       SBITERR => NLW_RAM_reg_0_7_SBITERR_UNCONNECTED,
       WEA(3) => LUTWriteEn,
       WEA(2) => LUTWriteEn,
@@ -3849,7 +3837,7 @@ RAM_reg_0_7: unisim.vcomponents.RAMB36E1
 RAM_reg_0_8: unisim.vcomponents.RAMB36E1
     generic map(
       DOA_REG => 0,
-      DOB_REG => 1,
+      DOB_REG => 0,
       EN_ECC_READ => false,
       EN_ECC_WRITE => false,
       INITP_00 => X"0000000000000000000000000000000000000000000000000000000000000000",
@@ -4043,11 +4031,11 @@ RAM_reg_0_8: unisim.vcomponents.RAMB36E1
       INJECTSBITERR => NLW_RAM_reg_0_8_INJECTSBITERR_UNCONNECTED,
       RDADDRECC(8 downto 0) => NLW_RAM_reg_0_8_RDADDRECC_UNCONNECTED(8 downto 0),
       REGCEAREGCE => '0',
-      REGCEB => '1',
+      REGCEB => '0',
       RSTRAMARSTRAM => '0',
       RSTRAMB => '0',
       RSTREGARSTREG => '0',
-      RSTREGB => \^rstp\,
+      RSTREGB => '0',
       SBITERR => NLW_RAM_reg_0_8_SBITERR_UNCONNECTED,
       WEA(3) => LUTWriteEn,
       WEA(2) => LUTWriteEn,
@@ -4058,7 +4046,7 @@ RAM_reg_0_8: unisim.vcomponents.RAMB36E1
 RAM_reg_0_9: unisim.vcomponents.RAMB36E1
     generic map(
       DOA_REG => 0,
-      DOB_REG => 1,
+      DOB_REG => 0,
       EN_ECC_READ => false,
       EN_ECC_WRITE => false,
       INITP_00 => X"0000000000000000000000000000000000000000000000000000000000000000",
@@ -4252,11 +4240,11 @@ RAM_reg_0_9: unisim.vcomponents.RAMB36E1
       INJECTSBITERR => NLW_RAM_reg_0_9_INJECTSBITERR_UNCONNECTED,
       RDADDRECC(8 downto 0) => NLW_RAM_reg_0_9_RDADDRECC_UNCONNECTED(8 downto 0),
       REGCEAREGCE => '0',
-      REGCEB => '1',
+      REGCEB => '0',
       RSTRAMARSTRAM => '0',
       RSTRAMB => '0',
       RSTREGARSTREG => '0',
-      RSTREGB => \^rstp\,
+      RSTREGB => '0',
       SBITERR => NLW_RAM_reg_0_9_SBITERR_UNCONNECTED,
       WEA(3) => LUTWriteEn,
       WEA(2) => LUTWriteEn,
@@ -4267,7 +4255,7 @@ RAM_reg_0_9: unisim.vcomponents.RAMB36E1
 RAM_reg_1_0: unisim.vcomponents.RAMB36E1
     generic map(
       DOA_REG => 0,
-      DOB_REG => 1,
+      DOB_REG => 0,
       EN_ECC_READ => false,
       EN_ECC_WRITE => false,
       INITP_00 => X"0000000000000000000000000000000000000000000000000000000000000000",
@@ -4462,11 +4450,11 @@ RAM_reg_1_0: unisim.vcomponents.RAMB36E1
       INJECTSBITERR => NLW_RAM_reg_1_0_INJECTSBITERR_UNCONNECTED,
       RDADDRECC(8 downto 0) => NLW_RAM_reg_1_0_RDADDRECC_UNCONNECTED(8 downto 0),
       REGCEAREGCE => '0',
-      REGCEB => '1',
+      REGCEB => '0',
       RSTRAMARSTRAM => '0',
       RSTRAMB => '0',
       RSTREGARSTREG => '0',
-      RSTREGB => \^rstp\,
+      RSTREGB => '0',
       SBITERR => NLW_RAM_reg_1_0_SBITERR_UNCONNECTED,
       WEA(3) => LUTWriteEn,
       WEA(2) => LUTWriteEn,
@@ -4477,7 +4465,7 @@ RAM_reg_1_0: unisim.vcomponents.RAMB36E1
 RAM_reg_1_1: unisim.vcomponents.RAMB36E1
     generic map(
       DOA_REG => 0,
-      DOB_REG => 1,
+      DOB_REG => 0,
       EN_ECC_READ => false,
       EN_ECC_WRITE => false,
       INITP_00 => X"0000000000000000000000000000000000000000000000000000000000000000",
@@ -4672,11 +4660,11 @@ RAM_reg_1_1: unisim.vcomponents.RAMB36E1
       INJECTSBITERR => NLW_RAM_reg_1_1_INJECTSBITERR_UNCONNECTED,
       RDADDRECC(8 downto 0) => NLW_RAM_reg_1_1_RDADDRECC_UNCONNECTED(8 downto 0),
       REGCEAREGCE => '0',
-      REGCEB => '1',
+      REGCEB => '0',
       RSTRAMARSTRAM => '0',
       RSTRAMB => '0',
       RSTREGARSTREG => '0',
-      RSTREGB => \^rstp\,
+      RSTREGB => '0',
       SBITERR => NLW_RAM_reg_1_1_SBITERR_UNCONNECTED,
       WEA(3) => LUTWriteEn,
       WEA(2) => LUTWriteEn,
@@ -4687,7 +4675,7 @@ RAM_reg_1_1: unisim.vcomponents.RAMB36E1
 RAM_reg_1_10: unisim.vcomponents.RAMB36E1
     generic map(
       DOA_REG => 0,
-      DOB_REG => 1,
+      DOB_REG => 0,
       EN_ECC_READ => false,
       EN_ECC_WRITE => false,
       INITP_00 => X"0000000000000000000000000000000000000000000000000000000000000000",
@@ -4882,11 +4870,11 @@ RAM_reg_1_10: unisim.vcomponents.RAMB36E1
       INJECTSBITERR => NLW_RAM_reg_1_10_INJECTSBITERR_UNCONNECTED,
       RDADDRECC(8 downto 0) => NLW_RAM_reg_1_10_RDADDRECC_UNCONNECTED(8 downto 0),
       REGCEAREGCE => '0',
-      REGCEB => '1',
+      REGCEB => '0',
       RSTRAMARSTRAM => '0',
       RSTRAMB => '0',
       RSTREGARSTREG => '0',
-      RSTREGB => \^rstp\,
+      RSTREGB => '0',
       SBITERR => NLW_RAM_reg_1_10_SBITERR_UNCONNECTED,
       WEA(3) => LUTWriteEn,
       WEA(2) => LUTWriteEn,
@@ -4897,7 +4885,7 @@ RAM_reg_1_10: unisim.vcomponents.RAMB36E1
 RAM_reg_1_11: unisim.vcomponents.RAMB36E1
     generic map(
       DOA_REG => 0,
-      DOB_REG => 1,
+      DOB_REG => 0,
       EN_ECC_READ => false,
       EN_ECC_WRITE => false,
       INITP_00 => X"0000000000000000000000000000000000000000000000000000000000000000",
@@ -5092,11 +5080,11 @@ RAM_reg_1_11: unisim.vcomponents.RAMB36E1
       INJECTSBITERR => NLW_RAM_reg_1_11_INJECTSBITERR_UNCONNECTED,
       RDADDRECC(8 downto 0) => NLW_RAM_reg_1_11_RDADDRECC_UNCONNECTED(8 downto 0),
       REGCEAREGCE => '0',
-      REGCEB => '1',
+      REGCEB => '0',
       RSTRAMARSTRAM => '0',
       RSTRAMB => '0',
       RSTREGARSTREG => '0',
-      RSTREGB => \^rstp\,
+      RSTREGB => '0',
       SBITERR => NLW_RAM_reg_1_11_SBITERR_UNCONNECTED,
       WEA(3) => LUTWriteEn,
       WEA(2) => LUTWriteEn,
@@ -5107,7 +5095,7 @@ RAM_reg_1_11: unisim.vcomponents.RAMB36E1
 RAM_reg_1_12: unisim.vcomponents.RAMB36E1
     generic map(
       DOA_REG => 0,
-      DOB_REG => 1,
+      DOB_REG => 0,
       EN_ECC_READ => false,
       EN_ECC_WRITE => false,
       INITP_00 => X"0000000000000000000000000000000000000000000000000000000000000000",
@@ -5302,11 +5290,11 @@ RAM_reg_1_12: unisim.vcomponents.RAMB36E1
       INJECTSBITERR => NLW_RAM_reg_1_12_INJECTSBITERR_UNCONNECTED,
       RDADDRECC(8 downto 0) => NLW_RAM_reg_1_12_RDADDRECC_UNCONNECTED(8 downto 0),
       REGCEAREGCE => '0',
-      REGCEB => '1',
+      REGCEB => '0',
       RSTRAMARSTRAM => '0',
       RSTRAMB => '0',
       RSTREGARSTREG => '0',
-      RSTREGB => \^rstp\,
+      RSTREGB => '0',
       SBITERR => NLW_RAM_reg_1_12_SBITERR_UNCONNECTED,
       WEA(3) => LUTWriteEn,
       WEA(2) => LUTWriteEn,
@@ -5317,7 +5305,7 @@ RAM_reg_1_12: unisim.vcomponents.RAMB36E1
 RAM_reg_1_13: unisim.vcomponents.RAMB36E1
     generic map(
       DOA_REG => 0,
-      DOB_REG => 1,
+      DOB_REG => 0,
       EN_ECC_READ => false,
       EN_ECC_WRITE => false,
       INITP_00 => X"0000000000000000000000000000000000000000000000000000000000000000",
@@ -5512,11 +5500,11 @@ RAM_reg_1_13: unisim.vcomponents.RAMB36E1
       INJECTSBITERR => NLW_RAM_reg_1_13_INJECTSBITERR_UNCONNECTED,
       RDADDRECC(8 downto 0) => NLW_RAM_reg_1_13_RDADDRECC_UNCONNECTED(8 downto 0),
       REGCEAREGCE => '0',
-      REGCEB => '1',
+      REGCEB => '0',
       RSTRAMARSTRAM => '0',
       RSTRAMB => '0',
       RSTREGARSTREG => '0',
-      RSTREGB => \^rstp\,
+      RSTREGB => '0',
       SBITERR => NLW_RAM_reg_1_13_SBITERR_UNCONNECTED,
       WEA(3) => LUTWriteEn,
       WEA(2) => LUTWriteEn,
@@ -5527,7 +5515,7 @@ RAM_reg_1_13: unisim.vcomponents.RAMB36E1
 RAM_reg_1_14: unisim.vcomponents.RAMB36E1
     generic map(
       DOA_REG => 0,
-      DOB_REG => 1,
+      DOB_REG => 0,
       EN_ECC_READ => false,
       EN_ECC_WRITE => false,
       INITP_00 => X"0000000000000000000000000000000000000000000000000000000000000000",
@@ -5722,11 +5710,11 @@ RAM_reg_1_14: unisim.vcomponents.RAMB36E1
       INJECTSBITERR => NLW_RAM_reg_1_14_INJECTSBITERR_UNCONNECTED,
       RDADDRECC(8 downto 0) => NLW_RAM_reg_1_14_RDADDRECC_UNCONNECTED(8 downto 0),
       REGCEAREGCE => '0',
-      REGCEB => '1',
+      REGCEB => '0',
       RSTRAMARSTRAM => '0',
       RSTRAMB => '0',
       RSTREGARSTREG => '0',
-      RSTREGB => \^rstp\,
+      RSTREGB => '0',
       SBITERR => NLW_RAM_reg_1_14_SBITERR_UNCONNECTED,
       WEA(3) => LUTWriteEn,
       WEA(2) => LUTWriteEn,
@@ -5737,7 +5725,7 @@ RAM_reg_1_14: unisim.vcomponents.RAMB36E1
 RAM_reg_1_15: unisim.vcomponents.RAMB36E1
     generic map(
       DOA_REG => 0,
-      DOB_REG => 1,
+      DOB_REG => 0,
       EN_ECC_READ => false,
       EN_ECC_WRITE => false,
       INITP_00 => X"0000000000000000000000000000000000000000000000000000000000000000",
@@ -5932,11 +5920,11 @@ RAM_reg_1_15: unisim.vcomponents.RAMB36E1
       INJECTSBITERR => NLW_RAM_reg_1_15_INJECTSBITERR_UNCONNECTED,
       RDADDRECC(8 downto 0) => NLW_RAM_reg_1_15_RDADDRECC_UNCONNECTED(8 downto 0),
       REGCEAREGCE => '0',
-      REGCEB => '1',
+      REGCEB => '0',
       RSTRAMARSTRAM => '0',
       RSTRAMB => '0',
       RSTREGARSTREG => '0',
-      RSTREGB => \^rstp\,
+      RSTREGB => '0',
       SBITERR => NLW_RAM_reg_1_15_SBITERR_UNCONNECTED,
       WEA(3) => LUTWriteEn,
       WEA(2) => LUTWriteEn,
@@ -5947,7 +5935,7 @@ RAM_reg_1_15: unisim.vcomponents.RAMB36E1
 RAM_reg_1_2: unisim.vcomponents.RAMB36E1
     generic map(
       DOA_REG => 0,
-      DOB_REG => 1,
+      DOB_REG => 0,
       EN_ECC_READ => false,
       EN_ECC_WRITE => false,
       INITP_00 => X"0000000000000000000000000000000000000000000000000000000000000000",
@@ -6142,11 +6130,11 @@ RAM_reg_1_2: unisim.vcomponents.RAMB36E1
       INJECTSBITERR => NLW_RAM_reg_1_2_INJECTSBITERR_UNCONNECTED,
       RDADDRECC(8 downto 0) => NLW_RAM_reg_1_2_RDADDRECC_UNCONNECTED(8 downto 0),
       REGCEAREGCE => '0',
-      REGCEB => '1',
+      REGCEB => '0',
       RSTRAMARSTRAM => '0',
       RSTRAMB => '0',
       RSTREGARSTREG => '0',
-      RSTREGB => \^rstp\,
+      RSTREGB => '0',
       SBITERR => NLW_RAM_reg_1_2_SBITERR_UNCONNECTED,
       WEA(3) => LUTWriteEn,
       WEA(2) => LUTWriteEn,
@@ -6157,7 +6145,7 @@ RAM_reg_1_2: unisim.vcomponents.RAMB36E1
 RAM_reg_1_3: unisim.vcomponents.RAMB36E1
     generic map(
       DOA_REG => 0,
-      DOB_REG => 1,
+      DOB_REG => 0,
       EN_ECC_READ => false,
       EN_ECC_WRITE => false,
       INITP_00 => X"0000000000000000000000000000000000000000000000000000000000000000",
@@ -6352,11 +6340,11 @@ RAM_reg_1_3: unisim.vcomponents.RAMB36E1
       INJECTSBITERR => NLW_RAM_reg_1_3_INJECTSBITERR_UNCONNECTED,
       RDADDRECC(8 downto 0) => NLW_RAM_reg_1_3_RDADDRECC_UNCONNECTED(8 downto 0),
       REGCEAREGCE => '0',
-      REGCEB => '1',
+      REGCEB => '0',
       RSTRAMARSTRAM => '0',
       RSTRAMB => '0',
       RSTREGARSTREG => '0',
-      RSTREGB => \^rstp\,
+      RSTREGB => '0',
       SBITERR => NLW_RAM_reg_1_3_SBITERR_UNCONNECTED,
       WEA(3) => LUTWriteEn,
       WEA(2) => LUTWriteEn,
@@ -6367,7 +6355,7 @@ RAM_reg_1_3: unisim.vcomponents.RAMB36E1
 RAM_reg_1_4: unisim.vcomponents.RAMB36E1
     generic map(
       DOA_REG => 0,
-      DOB_REG => 1,
+      DOB_REG => 0,
       EN_ECC_READ => false,
       EN_ECC_WRITE => false,
       INITP_00 => X"0000000000000000000000000000000000000000000000000000000000000000",
@@ -6562,11 +6550,11 @@ RAM_reg_1_4: unisim.vcomponents.RAMB36E1
       INJECTSBITERR => NLW_RAM_reg_1_4_INJECTSBITERR_UNCONNECTED,
       RDADDRECC(8 downto 0) => NLW_RAM_reg_1_4_RDADDRECC_UNCONNECTED(8 downto 0),
       REGCEAREGCE => '0',
-      REGCEB => '1',
+      REGCEB => '0',
       RSTRAMARSTRAM => '0',
       RSTRAMB => '0',
       RSTREGARSTREG => '0',
-      RSTREGB => \^rstp\,
+      RSTREGB => '0',
       SBITERR => NLW_RAM_reg_1_4_SBITERR_UNCONNECTED,
       WEA(3) => LUTWriteEn,
       WEA(2) => LUTWriteEn,
@@ -6577,7 +6565,7 @@ RAM_reg_1_4: unisim.vcomponents.RAMB36E1
 RAM_reg_1_5: unisim.vcomponents.RAMB36E1
     generic map(
       DOA_REG => 0,
-      DOB_REG => 1,
+      DOB_REG => 0,
       EN_ECC_READ => false,
       EN_ECC_WRITE => false,
       INITP_00 => X"0000000000000000000000000000000000000000000000000000000000000000",
@@ -6772,11 +6760,11 @@ RAM_reg_1_5: unisim.vcomponents.RAMB36E1
       INJECTSBITERR => NLW_RAM_reg_1_5_INJECTSBITERR_UNCONNECTED,
       RDADDRECC(8 downto 0) => NLW_RAM_reg_1_5_RDADDRECC_UNCONNECTED(8 downto 0),
       REGCEAREGCE => '0',
-      REGCEB => '1',
+      REGCEB => '0',
       RSTRAMARSTRAM => '0',
       RSTRAMB => '0',
       RSTREGARSTREG => '0',
-      RSTREGB => \^rstp\,
+      RSTREGB => '0',
       SBITERR => NLW_RAM_reg_1_5_SBITERR_UNCONNECTED,
       WEA(3) => LUTWriteEn,
       WEA(2) => LUTWriteEn,
@@ -6787,7 +6775,7 @@ RAM_reg_1_5: unisim.vcomponents.RAMB36E1
 RAM_reg_1_6: unisim.vcomponents.RAMB36E1
     generic map(
       DOA_REG => 0,
-      DOB_REG => 1,
+      DOB_REG => 0,
       EN_ECC_READ => false,
       EN_ECC_WRITE => false,
       INITP_00 => X"0000000000000000000000000000000000000000000000000000000000000000",
@@ -6982,11 +6970,11 @@ RAM_reg_1_6: unisim.vcomponents.RAMB36E1
       INJECTSBITERR => NLW_RAM_reg_1_6_INJECTSBITERR_UNCONNECTED,
       RDADDRECC(8 downto 0) => NLW_RAM_reg_1_6_RDADDRECC_UNCONNECTED(8 downto 0),
       REGCEAREGCE => '0',
-      REGCEB => '1',
+      REGCEB => '0',
       RSTRAMARSTRAM => '0',
       RSTRAMB => '0',
       RSTREGARSTREG => '0',
-      RSTREGB => \^rstp\,
+      RSTREGB => '0',
       SBITERR => NLW_RAM_reg_1_6_SBITERR_UNCONNECTED,
       WEA(3) => LUTWriteEn,
       WEA(2) => LUTWriteEn,
@@ -6997,7 +6985,7 @@ RAM_reg_1_6: unisim.vcomponents.RAMB36E1
 RAM_reg_1_7: unisim.vcomponents.RAMB36E1
     generic map(
       DOA_REG => 0,
-      DOB_REG => 1,
+      DOB_REG => 0,
       EN_ECC_READ => false,
       EN_ECC_WRITE => false,
       INITP_00 => X"0000000000000000000000000000000000000000000000000000000000000000",
@@ -7192,11 +7180,11 @@ RAM_reg_1_7: unisim.vcomponents.RAMB36E1
       INJECTSBITERR => NLW_RAM_reg_1_7_INJECTSBITERR_UNCONNECTED,
       RDADDRECC(8 downto 0) => NLW_RAM_reg_1_7_RDADDRECC_UNCONNECTED(8 downto 0),
       REGCEAREGCE => '0',
-      REGCEB => '1',
+      REGCEB => '0',
       RSTRAMARSTRAM => '0',
       RSTRAMB => '0',
       RSTREGARSTREG => '0',
-      RSTREGB => \^rstp\,
+      RSTREGB => '0',
       SBITERR => NLW_RAM_reg_1_7_SBITERR_UNCONNECTED,
       WEA(3) => LUTWriteEn,
       WEA(2) => LUTWriteEn,
@@ -7207,7 +7195,7 @@ RAM_reg_1_7: unisim.vcomponents.RAMB36E1
 RAM_reg_1_8: unisim.vcomponents.RAMB36E1
     generic map(
       DOA_REG => 0,
-      DOB_REG => 1,
+      DOB_REG => 0,
       EN_ECC_READ => false,
       EN_ECC_WRITE => false,
       INITP_00 => X"0000000000000000000000000000000000000000000000000000000000000000",
@@ -7402,11 +7390,11 @@ RAM_reg_1_8: unisim.vcomponents.RAMB36E1
       INJECTSBITERR => NLW_RAM_reg_1_8_INJECTSBITERR_UNCONNECTED,
       RDADDRECC(8 downto 0) => NLW_RAM_reg_1_8_RDADDRECC_UNCONNECTED(8 downto 0),
       REGCEAREGCE => '0',
-      REGCEB => '1',
+      REGCEB => '0',
       RSTRAMARSTRAM => '0',
       RSTRAMB => '0',
       RSTREGARSTREG => '0',
-      RSTREGB => \^rstp\,
+      RSTREGB => '0',
       SBITERR => NLW_RAM_reg_1_8_SBITERR_UNCONNECTED,
       WEA(3) => LUTWriteEn,
       WEA(2) => LUTWriteEn,
@@ -7417,7 +7405,7 @@ RAM_reg_1_8: unisim.vcomponents.RAMB36E1
 RAM_reg_1_9: unisim.vcomponents.RAMB36E1
     generic map(
       DOA_REG => 0,
-      DOB_REG => 1,
+      DOB_REG => 0,
       EN_ECC_READ => false,
       EN_ECC_WRITE => false,
       INITP_00 => X"0000000000000000000000000000000000000000000000000000000000000000",
@@ -7612,11 +7600,11 @@ RAM_reg_1_9: unisim.vcomponents.RAMB36E1
       INJECTSBITERR => NLW_RAM_reg_1_9_INJECTSBITERR_UNCONNECTED,
       RDADDRECC(8 downto 0) => NLW_RAM_reg_1_9_RDADDRECC_UNCONNECTED(8 downto 0),
       REGCEAREGCE => '0',
-      REGCEB => '1',
+      REGCEB => '0',
       RSTRAMARSTRAM => '0',
       RSTRAMB => '0',
       RSTREGARSTREG => '0',
-      RSTREGB => \^rstp\,
+      RSTREGB => '0',
       SBITERR => NLW_RAM_reg_1_9_SBITERR_UNCONNECTED,
       WEA(3) => LUTWriteEn,
       WEA(2) => LUTWriteEn,
@@ -7639,16 +7627,15 @@ entity decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_DDS is
     LUTAddress : in STD_LOGIC_VECTOR ( 15 downto 0 );
     LUTData : in STD_LOGIC_VECTOR ( 15 downto 0 );
     LUTWriteEn : in STD_LOGIC;
+    AmplCntrl : in STD_LOGIC_VECTOR ( 15 downto 0 );
     DirectValue : in STD_LOGIC_VECTOR ( 15 downto 0 );
     DataPathSelect : in STD_LOGIC;
-    AmplCntrl : in STD_LOGIC_VECTOR ( 15 downto 0 );
     FreqCntrl : in STD_LOGIC_VECTOR ( 23 downto 0 );
     PhaseCntrl : in STD_LOGIC_VECTOR ( 23 downto 0 )
   );
 end decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_DDS;
 
 architecture STRUCTURE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_DDS is
-  signal A : STD_LOGIC_VECTOR ( 15 downto 0 );
   signal \Accu[0]_i_1_n_0\ : STD_LOGIC;
   signal \Accu[0]_i_3_n_0\ : STD_LOGIC;
   signal \Accu[0]_i_4_n_0\ : STD_LOGIC;
@@ -7722,22 +7709,23 @@ architecture STRUCTURE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_DDS is
   signal \Accu_reg[8]_i_1_n_5\ : STD_LOGIC;
   signal \Accu_reg[8]_i_1_n_6\ : STD_LOGIC;
   signal \Accu_reg[8]_i_1_n_7\ : STD_LOGIC;
-  signal MultRes_reg_n_100 : STD_LOGIC;
-  signal MultRes_reg_n_101 : STD_LOGIC;
-  signal MultRes_reg_n_102 : STD_LOGIC;
-  signal MultRes_reg_n_103 : STD_LOGIC;
-  signal MultRes_reg_n_104 : STD_LOGIC;
-  signal MultRes_reg_n_105 : STD_LOGIC;
-  signal MultRes_reg_n_90 : STD_LOGIC;
-  signal MultRes_reg_n_91 : STD_LOGIC;
-  signal MultRes_reg_n_92 : STD_LOGIC;
-  signal MultRes_reg_n_93 : STD_LOGIC;
-  signal MultRes_reg_n_94 : STD_LOGIC;
-  signal MultRes_reg_n_95 : STD_LOGIC;
-  signal MultRes_reg_n_96 : STD_LOGIC;
-  signal MultRes_reg_n_97 : STD_LOGIC;
-  signal MultRes_reg_n_98 : STD_LOGIC;
-  signal MultRes_reg_n_99 : STD_LOGIC;
+  signal MultRes0_i_2_n_0 : STD_LOGIC;
+  signal MultRes0_n_100 : STD_LOGIC;
+  signal MultRes0_n_101 : STD_LOGIC;
+  signal MultRes0_n_102 : STD_LOGIC;
+  signal MultRes0_n_103 : STD_LOGIC;
+  signal MultRes0_n_104 : STD_LOGIC;
+  signal MultRes0_n_105 : STD_LOGIC;
+  signal MultRes0_n_90 : STD_LOGIC;
+  signal MultRes0_n_91 : STD_LOGIC;
+  signal MultRes0_n_92 : STD_LOGIC;
+  signal MultRes0_n_93 : STD_LOGIC;
+  signal MultRes0_n_94 : STD_LOGIC;
+  signal MultRes0_n_95 : STD_LOGIC;
+  signal MultRes0_n_96 : STD_LOGIC;
+  signal MultRes0_n_97 : STD_LOGIC;
+  signal MultRes0_n_98 : STD_LOGIC;
+  signal MultRes0_n_99 : STD_LOGIC;
   signal PhaseAddress0 : STD_LOGIC_VECTOR ( 23 downto 8 );
   signal \PhaseAddress0_carry__0_i_1_n_0\ : STD_LOGIC;
   signal \PhaseAddress0_carry__0_i_2_n_0\ : STD_LOGIC;
@@ -7850,20 +7838,20 @@ architecture STRUCTURE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_DDS is
   signal \PhaseAddress_reg[9]_rep__1_n_0\ : STD_LOGIC;
   signal \PhaseAddress_reg[9]_rep__2_n_0\ : STD_LOGIC;
   signal \PhaseAddress_reg[9]_rep_n_0\ : STD_LOGIC;
-  signal RSTP : STD_LOGIC;
-  signal \output_register.doutb_reg\ : STD_LOGIC_VECTOR ( 15 downto 0 );
+  signal RAM_Data : STD_LOGIC_VECTOR ( 15 downto 0 );
+  signal p_0_in0 : STD_LOGIC;
   signal \NLW_Accu_reg[20]_i_1_CO_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 to 3 );
-  signal NLW_MultRes_reg_CARRYCASCOUT_UNCONNECTED : STD_LOGIC;
-  signal NLW_MultRes_reg_MULTSIGNOUT_UNCONNECTED : STD_LOGIC;
-  signal NLW_MultRes_reg_OVERFLOW_UNCONNECTED : STD_LOGIC;
-  signal NLW_MultRes_reg_PATTERNBDETECT_UNCONNECTED : STD_LOGIC;
-  signal NLW_MultRes_reg_PATTERNDETECT_UNCONNECTED : STD_LOGIC;
-  signal NLW_MultRes_reg_UNDERFLOW_UNCONNECTED : STD_LOGIC;
-  signal NLW_MultRes_reg_ACOUT_UNCONNECTED : STD_LOGIC_VECTOR ( 29 downto 0 );
-  signal NLW_MultRes_reg_BCOUT_UNCONNECTED : STD_LOGIC_VECTOR ( 17 downto 0 );
-  signal NLW_MultRes_reg_CARRYOUT_UNCONNECTED : STD_LOGIC_VECTOR ( 3 downto 0 );
-  signal NLW_MultRes_reg_P_UNCONNECTED : STD_LOGIC_VECTOR ( 47 downto 32 );
-  signal NLW_MultRes_reg_PCOUT_UNCONNECTED : STD_LOGIC_VECTOR ( 47 downto 0 );
+  signal NLW_MultRes0_CARRYCASCOUT_UNCONNECTED : STD_LOGIC;
+  signal NLW_MultRes0_MULTSIGNOUT_UNCONNECTED : STD_LOGIC;
+  signal NLW_MultRes0_OVERFLOW_UNCONNECTED : STD_LOGIC;
+  signal NLW_MultRes0_PATTERNBDETECT_UNCONNECTED : STD_LOGIC;
+  signal NLW_MultRes0_PATTERNDETECT_UNCONNECTED : STD_LOGIC;
+  signal NLW_MultRes0_UNDERFLOW_UNCONNECTED : STD_LOGIC;
+  signal NLW_MultRes0_ACOUT_UNCONNECTED : STD_LOGIC_VECTOR ( 29 downto 0 );
+  signal NLW_MultRes0_BCOUT_UNCONNECTED : STD_LOGIC_VECTOR ( 17 downto 0 );
+  signal NLW_MultRes0_CARRYOUT_UNCONNECTED : STD_LOGIC_VECTOR ( 3 downto 0 );
+  signal NLW_MultRes0_P_UNCONNECTED : STD_LOGIC_VECTOR ( 47 downto 32 );
+  signal NLW_MultRes0_PCOUT_UNCONNECTED : STD_LOGIC_VECTOR ( 47 downto 0 );
   signal NLW_PhaseAddress0_carry_O_UNCONNECTED : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal \NLW_PhaseAddress0_carry__0_O_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal \NLW_PhaseAddress0_carry__4_CO_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 to 3 );
@@ -8482,7 +8470,7 @@ LUT: entity work.decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_DualPortBRAM
       LUTAddress(15 downto 0) => LUTAddress(15 downto 0),
       LUTData(15 downto 0) => LUTData(15 downto 0),
       LUTWriteEn => LUTWriteEn,
-      RAM_Data(15 downto 0) => \output_register.doutb_reg\(15 downto 0),
+      RAM_Data(15 downto 0) => RAM_Data(15 downto 0),
       RAM_reg_0_10_0(15) => \PhaseAddress_reg[23]_rep__1_n_0\,
       RAM_reg_0_10_0(14) => \PhaseAddress_reg[22]_rep__1_n_0\,
       RAM_reg_0_10_0(13) => \PhaseAddress_reg[21]_rep__1_n_0\,
@@ -8515,7 +8503,6 @@ LUT: entity work.decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_DualPortBRAM
       RAM_reg_0_5_0(2) => \PhaseAddress_reg[10]_rep__0_n_0\,
       RAM_reg_0_5_0(1) => \PhaseAddress_reg[9]_rep__0_n_0\,
       RAM_reg_0_5_0(0) => \PhaseAddress_reg[8]_rep__0_n_0\,
-      RSTP => RSTP,
       RdAddress(15) => \PhaseAddress_reg[23]_rep__2_n_0\,
       RdAddress(14) => \PhaseAddress_reg[22]_rep__2_n_0\,
       RdAddress(13) => \PhaseAddress_reg[21]_rep__2_n_0\,
@@ -8531,10 +8518,9 @@ LUT: entity work.decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_DualPortBRAM
       RdAddress(3) => \PhaseAddress_reg[11]_rep__2_n_0\,
       RdAddress(2) => \PhaseAddress_reg[10]_rep__2_n_0\,
       RdAddress(1) => \PhaseAddress_reg[9]_rep__2_n_0\,
-      RdAddress(0) => \PhaseAddress_reg[8]_rep__2_n_0\,
-      rst_n => rst_n
+      RdAddress(0) => \PhaseAddress_reg[8]_rep__2_n_0\
     );
-MultRes_reg: unisim.vcomponents.DSP48E1
+MultRes0: unisim.vcomponents.DSP48E1
     generic map(
       ACASCREG => 1,
       ADREG => 1,
@@ -8563,35 +8549,52 @@ MultRes_reg: unisim.vcomponents.DSP48E1
       USE_SIMD => "ONE48"
     )
         port map (
-      A(29) => A(15),
-      A(28) => A(15),
-      A(27) => A(15),
-      A(26) => A(15),
-      A(25) => A(15),
-      A(24) => A(15),
-      A(23) => A(15),
-      A(22) => A(15),
-      A(21) => A(15),
-      A(20) => A(15),
-      A(19) => A(15),
-      A(18) => A(15),
-      A(17) => A(15),
-      A(16) => A(15),
-      A(15 downto 0) => A(15 downto 0),
+      A(29) => RAM_Data(15),
+      A(28) => RAM_Data(15),
+      A(27) => RAM_Data(15),
+      A(26) => RAM_Data(15),
+      A(25) => RAM_Data(15),
+      A(24) => RAM_Data(15),
+      A(23) => RAM_Data(15),
+      A(22) => RAM_Data(15),
+      A(21) => RAM_Data(15),
+      A(20) => RAM_Data(15),
+      A(19) => RAM_Data(15),
+      A(18) => RAM_Data(15),
+      A(17) => RAM_Data(15),
+      A(16) => RAM_Data(15),
+      A(15 downto 0) => RAM_Data(15 downto 0),
       ACIN(29 downto 0) => B"000000000000000000000000000000",
-      ACOUT(29 downto 0) => NLW_MultRes_reg_ACOUT_UNCONNECTED(29 downto 0),
+      ACOUT(29 downto 0) => NLW_MultRes0_ACOUT_UNCONNECTED(29 downto 0),
       ALUMODE(3 downto 0) => B"0000",
       B(17) => AmplCntrl(15),
       B(16) => AmplCntrl(15),
       B(15 downto 0) => AmplCntrl(15 downto 0),
       BCIN(17 downto 0) => B"000000000000000000",
-      BCOUT(17 downto 0) => NLW_MultRes_reg_BCOUT_UNCONNECTED(17 downto 0),
-      C(47 downto 0) => B"111111111111111111111111111111111111111111111111",
+      BCOUT(17 downto 0) => NLW_MultRes0_BCOUT_UNCONNECTED(17 downto 0),
+      C(47) => DirectValue(15),
+      C(46) => DirectValue(15),
+      C(45) => DirectValue(15),
+      C(44) => DirectValue(15),
+      C(43) => DirectValue(15),
+      C(42) => DirectValue(15),
+      C(41) => DirectValue(15),
+      C(40) => DirectValue(15),
+      C(39) => DirectValue(15),
+      C(38) => DirectValue(15),
+      C(37) => DirectValue(15),
+      C(36) => DirectValue(15),
+      C(35) => DirectValue(15),
+      C(34) => DirectValue(15),
+      C(33) => DirectValue(15),
+      C(32) => DirectValue(15),
+      C(31 downto 16) => DirectValue(15 downto 0),
+      C(15 downto 0) => B"0000000000000000",
       CARRYCASCIN => '0',
-      CARRYCASCOUT => NLW_MultRes_reg_CARRYCASCOUT_UNCONNECTED,
+      CARRYCASCOUT => NLW_MultRes0_CARRYCASCOUT_UNCONNECTED,
       CARRYIN => '0',
       CARRYINSEL(2 downto 0) => B"000",
-      CARRYOUT(3 downto 0) => NLW_MultRes_reg_CARRYOUT_UNCONNECTED(3 downto 0),
+      CARRYOUT(3 downto 0) => NLW_MultRes0_CARRYOUT_UNCONNECTED(3 downto 0),
       CEA1 => '0',
       CEA2 => '1',
       CEAD => '0',
@@ -8609,32 +8612,38 @@ MultRes_reg: unisim.vcomponents.DSP48E1
       D(24 downto 0) => B"0000000000000000000000000",
       INMODE(4 downto 0) => B"00000",
       MULTSIGNIN => '0',
-      MULTSIGNOUT => NLW_MultRes_reg_MULTSIGNOUT_UNCONNECTED,
-      OPMODE(6 downto 0) => B"0000101",
-      OVERFLOW => NLW_MultRes_reg_OVERFLOW_UNCONNECTED,
-      P(47 downto 32) => NLW_MultRes_reg_P_UNCONNECTED(47 downto 32),
+      MULTSIGNOUT => NLW_MultRes0_MULTSIGNOUT_UNCONNECTED,
+      OPMODE(6) => '0',
+      OPMODE(5) => MultRes0_i_2_n_0,
+      OPMODE(4) => MultRes0_i_2_n_0,
+      OPMODE(3) => '0',
+      OPMODE(2) => DataPathSelect,
+      OPMODE(1) => '0',
+      OPMODE(0) => DataPathSelect,
+      OVERFLOW => NLW_MultRes0_OVERFLOW_UNCONNECTED,
+      P(47 downto 32) => NLW_MultRes0_P_UNCONNECTED(47 downto 32),
       P(31 downto 16) => SampleOut(15 downto 0),
-      P(15) => MultRes_reg_n_90,
-      P(14) => MultRes_reg_n_91,
-      P(13) => MultRes_reg_n_92,
-      P(12) => MultRes_reg_n_93,
-      P(11) => MultRes_reg_n_94,
-      P(10) => MultRes_reg_n_95,
-      P(9) => MultRes_reg_n_96,
-      P(8) => MultRes_reg_n_97,
-      P(7) => MultRes_reg_n_98,
-      P(6) => MultRes_reg_n_99,
-      P(5) => MultRes_reg_n_100,
-      P(4) => MultRes_reg_n_101,
-      P(3) => MultRes_reg_n_102,
-      P(2) => MultRes_reg_n_103,
-      P(1) => MultRes_reg_n_104,
-      P(0) => MultRes_reg_n_105,
-      PATTERNBDETECT => NLW_MultRes_reg_PATTERNBDETECT_UNCONNECTED,
-      PATTERNDETECT => NLW_MultRes_reg_PATTERNDETECT_UNCONNECTED,
+      P(15) => MultRes0_n_90,
+      P(14) => MultRes0_n_91,
+      P(13) => MultRes0_n_92,
+      P(12) => MultRes0_n_93,
+      P(11) => MultRes0_n_94,
+      P(10) => MultRes0_n_95,
+      P(9) => MultRes0_n_96,
+      P(8) => MultRes0_n_97,
+      P(7) => MultRes0_n_98,
+      P(6) => MultRes0_n_99,
+      P(5) => MultRes0_n_100,
+      P(4) => MultRes0_n_101,
+      P(3) => MultRes0_n_102,
+      P(2) => MultRes0_n_103,
+      P(1) => MultRes0_n_104,
+      P(0) => MultRes0_n_105,
+      PATTERNBDETECT => NLW_MultRes0_PATTERNBDETECT_UNCONNECTED,
+      PATTERNDETECT => NLW_MultRes0_PATTERNDETECT_UNCONNECTED,
       PCIN(47 downto 0) => B"000000000000000000000000000000000000000000000000",
-      PCOUT(47 downto 0) => NLW_MultRes_reg_PCOUT_UNCONNECTED(47 downto 0),
-      RSTA => RSTP,
+      PCOUT(47 downto 0) => NLW_MultRes0_PCOUT_UNCONNECTED(47 downto 0),
+      RSTA => p_0_in0,
       RSTALLCARRYIN => '0',
       RSTALUMODE => '0',
       RSTB => '0',
@@ -8643,168 +8652,24 @@ MultRes_reg: unisim.vcomponents.DSP48E1
       RSTD => '0',
       RSTINMODE => '0',
       RSTM => '0',
-      RSTP => RSTP,
-      UNDERFLOW => NLW_MultRes_reg_UNDERFLOW_UNCONNECTED
+      RSTP => p_0_in0,
+      UNDERFLOW => NLW_MultRes0_UNDERFLOW_UNCONNECTED
     );
-MultRes_reg_i_10: unisim.vcomponents.LUT3
+MultRes0_i_1: unisim.vcomponents.LUT1
     generic map(
-      INIT => X"AC"
+      INIT => X"1"
     )
         port map (
-      I0 => \output_register.doutb_reg\(7),
-      I1 => DirectValue(7),
-      I2 => DataPathSelect,
-      O => A(7)
+      I0 => rst_n,
+      O => p_0_in0
     );
-MultRes_reg_i_11: unisim.vcomponents.LUT3
+MultRes0_i_2: unisim.vcomponents.LUT1
     generic map(
-      INIT => X"AC"
+      INIT => X"1"
     )
         port map (
-      I0 => \output_register.doutb_reg\(6),
-      I1 => DirectValue(6),
-      I2 => DataPathSelect,
-      O => A(6)
-    );
-MultRes_reg_i_12: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"AC"
-    )
-        port map (
-      I0 => \output_register.doutb_reg\(5),
-      I1 => DirectValue(5),
-      I2 => DataPathSelect,
-      O => A(5)
-    );
-MultRes_reg_i_13: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"AC"
-    )
-        port map (
-      I0 => \output_register.doutb_reg\(4),
-      I1 => DirectValue(4),
-      I2 => DataPathSelect,
-      O => A(4)
-    );
-MultRes_reg_i_14: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"AC"
-    )
-        port map (
-      I0 => \output_register.doutb_reg\(3),
-      I1 => DirectValue(3),
-      I2 => DataPathSelect,
-      O => A(3)
-    );
-MultRes_reg_i_15: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"AC"
-    )
-        port map (
-      I0 => \output_register.doutb_reg\(2),
-      I1 => DirectValue(2),
-      I2 => DataPathSelect,
-      O => A(2)
-    );
-MultRes_reg_i_16: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"AC"
-    )
-        port map (
-      I0 => \output_register.doutb_reg\(1),
-      I1 => DirectValue(1),
-      I2 => DataPathSelect,
-      O => A(1)
-    );
-MultRes_reg_i_17: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"AC"
-    )
-        port map (
-      I0 => \output_register.doutb_reg\(0),
-      I1 => DirectValue(0),
-      I2 => DataPathSelect,
-      O => A(0)
-    );
-MultRes_reg_i_2: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"AC"
-    )
-        port map (
-      I0 => \output_register.doutb_reg\(15),
-      I1 => DirectValue(15),
-      I2 => DataPathSelect,
-      O => A(15)
-    );
-MultRes_reg_i_3: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"AC"
-    )
-        port map (
-      I0 => \output_register.doutb_reg\(14),
-      I1 => DirectValue(14),
-      I2 => DataPathSelect,
-      O => A(14)
-    );
-MultRes_reg_i_4: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"AC"
-    )
-        port map (
-      I0 => \output_register.doutb_reg\(13),
-      I1 => DirectValue(13),
-      I2 => DataPathSelect,
-      O => A(13)
-    );
-MultRes_reg_i_5: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"AC"
-    )
-        port map (
-      I0 => \output_register.doutb_reg\(12),
-      I1 => DirectValue(12),
-      I2 => DataPathSelect,
-      O => A(12)
-    );
-MultRes_reg_i_6: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"AC"
-    )
-        port map (
-      I0 => \output_register.doutb_reg\(11),
-      I1 => DirectValue(11),
-      I2 => DataPathSelect,
-      O => A(11)
-    );
-MultRes_reg_i_7: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"AC"
-    )
-        port map (
-      I0 => \output_register.doutb_reg\(10),
-      I1 => DirectValue(10),
-      I2 => DataPathSelect,
-      O => A(10)
-    );
-MultRes_reg_i_8: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"AC"
-    )
-        port map (
-      I0 => \output_register.doutb_reg\(9),
-      I1 => DirectValue(9),
-      I2 => DataPathSelect,
-      O => A(9)
-    );
-MultRes_reg_i_9: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"AC"
-    )
-        port map (
-      I0 => \output_register.doutb_reg\(8),
-      I1 => DirectValue(8),
-      I2 => DataPathSelect,
-      O => A(8)
+      I0 => DataPathSelect,
+      O => MultRes0_i_2_n_0
     );
 PhaseAddress0_carry: unisim.vcomponents.CARRY4
      port map (
@@ -9119,7 +8984,7 @@ PhaseAddress0_carry_i_4: unisim.vcomponents.LUT2
       CE => '1',
       D => PhaseAddress0(10),
       Q => \PhaseAddress_reg[10]_rep_n_0\,
-      R => RSTP
+      R => p_0_in0
     );
 \PhaseAddress_reg[10]_rep__0\: unisim.vcomponents.FDRE
      port map (
@@ -9127,7 +8992,7 @@ PhaseAddress0_carry_i_4: unisim.vcomponents.LUT2
       CE => '1',
       D => PhaseAddress0(10),
       Q => \PhaseAddress_reg[10]_rep__0_n_0\,
-      R => RSTP
+      R => p_0_in0
     );
 \PhaseAddress_reg[10]_rep__1\: unisim.vcomponents.FDRE
      port map (
@@ -9135,7 +9000,7 @@ PhaseAddress0_carry_i_4: unisim.vcomponents.LUT2
       CE => '1',
       D => PhaseAddress0(10),
       Q => \PhaseAddress_reg[10]_rep__1_n_0\,
-      R => RSTP
+      R => p_0_in0
     );
 \PhaseAddress_reg[10]_rep__2\: unisim.vcomponents.FDRE
      port map (
@@ -9143,7 +9008,7 @@ PhaseAddress0_carry_i_4: unisim.vcomponents.LUT2
       CE => '1',
       D => PhaseAddress0(10),
       Q => \PhaseAddress_reg[10]_rep__2_n_0\,
-      R => RSTP
+      R => p_0_in0
     );
 \PhaseAddress_reg[11]_rep\: unisim.vcomponents.FDRE
      port map (
@@ -9151,7 +9016,7 @@ PhaseAddress0_carry_i_4: unisim.vcomponents.LUT2
       CE => '1',
       D => PhaseAddress0(11),
       Q => \PhaseAddress_reg[11]_rep_n_0\,
-      R => RSTP
+      R => p_0_in0
     );
 \PhaseAddress_reg[11]_rep__0\: unisim.vcomponents.FDRE
      port map (
@@ -9159,7 +9024,7 @@ PhaseAddress0_carry_i_4: unisim.vcomponents.LUT2
       CE => '1',
       D => PhaseAddress0(11),
       Q => \PhaseAddress_reg[11]_rep__0_n_0\,
-      R => RSTP
+      R => p_0_in0
     );
 \PhaseAddress_reg[11]_rep__1\: unisim.vcomponents.FDRE
      port map (
@@ -9167,7 +9032,7 @@ PhaseAddress0_carry_i_4: unisim.vcomponents.LUT2
       CE => '1',
       D => PhaseAddress0(11),
       Q => \PhaseAddress_reg[11]_rep__1_n_0\,
-      R => RSTP
+      R => p_0_in0
     );
 \PhaseAddress_reg[11]_rep__2\: unisim.vcomponents.FDRE
      port map (
@@ -9175,7 +9040,7 @@ PhaseAddress0_carry_i_4: unisim.vcomponents.LUT2
       CE => '1',
       D => PhaseAddress0(11),
       Q => \PhaseAddress_reg[11]_rep__2_n_0\,
-      R => RSTP
+      R => p_0_in0
     );
 \PhaseAddress_reg[12]_rep\: unisim.vcomponents.FDRE
      port map (
@@ -9183,7 +9048,7 @@ PhaseAddress0_carry_i_4: unisim.vcomponents.LUT2
       CE => '1',
       D => PhaseAddress0(12),
       Q => \PhaseAddress_reg[12]_rep_n_0\,
-      R => RSTP
+      R => p_0_in0
     );
 \PhaseAddress_reg[12]_rep__0\: unisim.vcomponents.FDRE
      port map (
@@ -9191,7 +9056,7 @@ PhaseAddress0_carry_i_4: unisim.vcomponents.LUT2
       CE => '1',
       D => PhaseAddress0(12),
       Q => \PhaseAddress_reg[12]_rep__0_n_0\,
-      R => RSTP
+      R => p_0_in0
     );
 \PhaseAddress_reg[12]_rep__1\: unisim.vcomponents.FDRE
      port map (
@@ -9199,7 +9064,7 @@ PhaseAddress0_carry_i_4: unisim.vcomponents.LUT2
       CE => '1',
       D => PhaseAddress0(12),
       Q => \PhaseAddress_reg[12]_rep__1_n_0\,
-      R => RSTP
+      R => p_0_in0
     );
 \PhaseAddress_reg[12]_rep__2\: unisim.vcomponents.FDRE
      port map (
@@ -9207,7 +9072,7 @@ PhaseAddress0_carry_i_4: unisim.vcomponents.LUT2
       CE => '1',
       D => PhaseAddress0(12),
       Q => \PhaseAddress_reg[12]_rep__2_n_0\,
-      R => RSTP
+      R => p_0_in0
     );
 \PhaseAddress_reg[13]_rep\: unisim.vcomponents.FDRE
      port map (
@@ -9215,7 +9080,7 @@ PhaseAddress0_carry_i_4: unisim.vcomponents.LUT2
       CE => '1',
       D => PhaseAddress0(13),
       Q => \PhaseAddress_reg[13]_rep_n_0\,
-      R => RSTP
+      R => p_0_in0
     );
 \PhaseAddress_reg[13]_rep__0\: unisim.vcomponents.FDRE
      port map (
@@ -9223,7 +9088,7 @@ PhaseAddress0_carry_i_4: unisim.vcomponents.LUT2
       CE => '1',
       D => PhaseAddress0(13),
       Q => \PhaseAddress_reg[13]_rep__0_n_0\,
-      R => RSTP
+      R => p_0_in0
     );
 \PhaseAddress_reg[13]_rep__1\: unisim.vcomponents.FDRE
      port map (
@@ -9231,7 +9096,7 @@ PhaseAddress0_carry_i_4: unisim.vcomponents.LUT2
       CE => '1',
       D => PhaseAddress0(13),
       Q => \PhaseAddress_reg[13]_rep__1_n_0\,
-      R => RSTP
+      R => p_0_in0
     );
 \PhaseAddress_reg[13]_rep__2\: unisim.vcomponents.FDRE
      port map (
@@ -9239,7 +9104,7 @@ PhaseAddress0_carry_i_4: unisim.vcomponents.LUT2
       CE => '1',
       D => PhaseAddress0(13),
       Q => \PhaseAddress_reg[13]_rep__2_n_0\,
-      R => RSTP
+      R => p_0_in0
     );
 \PhaseAddress_reg[14]_rep\: unisim.vcomponents.FDRE
      port map (
@@ -9247,7 +9112,7 @@ PhaseAddress0_carry_i_4: unisim.vcomponents.LUT2
       CE => '1',
       D => PhaseAddress0(14),
       Q => \PhaseAddress_reg[14]_rep_n_0\,
-      R => RSTP
+      R => p_0_in0
     );
 \PhaseAddress_reg[14]_rep__0\: unisim.vcomponents.FDRE
      port map (
@@ -9255,7 +9120,7 @@ PhaseAddress0_carry_i_4: unisim.vcomponents.LUT2
       CE => '1',
       D => PhaseAddress0(14),
       Q => \PhaseAddress_reg[14]_rep__0_n_0\,
-      R => RSTP
+      R => p_0_in0
     );
 \PhaseAddress_reg[14]_rep__1\: unisim.vcomponents.FDRE
      port map (
@@ -9263,7 +9128,7 @@ PhaseAddress0_carry_i_4: unisim.vcomponents.LUT2
       CE => '1',
       D => PhaseAddress0(14),
       Q => \PhaseAddress_reg[14]_rep__1_n_0\,
-      R => RSTP
+      R => p_0_in0
     );
 \PhaseAddress_reg[14]_rep__2\: unisim.vcomponents.FDRE
      port map (
@@ -9271,7 +9136,7 @@ PhaseAddress0_carry_i_4: unisim.vcomponents.LUT2
       CE => '1',
       D => PhaseAddress0(14),
       Q => \PhaseAddress_reg[14]_rep__2_n_0\,
-      R => RSTP
+      R => p_0_in0
     );
 \PhaseAddress_reg[15]_rep\: unisim.vcomponents.FDRE
      port map (
@@ -9279,7 +9144,7 @@ PhaseAddress0_carry_i_4: unisim.vcomponents.LUT2
       CE => '1',
       D => PhaseAddress0(15),
       Q => \PhaseAddress_reg[15]_rep_n_0\,
-      R => RSTP
+      R => p_0_in0
     );
 \PhaseAddress_reg[15]_rep__0\: unisim.vcomponents.FDRE
      port map (
@@ -9287,7 +9152,7 @@ PhaseAddress0_carry_i_4: unisim.vcomponents.LUT2
       CE => '1',
       D => PhaseAddress0(15),
       Q => \PhaseAddress_reg[15]_rep__0_n_0\,
-      R => RSTP
+      R => p_0_in0
     );
 \PhaseAddress_reg[15]_rep__1\: unisim.vcomponents.FDRE
      port map (
@@ -9295,7 +9160,7 @@ PhaseAddress0_carry_i_4: unisim.vcomponents.LUT2
       CE => '1',
       D => PhaseAddress0(15),
       Q => \PhaseAddress_reg[15]_rep__1_n_0\,
-      R => RSTP
+      R => p_0_in0
     );
 \PhaseAddress_reg[15]_rep__2\: unisim.vcomponents.FDRE
      port map (
@@ -9303,7 +9168,7 @@ PhaseAddress0_carry_i_4: unisim.vcomponents.LUT2
       CE => '1',
       D => PhaseAddress0(15),
       Q => \PhaseAddress_reg[15]_rep__2_n_0\,
-      R => RSTP
+      R => p_0_in0
     );
 \PhaseAddress_reg[16]_rep\: unisim.vcomponents.FDRE
      port map (
@@ -9311,7 +9176,7 @@ PhaseAddress0_carry_i_4: unisim.vcomponents.LUT2
       CE => '1',
       D => PhaseAddress0(16),
       Q => \PhaseAddress_reg[16]_rep_n_0\,
-      R => RSTP
+      R => p_0_in0
     );
 \PhaseAddress_reg[16]_rep__0\: unisim.vcomponents.FDRE
      port map (
@@ -9319,7 +9184,7 @@ PhaseAddress0_carry_i_4: unisim.vcomponents.LUT2
       CE => '1',
       D => PhaseAddress0(16),
       Q => \PhaseAddress_reg[16]_rep__0_n_0\,
-      R => RSTP
+      R => p_0_in0
     );
 \PhaseAddress_reg[16]_rep__1\: unisim.vcomponents.FDRE
      port map (
@@ -9327,7 +9192,7 @@ PhaseAddress0_carry_i_4: unisim.vcomponents.LUT2
       CE => '1',
       D => PhaseAddress0(16),
       Q => \PhaseAddress_reg[16]_rep__1_n_0\,
-      R => RSTP
+      R => p_0_in0
     );
 \PhaseAddress_reg[16]_rep__2\: unisim.vcomponents.FDRE
      port map (
@@ -9335,7 +9200,7 @@ PhaseAddress0_carry_i_4: unisim.vcomponents.LUT2
       CE => '1',
       D => PhaseAddress0(16),
       Q => \PhaseAddress_reg[16]_rep__2_n_0\,
-      R => RSTP
+      R => p_0_in0
     );
 \PhaseAddress_reg[17]_rep\: unisim.vcomponents.FDRE
      port map (
@@ -9343,7 +9208,7 @@ PhaseAddress0_carry_i_4: unisim.vcomponents.LUT2
       CE => '1',
       D => PhaseAddress0(17),
       Q => \PhaseAddress_reg[17]_rep_n_0\,
-      R => RSTP
+      R => p_0_in0
     );
 \PhaseAddress_reg[17]_rep__0\: unisim.vcomponents.FDRE
      port map (
@@ -9351,7 +9216,7 @@ PhaseAddress0_carry_i_4: unisim.vcomponents.LUT2
       CE => '1',
       D => PhaseAddress0(17),
       Q => \PhaseAddress_reg[17]_rep__0_n_0\,
-      R => RSTP
+      R => p_0_in0
     );
 \PhaseAddress_reg[17]_rep__1\: unisim.vcomponents.FDRE
      port map (
@@ -9359,7 +9224,7 @@ PhaseAddress0_carry_i_4: unisim.vcomponents.LUT2
       CE => '1',
       D => PhaseAddress0(17),
       Q => \PhaseAddress_reg[17]_rep__1_n_0\,
-      R => RSTP
+      R => p_0_in0
     );
 \PhaseAddress_reg[17]_rep__2\: unisim.vcomponents.FDRE
      port map (
@@ -9367,7 +9232,7 @@ PhaseAddress0_carry_i_4: unisim.vcomponents.LUT2
       CE => '1',
       D => PhaseAddress0(17),
       Q => \PhaseAddress_reg[17]_rep__2_n_0\,
-      R => RSTP
+      R => p_0_in0
     );
 \PhaseAddress_reg[18]_rep\: unisim.vcomponents.FDRE
      port map (
@@ -9375,7 +9240,7 @@ PhaseAddress0_carry_i_4: unisim.vcomponents.LUT2
       CE => '1',
       D => PhaseAddress0(18),
       Q => \PhaseAddress_reg[18]_rep_n_0\,
-      R => RSTP
+      R => p_0_in0
     );
 \PhaseAddress_reg[18]_rep__0\: unisim.vcomponents.FDRE
      port map (
@@ -9383,7 +9248,7 @@ PhaseAddress0_carry_i_4: unisim.vcomponents.LUT2
       CE => '1',
       D => PhaseAddress0(18),
       Q => \PhaseAddress_reg[18]_rep__0_n_0\,
-      R => RSTP
+      R => p_0_in0
     );
 \PhaseAddress_reg[18]_rep__1\: unisim.vcomponents.FDRE
      port map (
@@ -9391,7 +9256,7 @@ PhaseAddress0_carry_i_4: unisim.vcomponents.LUT2
       CE => '1',
       D => PhaseAddress0(18),
       Q => \PhaseAddress_reg[18]_rep__1_n_0\,
-      R => RSTP
+      R => p_0_in0
     );
 \PhaseAddress_reg[18]_rep__2\: unisim.vcomponents.FDRE
      port map (
@@ -9399,7 +9264,7 @@ PhaseAddress0_carry_i_4: unisim.vcomponents.LUT2
       CE => '1',
       D => PhaseAddress0(18),
       Q => \PhaseAddress_reg[18]_rep__2_n_0\,
-      R => RSTP
+      R => p_0_in0
     );
 \PhaseAddress_reg[19]_rep\: unisim.vcomponents.FDRE
      port map (
@@ -9407,7 +9272,7 @@ PhaseAddress0_carry_i_4: unisim.vcomponents.LUT2
       CE => '1',
       D => PhaseAddress0(19),
       Q => \PhaseAddress_reg[19]_rep_n_0\,
-      R => RSTP
+      R => p_0_in0
     );
 \PhaseAddress_reg[19]_rep__0\: unisim.vcomponents.FDRE
      port map (
@@ -9415,7 +9280,7 @@ PhaseAddress0_carry_i_4: unisim.vcomponents.LUT2
       CE => '1',
       D => PhaseAddress0(19),
       Q => \PhaseAddress_reg[19]_rep__0_n_0\,
-      R => RSTP
+      R => p_0_in0
     );
 \PhaseAddress_reg[19]_rep__1\: unisim.vcomponents.FDRE
      port map (
@@ -9423,7 +9288,7 @@ PhaseAddress0_carry_i_4: unisim.vcomponents.LUT2
       CE => '1',
       D => PhaseAddress0(19),
       Q => \PhaseAddress_reg[19]_rep__1_n_0\,
-      R => RSTP
+      R => p_0_in0
     );
 \PhaseAddress_reg[19]_rep__2\: unisim.vcomponents.FDRE
      port map (
@@ -9431,7 +9296,7 @@ PhaseAddress0_carry_i_4: unisim.vcomponents.LUT2
       CE => '1',
       D => PhaseAddress0(19),
       Q => \PhaseAddress_reg[19]_rep__2_n_0\,
-      R => RSTP
+      R => p_0_in0
     );
 \PhaseAddress_reg[20]_rep\: unisim.vcomponents.FDRE
      port map (
@@ -9439,7 +9304,7 @@ PhaseAddress0_carry_i_4: unisim.vcomponents.LUT2
       CE => '1',
       D => PhaseAddress0(20),
       Q => \PhaseAddress_reg[20]_rep_n_0\,
-      R => RSTP
+      R => p_0_in0
     );
 \PhaseAddress_reg[20]_rep__0\: unisim.vcomponents.FDRE
      port map (
@@ -9447,7 +9312,7 @@ PhaseAddress0_carry_i_4: unisim.vcomponents.LUT2
       CE => '1',
       D => PhaseAddress0(20),
       Q => \PhaseAddress_reg[20]_rep__0_n_0\,
-      R => RSTP
+      R => p_0_in0
     );
 \PhaseAddress_reg[20]_rep__1\: unisim.vcomponents.FDRE
      port map (
@@ -9455,7 +9320,7 @@ PhaseAddress0_carry_i_4: unisim.vcomponents.LUT2
       CE => '1',
       D => PhaseAddress0(20),
       Q => \PhaseAddress_reg[20]_rep__1_n_0\,
-      R => RSTP
+      R => p_0_in0
     );
 \PhaseAddress_reg[20]_rep__2\: unisim.vcomponents.FDRE
      port map (
@@ -9463,7 +9328,7 @@ PhaseAddress0_carry_i_4: unisim.vcomponents.LUT2
       CE => '1',
       D => PhaseAddress0(20),
       Q => \PhaseAddress_reg[20]_rep__2_n_0\,
-      R => RSTP
+      R => p_0_in0
     );
 \PhaseAddress_reg[21]_rep\: unisim.vcomponents.FDRE
      port map (
@@ -9471,7 +9336,7 @@ PhaseAddress0_carry_i_4: unisim.vcomponents.LUT2
       CE => '1',
       D => PhaseAddress0(21),
       Q => \PhaseAddress_reg[21]_rep_n_0\,
-      R => RSTP
+      R => p_0_in0
     );
 \PhaseAddress_reg[21]_rep__0\: unisim.vcomponents.FDRE
      port map (
@@ -9479,7 +9344,7 @@ PhaseAddress0_carry_i_4: unisim.vcomponents.LUT2
       CE => '1',
       D => PhaseAddress0(21),
       Q => \PhaseAddress_reg[21]_rep__0_n_0\,
-      R => RSTP
+      R => p_0_in0
     );
 \PhaseAddress_reg[21]_rep__1\: unisim.vcomponents.FDRE
      port map (
@@ -9487,7 +9352,7 @@ PhaseAddress0_carry_i_4: unisim.vcomponents.LUT2
       CE => '1',
       D => PhaseAddress0(21),
       Q => \PhaseAddress_reg[21]_rep__1_n_0\,
-      R => RSTP
+      R => p_0_in0
     );
 \PhaseAddress_reg[21]_rep__2\: unisim.vcomponents.FDRE
      port map (
@@ -9495,7 +9360,7 @@ PhaseAddress0_carry_i_4: unisim.vcomponents.LUT2
       CE => '1',
       D => PhaseAddress0(21),
       Q => \PhaseAddress_reg[21]_rep__2_n_0\,
-      R => RSTP
+      R => p_0_in0
     );
 \PhaseAddress_reg[22]_rep\: unisim.vcomponents.FDRE
      port map (
@@ -9503,7 +9368,7 @@ PhaseAddress0_carry_i_4: unisim.vcomponents.LUT2
       CE => '1',
       D => PhaseAddress0(22),
       Q => \PhaseAddress_reg[22]_rep_n_0\,
-      R => RSTP
+      R => p_0_in0
     );
 \PhaseAddress_reg[22]_rep__0\: unisim.vcomponents.FDRE
      port map (
@@ -9511,7 +9376,7 @@ PhaseAddress0_carry_i_4: unisim.vcomponents.LUT2
       CE => '1',
       D => PhaseAddress0(22),
       Q => \PhaseAddress_reg[22]_rep__0_n_0\,
-      R => RSTP
+      R => p_0_in0
     );
 \PhaseAddress_reg[22]_rep__1\: unisim.vcomponents.FDRE
      port map (
@@ -9519,7 +9384,7 @@ PhaseAddress0_carry_i_4: unisim.vcomponents.LUT2
       CE => '1',
       D => PhaseAddress0(22),
       Q => \PhaseAddress_reg[22]_rep__1_n_0\,
-      R => RSTP
+      R => p_0_in0
     );
 \PhaseAddress_reg[22]_rep__2\: unisim.vcomponents.FDRE
      port map (
@@ -9527,7 +9392,7 @@ PhaseAddress0_carry_i_4: unisim.vcomponents.LUT2
       CE => '1',
       D => PhaseAddress0(22),
       Q => \PhaseAddress_reg[22]_rep__2_n_0\,
-      R => RSTP
+      R => p_0_in0
     );
 \PhaseAddress_reg[23]_rep\: unisim.vcomponents.FDRE
      port map (
@@ -9535,7 +9400,7 @@ PhaseAddress0_carry_i_4: unisim.vcomponents.LUT2
       CE => '1',
       D => PhaseAddress0(23),
       Q => \PhaseAddress_reg[23]_rep_n_0\,
-      R => RSTP
+      R => p_0_in0
     );
 \PhaseAddress_reg[23]_rep__0\: unisim.vcomponents.FDRE
      port map (
@@ -9543,7 +9408,7 @@ PhaseAddress0_carry_i_4: unisim.vcomponents.LUT2
       CE => '1',
       D => PhaseAddress0(23),
       Q => \PhaseAddress_reg[23]_rep__0_n_0\,
-      R => RSTP
+      R => p_0_in0
     );
 \PhaseAddress_reg[23]_rep__1\: unisim.vcomponents.FDRE
      port map (
@@ -9551,7 +9416,7 @@ PhaseAddress0_carry_i_4: unisim.vcomponents.LUT2
       CE => '1',
       D => PhaseAddress0(23),
       Q => \PhaseAddress_reg[23]_rep__1_n_0\,
-      R => RSTP
+      R => p_0_in0
     );
 \PhaseAddress_reg[23]_rep__2\: unisim.vcomponents.FDRE
      port map (
@@ -9559,7 +9424,7 @@ PhaseAddress0_carry_i_4: unisim.vcomponents.LUT2
       CE => '1',
       D => PhaseAddress0(23),
       Q => \PhaseAddress_reg[23]_rep__2_n_0\,
-      R => RSTP
+      R => p_0_in0
     );
 \PhaseAddress_reg[8]_rep\: unisim.vcomponents.FDRE
      port map (
@@ -9567,7 +9432,7 @@ PhaseAddress0_carry_i_4: unisim.vcomponents.LUT2
       CE => '1',
       D => PhaseAddress0(8),
       Q => \PhaseAddress_reg[8]_rep_n_0\,
-      R => RSTP
+      R => p_0_in0
     );
 \PhaseAddress_reg[8]_rep__0\: unisim.vcomponents.FDRE
      port map (
@@ -9575,7 +9440,7 @@ PhaseAddress0_carry_i_4: unisim.vcomponents.LUT2
       CE => '1',
       D => PhaseAddress0(8),
       Q => \PhaseAddress_reg[8]_rep__0_n_0\,
-      R => RSTP
+      R => p_0_in0
     );
 \PhaseAddress_reg[8]_rep__1\: unisim.vcomponents.FDRE
      port map (
@@ -9583,7 +9448,7 @@ PhaseAddress0_carry_i_4: unisim.vcomponents.LUT2
       CE => '1',
       D => PhaseAddress0(8),
       Q => \PhaseAddress_reg[8]_rep__1_n_0\,
-      R => RSTP
+      R => p_0_in0
     );
 \PhaseAddress_reg[8]_rep__2\: unisim.vcomponents.FDRE
      port map (
@@ -9591,7 +9456,7 @@ PhaseAddress0_carry_i_4: unisim.vcomponents.LUT2
       CE => '1',
       D => PhaseAddress0(8),
       Q => \PhaseAddress_reg[8]_rep__2_n_0\,
-      R => RSTP
+      R => p_0_in0
     );
 \PhaseAddress_reg[9]_rep\: unisim.vcomponents.FDRE
      port map (
@@ -9599,7 +9464,7 @@ PhaseAddress0_carry_i_4: unisim.vcomponents.LUT2
       CE => '1',
       D => PhaseAddress0(9),
       Q => \PhaseAddress_reg[9]_rep_n_0\,
-      R => RSTP
+      R => p_0_in0
     );
 \PhaseAddress_reg[9]_rep__0\: unisim.vcomponents.FDRE
      port map (
@@ -9607,7 +9472,7 @@ PhaseAddress0_carry_i_4: unisim.vcomponents.LUT2
       CE => '1',
       D => PhaseAddress0(9),
       Q => \PhaseAddress_reg[9]_rep__0_n_0\,
-      R => RSTP
+      R => p_0_in0
     );
 \PhaseAddress_reg[9]_rep__1\: unisim.vcomponents.FDRE
      port map (
@@ -9615,7 +9480,7 @@ PhaseAddress0_carry_i_4: unisim.vcomponents.LUT2
       CE => '1',
       D => PhaseAddress0(9),
       Q => \PhaseAddress_reg[9]_rep__1_n_0\,
-      R => RSTP
+      R => p_0_in0
     );
 \PhaseAddress_reg[9]_rep__2\: unisim.vcomponents.FDRE
      port map (
@@ -9623,7 +9488,7 @@ PhaseAddress0_carry_i_4: unisim.vcomponents.LUT2
       CE => '1',
       D => PhaseAddress0(9),
       Q => \PhaseAddress_reg[9]_rep__2_n_0\,
-      R => RSTP
+      R => p_0_in0
     );
 end STRUCTURE;
 library IEEE;

@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date         : Sun May 26 22:30:01 2019
+| Date         : Sun Nov  3 17:17:04 2019
 | Host         : ace-PC running 64-bit Service Pack 1  (build 7601)
 | Command      : report_drc -file TopBlockDesign_wrapper_drc_routed.rpt -pb TopBlockDesign_wrapper_drc_routed.pb -rpx TopBlockDesign_wrapper_drc_routed.rpx
 | Design       : TopBlockDesign_wrapper
@@ -25,23 +25,22 @@ Table of Contents
            Ruledeck: default
              Max violations: <unlimited>
              Violations found: 2
-+--------+----------+------------------------+------------+
-| Rule   | Severity | Description            | Violations |
-+--------+----------+------------------------+------------+
-| DPIP-1 | Warning  | Input pipelining       | 1          |
-| DPOP-2 | Warning  | MREG Output pipelining | 1          |
-+--------+----------+------------------------+------------+
++--------+----------+------------------+------------+
+| Rule   | Severity | Description      | Violations |
++--------+----------+------------------+------------+
+| DPIP-1 | Warning  | Input pipelining | 2          |
++--------+----------+------------------+------------+
 
 2. REPORT DETAILS
 -----------------
 DPIP-1#1 Warning
 Input pipelining  
-DSP TopBlockDesign_i/DDS_0/inst/MultRes_reg input TopBlockDesign_i/DDS_0/inst/MultRes_reg/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP TopBlockDesign_i/DDS_0/inst/MultRes0 input TopBlockDesign_i/DDS_0/inst/MultRes0/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
-DPOP-2#1 Warning
-MREG Output pipelining  
-DSP TopBlockDesign_i/DDS_0/inst/MultRes_reg multiplier stage TopBlockDesign_i/DDS_0/inst/MultRes_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+DPIP-1#2 Warning
+Input pipelining  
+DSP TopBlockDesign_i/DDS_0/inst/MultRes0 input TopBlockDesign_i/DDS_0/inst/MultRes0/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 

@@ -26,7 +26,7 @@ classdef GizmoSerialControl < handle
         
         function obj=GizmoSerialControl()
                     
-            obj.Port = 'COM16';
+            obj.Port = 'COM7';
 
             obj.WaveformMemory=zeros(1,2^16);%Size depends on SineForLUT.txt sample num
            
@@ -83,7 +83,7 @@ classdef GizmoSerialControl < handle
             fwrite(obj.Gizmo,Instruction_ID,'uint16')
                         
             %Send parameter(s)
-            obj.DAC_Mode = Mode;
+            obj.DAC_Mode = Mode;%0: straight binary, 1:2s complement 
             fwrite(obj.Gizmo,obj.DAC_Mode,'uint8')
             
             obj.DAC_Sleep = Sleep;
@@ -201,6 +201,19 @@ classdef GizmoSerialControl < handle
             
         end
         
+        function SetDirectValue(obj,DirectValue)
+            %Tell Gizmo the instruction she needs to perform
+            Instruction_ID = 111;
+            fwrite(obj.Gizmo,Instruction_ID,'uint16')
+            
+            Msg = hex2dec(DirectValue)
+            fwrite(obj.Gizmo,Msg,'uint16')
+            
+            %Read parameter(s)
+            Msg  = fread(obj.Gizmo,1,'uint32')
+            dec2hex(Msg)
+        end
+            
         function Configure_DDS_LUT(obj,Path)
             
             %Tell Gizmo the instruction she needs to perform

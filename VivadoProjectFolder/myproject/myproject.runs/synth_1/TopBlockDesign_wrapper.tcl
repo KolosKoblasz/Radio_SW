@@ -40,7 +40,6 @@ set_property used_in_implementation false [get_files -all d:/DIY/Radio_SW/Vivado
 set_property used_in_implementation false [get_files -all d:/DIY/Radio_SW/VivadoProjectFolder/myproject/myproject.srcs/sources_1/bd/TopBlockDesign/ip/TopBlockDesign_axi_gpio_0_0/TopBlockDesign_axi_gpio_0_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all d:/DIY/Radio_SW/VivadoProjectFolder/myproject/myproject.srcs/sources_1/bd/TopBlockDesign/ip/TopBlockDesign_axi_gpio_0_0/TopBlockDesign_axi_gpio_0_0.xdc]
 set_property used_in_implementation false [get_files -all d:/DIY/Radio_SW/VivadoProjectFolder/myproject/myproject.srcs/sources_1/bd/TopBlockDesign/ip/TopBlockDesign_xbar_0/TopBlockDesign_xbar_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all d:/DIY/Radio_SW/VivadoProjectFolder/myproject/myproject.srcs/sources_1/bd/TopBlockDesign/ip/TopBlockDesign_auto_pc_0/TopBlockDesign_auto_pc_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all d:/DIY/Radio_SW/VivadoProjectFolder/myproject/myproject.srcs/sources_1/bd/TopBlockDesign/ip/TopBlockDesign_clk_wiz_0_0/TopBlockDesign_clk_wiz_0_0_board.xdc]
 set_property used_in_implementation false [get_files -all d:/DIY/Radio_SW/VivadoProjectFolder/myproject/myproject.srcs/sources_1/bd/TopBlockDesign/ip/TopBlockDesign_clk_wiz_0_0/TopBlockDesign_clk_wiz_0_0.xdc]
 set_property used_in_implementation false [get_files -all d:/DIY/Radio_SW/VivadoProjectFolder/myproject/myproject.srcs/sources_1/bd/TopBlockDesign/ip/TopBlockDesign_clk_wiz_0_0/TopBlockDesign_clk_wiz_0_0_ooc.xdc]
@@ -48,6 +47,7 @@ set_property used_in_implementation false [get_files -all d:/DIY/Radio_SW/Vivado
 set_property used_in_implementation false [get_files -all d:/DIY/Radio_SW/VivadoProjectFolder/myproject/myproject.srcs/sources_1/bd/TopBlockDesign/ip/TopBlockDesign_proc_sys_reset_0_0/TopBlockDesign_proc_sys_reset_0_0.xdc]
 set_property used_in_implementation false [get_files -all d:/DIY/Radio_SW/VivadoProjectFolder/myproject/myproject.srcs/sources_1/bd/TopBlockDesign/ip/TopBlockDesign_proc_sys_reset_0_0/TopBlockDesign_proc_sys_reset_0_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all d:/DIY/Radio_SW/VivadoProjectFolder/myproject/myproject.srcs/sources_1/bd/TopBlockDesign/ip/TopBlockDesign_processing_system7_0_0/TopBlockDesign_processing_system7_0_0.xdc]
+set_property used_in_implementation false [get_files -all d:/DIY/Radio_SW/VivadoProjectFolder/myproject/myproject.srcs/sources_1/bd/TopBlockDesign/ip/TopBlockDesign_auto_pc_0/TopBlockDesign_auto_pc_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all D:/DIY/Radio_SW/VivadoProjectFolder/myproject/myproject.srcs/sources_1/bd/TopBlockDesign/TopBlockDesign_ooc.xdc]
 
 # Mark all dcp files as not used in implementation to prevent them from being

@@ -1,7 +1,7 @@
 // Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-// Date        : Sun May 26 22:21:03 2019
+// Date        : Sun Nov  3 17:08:06 2019
 // Host        : ace-PC running 64-bit Service Pack 1  (build 7601)
 // Command     : write_verilog -force -mode funcsim -rename_top decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix -prefix
 //               decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ TopBlockDesign_DDS_0_0_sim_netlist.v
@@ -21,9 +21,9 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_DDS
     LUTAddress,
     LUTData,
     LUTWriteEn,
+    AmplCntrl,
     DirectValue,
     DataPathSelect,
-    AmplCntrl,
     FreqCntrl,
     PhaseCntrl);
   output [15:0]SampleOut;
@@ -34,13 +34,12 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_DDS
   input [15:0]LUTAddress;
   input [15:0]LUTData;
   input LUTWriteEn;
+  input [15:0]AmplCntrl;
   input [15:0]DirectValue;
   input DataPathSelect;
-  input [15:0]AmplCntrl;
   input [23:0]FreqCntrl;
   input [23:0]PhaseCntrl;
 
-  wire [15:0]A;
   wire AXI_clk;
   wire \Accu[0]_i_1_n_0 ;
   wire \Accu[0]_i_3_n_0 ;
@@ -123,22 +122,23 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_DDS
   wire [15:0]LUTAddress;
   wire [15:0]LUTData;
   wire LUTWriteEn;
-  wire MultRes_reg_n_100;
-  wire MultRes_reg_n_101;
-  wire MultRes_reg_n_102;
-  wire MultRes_reg_n_103;
-  wire MultRes_reg_n_104;
-  wire MultRes_reg_n_105;
-  wire MultRes_reg_n_90;
-  wire MultRes_reg_n_91;
-  wire MultRes_reg_n_92;
-  wire MultRes_reg_n_93;
-  wire MultRes_reg_n_94;
-  wire MultRes_reg_n_95;
-  wire MultRes_reg_n_96;
-  wire MultRes_reg_n_97;
-  wire MultRes_reg_n_98;
-  wire MultRes_reg_n_99;
+  wire MultRes0_i_2_n_0;
+  wire MultRes0_n_100;
+  wire MultRes0_n_101;
+  wire MultRes0_n_102;
+  wire MultRes0_n_103;
+  wire MultRes0_n_104;
+  wire MultRes0_n_105;
+  wire MultRes0_n_90;
+  wire MultRes0_n_91;
+  wire MultRes0_n_92;
+  wire MultRes0_n_93;
+  wire MultRes0_n_94;
+  wire MultRes0_n_95;
+  wire MultRes0_n_96;
+  wire MultRes0_n_97;
+  wire MultRes0_n_98;
+  wire MultRes0_n_99;
   wire [23:8]PhaseAddress0;
   wire PhaseAddress0_carry__0_i_1_n_0;
   wire PhaseAddress0_carry__0_i_2_n_0;
@@ -252,23 +252,23 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_DDS
   wire \PhaseAddress_reg[9]_rep__2_n_0 ;
   wire \PhaseAddress_reg[9]_rep_n_0 ;
   wire [23:0]PhaseCntrl;
-  wire RSTP;
+  wire [15:0]RAM_Data;
   wire [15:0]SampleOut;
   wire en;
-  wire [15:0]\output_register.doutb_reg ;
+  wire p_0_in0;
   wire rst_n;
   wire [3:3]\NLW_Accu_reg[20]_i_1_CO_UNCONNECTED ;
-  wire NLW_MultRes_reg_CARRYCASCOUT_UNCONNECTED;
-  wire NLW_MultRes_reg_MULTSIGNOUT_UNCONNECTED;
-  wire NLW_MultRes_reg_OVERFLOW_UNCONNECTED;
-  wire NLW_MultRes_reg_PATTERNBDETECT_UNCONNECTED;
-  wire NLW_MultRes_reg_PATTERNDETECT_UNCONNECTED;
-  wire NLW_MultRes_reg_UNDERFLOW_UNCONNECTED;
-  wire [29:0]NLW_MultRes_reg_ACOUT_UNCONNECTED;
-  wire [17:0]NLW_MultRes_reg_BCOUT_UNCONNECTED;
-  wire [3:0]NLW_MultRes_reg_CARRYOUT_UNCONNECTED;
-  wire [47:32]NLW_MultRes_reg_P_UNCONNECTED;
-  wire [47:0]NLW_MultRes_reg_PCOUT_UNCONNECTED;
+  wire NLW_MultRes0_CARRYCASCOUT_UNCONNECTED;
+  wire NLW_MultRes0_MULTSIGNOUT_UNCONNECTED;
+  wire NLW_MultRes0_OVERFLOW_UNCONNECTED;
+  wire NLW_MultRes0_PATTERNBDETECT_UNCONNECTED;
+  wire NLW_MultRes0_PATTERNDETECT_UNCONNECTED;
+  wire NLW_MultRes0_UNDERFLOW_UNCONNECTED;
+  wire [29:0]NLW_MultRes0_ACOUT_UNCONNECTED;
+  wire [17:0]NLW_MultRes0_BCOUT_UNCONNECTED;
+  wire [3:0]NLW_MultRes0_CARRYOUT_UNCONNECTED;
+  wire [47:32]NLW_MultRes0_P_UNCONNECTED;
+  wire [47:0]NLW_MultRes0_PCOUT_UNCONNECTED;
   wire [3:0]NLW_PhaseAddress0_carry_O_UNCONNECTED;
   wire [3:0]NLW_PhaseAddress0_carry__0_O_UNCONNECTED;
   wire [3:3]NLW_PhaseAddress0_carry__4_CO_UNCONNECTED;
@@ -616,12 +616,10 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_DDS
         .LUTAddress(LUTAddress),
         .LUTData(LUTData),
         .LUTWriteEn(LUTWriteEn),
-        .RAM_Data(\output_register.doutb_reg ),
+        .RAM_Data(RAM_Data),
         .RAM_reg_0_10_0({\PhaseAddress_reg[23]_rep__1_n_0 ,\PhaseAddress_reg[22]_rep__1_n_0 ,\PhaseAddress_reg[21]_rep__1_n_0 ,\PhaseAddress_reg[20]_rep__1_n_0 ,\PhaseAddress_reg[19]_rep__1_n_0 ,\PhaseAddress_reg[18]_rep__1_n_0 ,\PhaseAddress_reg[17]_rep__1_n_0 ,\PhaseAddress_reg[16]_rep__1_n_0 ,\PhaseAddress_reg[15]_rep__1_n_0 ,\PhaseAddress_reg[14]_rep__1_n_0 ,\PhaseAddress_reg[13]_rep__1_n_0 ,\PhaseAddress_reg[12]_rep__1_n_0 ,\PhaseAddress_reg[11]_rep__1_n_0 ,\PhaseAddress_reg[10]_rep__1_n_0 ,\PhaseAddress_reg[9]_rep__1_n_0 ,\PhaseAddress_reg[8]_rep__1_n_0 }),
         .RAM_reg_0_5_0({\PhaseAddress_reg[23]_rep__0_n_0 ,\PhaseAddress_reg[22]_rep__0_n_0 ,\PhaseAddress_reg[21]_rep__0_n_0 ,\PhaseAddress_reg[20]_rep__0_n_0 ,\PhaseAddress_reg[19]_rep__0_n_0 ,\PhaseAddress_reg[18]_rep__0_n_0 ,\PhaseAddress_reg[17]_rep__0_n_0 ,\PhaseAddress_reg[16]_rep__0_n_0 ,\PhaseAddress_reg[15]_rep__0_n_0 ,\PhaseAddress_reg[14]_rep__0_n_0 ,\PhaseAddress_reg[13]_rep__0_n_0 ,\PhaseAddress_reg[12]_rep__0_n_0 ,\PhaseAddress_reg[11]_rep__0_n_0 ,\PhaseAddress_reg[10]_rep__0_n_0 ,\PhaseAddress_reg[9]_rep__0_n_0 ,\PhaseAddress_reg[8]_rep__0_n_0 }),
-        .RSTP(RSTP),
-        .RdAddress({\PhaseAddress_reg[23]_rep__2_n_0 ,\PhaseAddress_reg[22]_rep__2_n_0 ,\PhaseAddress_reg[21]_rep__2_n_0 ,\PhaseAddress_reg[20]_rep__2_n_0 ,\PhaseAddress_reg[19]_rep__2_n_0 ,\PhaseAddress_reg[18]_rep__2_n_0 ,\PhaseAddress_reg[17]_rep__2_n_0 ,\PhaseAddress_reg[16]_rep__2_n_0 ,\PhaseAddress_reg[15]_rep__2_n_0 ,\PhaseAddress_reg[14]_rep__2_n_0 ,\PhaseAddress_reg[13]_rep__2_n_0 ,\PhaseAddress_reg[12]_rep__2_n_0 ,\PhaseAddress_reg[11]_rep__2_n_0 ,\PhaseAddress_reg[10]_rep__2_n_0 ,\PhaseAddress_reg[9]_rep__2_n_0 ,\PhaseAddress_reg[8]_rep__2_n_0 }),
-        .rst_n(rst_n));
+        .RdAddress({\PhaseAddress_reg[23]_rep__2_n_0 ,\PhaseAddress_reg[22]_rep__2_n_0 ,\PhaseAddress_reg[21]_rep__2_n_0 ,\PhaseAddress_reg[20]_rep__2_n_0 ,\PhaseAddress_reg[19]_rep__2_n_0 ,\PhaseAddress_reg[18]_rep__2_n_0 ,\PhaseAddress_reg[17]_rep__2_n_0 ,\PhaseAddress_reg[16]_rep__2_n_0 ,\PhaseAddress_reg[15]_rep__2_n_0 ,\PhaseAddress_reg[14]_rep__2_n_0 ,\PhaseAddress_reg[13]_rep__2_n_0 ,\PhaseAddress_reg[12]_rep__2_n_0 ,\PhaseAddress_reg[11]_rep__2_n_0 ,\PhaseAddress_reg[10]_rep__2_n_0 ,\PhaseAddress_reg[9]_rep__2_n_0 ,\PhaseAddress_reg[8]_rep__2_n_0 }));
   DSP48E1 #(
     .ACASCREG(1),
     .ADREG(1),
@@ -648,20 +646,20 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_DDS
     .USE_MULT("MULTIPLY"),
     .USE_PATTERN_DETECT("NO_PATDET"),
     .USE_SIMD("ONE48")) 
-    MultRes_reg
-       (.A({A[15],A[15],A[15],A[15],A[15],A[15],A[15],A[15],A[15],A[15],A[15],A[15],A[15],A[15],A}),
+    MultRes0
+       (.A({RAM_Data[15],RAM_Data[15],RAM_Data[15],RAM_Data[15],RAM_Data[15],RAM_Data[15],RAM_Data[15],RAM_Data[15],RAM_Data[15],RAM_Data[15],RAM_Data[15],RAM_Data[15],RAM_Data[15],RAM_Data[15],RAM_Data}),
         .ACIN({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
-        .ACOUT(NLW_MultRes_reg_ACOUT_UNCONNECTED[29:0]),
+        .ACOUT(NLW_MultRes0_ACOUT_UNCONNECTED[29:0]),
         .ALUMODE({1'b0,1'b0,1'b0,1'b0}),
         .B({AmplCntrl[15],AmplCntrl[15],AmplCntrl}),
         .BCIN({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
-        .BCOUT(NLW_MultRes_reg_BCOUT_UNCONNECTED[17:0]),
-        .C({1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1}),
+        .BCOUT(NLW_MultRes0_BCOUT_UNCONNECTED[17:0]),
+        .C({DirectValue[15],DirectValue[15],DirectValue[15],DirectValue[15],DirectValue[15],DirectValue[15],DirectValue[15],DirectValue[15],DirectValue[15],DirectValue[15],DirectValue[15],DirectValue[15],DirectValue[15],DirectValue[15],DirectValue[15],DirectValue[15],DirectValue,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
         .CARRYCASCIN(1'b0),
-        .CARRYCASCOUT(NLW_MultRes_reg_CARRYCASCOUT_UNCONNECTED),
+        .CARRYCASCOUT(NLW_MultRes0_CARRYCASCOUT_UNCONNECTED),
         .CARRYIN(1'b0),
         .CARRYINSEL({1'b0,1'b0,1'b0}),
-        .CARRYOUT(NLW_MultRes_reg_CARRYOUT_UNCONNECTED[3:0]),
+        .CARRYOUT(NLW_MultRes0_CARRYOUT_UNCONNECTED[3:0]),
         .CEA1(1'b0),
         .CEA2(1'b1),
         .CEAD(1'b0),
@@ -679,15 +677,15 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_DDS
         .D({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
         .INMODE({1'b0,1'b0,1'b0,1'b0,1'b0}),
         .MULTSIGNIN(1'b0),
-        .MULTSIGNOUT(NLW_MultRes_reg_MULTSIGNOUT_UNCONNECTED),
-        .OPMODE({1'b0,1'b0,1'b0,1'b0,1'b1,1'b0,1'b1}),
-        .OVERFLOW(NLW_MultRes_reg_OVERFLOW_UNCONNECTED),
-        .P({NLW_MultRes_reg_P_UNCONNECTED[47:32],SampleOut,MultRes_reg_n_90,MultRes_reg_n_91,MultRes_reg_n_92,MultRes_reg_n_93,MultRes_reg_n_94,MultRes_reg_n_95,MultRes_reg_n_96,MultRes_reg_n_97,MultRes_reg_n_98,MultRes_reg_n_99,MultRes_reg_n_100,MultRes_reg_n_101,MultRes_reg_n_102,MultRes_reg_n_103,MultRes_reg_n_104,MultRes_reg_n_105}),
-        .PATTERNBDETECT(NLW_MultRes_reg_PATTERNBDETECT_UNCONNECTED),
-        .PATTERNDETECT(NLW_MultRes_reg_PATTERNDETECT_UNCONNECTED),
+        .MULTSIGNOUT(NLW_MultRes0_MULTSIGNOUT_UNCONNECTED),
+        .OPMODE({1'b0,MultRes0_i_2_n_0,MultRes0_i_2_n_0,1'b0,DataPathSelect,1'b0,DataPathSelect}),
+        .OVERFLOW(NLW_MultRes0_OVERFLOW_UNCONNECTED),
+        .P({NLW_MultRes0_P_UNCONNECTED[47:32],SampleOut,MultRes0_n_90,MultRes0_n_91,MultRes0_n_92,MultRes0_n_93,MultRes0_n_94,MultRes0_n_95,MultRes0_n_96,MultRes0_n_97,MultRes0_n_98,MultRes0_n_99,MultRes0_n_100,MultRes0_n_101,MultRes0_n_102,MultRes0_n_103,MultRes0_n_104,MultRes0_n_105}),
+        .PATTERNBDETECT(NLW_MultRes0_PATTERNBDETECT_UNCONNECTED),
+        .PATTERNDETECT(NLW_MultRes0_PATTERNDETECT_UNCONNECTED),
         .PCIN({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
-        .PCOUT(NLW_MultRes_reg_PCOUT_UNCONNECTED[47:0]),
-        .RSTA(RSTP),
+        .PCOUT(NLW_MultRes0_PCOUT_UNCONNECTED[47:0]),
+        .RSTA(p_0_in0),
         .RSTALLCARRYIN(1'b0),
         .RSTALUMODE(1'b0),
         .RSTB(1'b0),
@@ -696,120 +694,18 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_DDS
         .RSTD(1'b0),
         .RSTINMODE(1'b0),
         .RSTM(1'b0),
-        .RSTP(RSTP),
-        .UNDERFLOW(NLW_MultRes_reg_UNDERFLOW_UNCONNECTED));
-  LUT3 #(
-    .INIT(8'hAC)) 
-    MultRes_reg_i_10
-       (.I0(\output_register.doutb_reg [7]),
-        .I1(DirectValue[7]),
-        .I2(DataPathSelect),
-        .O(A[7]));
-  LUT3 #(
-    .INIT(8'hAC)) 
-    MultRes_reg_i_11
-       (.I0(\output_register.doutb_reg [6]),
-        .I1(DirectValue[6]),
-        .I2(DataPathSelect),
-        .O(A[6]));
-  LUT3 #(
-    .INIT(8'hAC)) 
-    MultRes_reg_i_12
-       (.I0(\output_register.doutb_reg [5]),
-        .I1(DirectValue[5]),
-        .I2(DataPathSelect),
-        .O(A[5]));
-  LUT3 #(
-    .INIT(8'hAC)) 
-    MultRes_reg_i_13
-       (.I0(\output_register.doutb_reg [4]),
-        .I1(DirectValue[4]),
-        .I2(DataPathSelect),
-        .O(A[4]));
-  LUT3 #(
-    .INIT(8'hAC)) 
-    MultRes_reg_i_14
-       (.I0(\output_register.doutb_reg [3]),
-        .I1(DirectValue[3]),
-        .I2(DataPathSelect),
-        .O(A[3]));
-  LUT3 #(
-    .INIT(8'hAC)) 
-    MultRes_reg_i_15
-       (.I0(\output_register.doutb_reg [2]),
-        .I1(DirectValue[2]),
-        .I2(DataPathSelect),
-        .O(A[2]));
-  LUT3 #(
-    .INIT(8'hAC)) 
-    MultRes_reg_i_16
-       (.I0(\output_register.doutb_reg [1]),
-        .I1(DirectValue[1]),
-        .I2(DataPathSelect),
-        .O(A[1]));
-  LUT3 #(
-    .INIT(8'hAC)) 
-    MultRes_reg_i_17
-       (.I0(\output_register.doutb_reg [0]),
-        .I1(DirectValue[0]),
-        .I2(DataPathSelect),
-        .O(A[0]));
-  LUT3 #(
-    .INIT(8'hAC)) 
-    MultRes_reg_i_2
-       (.I0(\output_register.doutb_reg [15]),
-        .I1(DirectValue[15]),
-        .I2(DataPathSelect),
-        .O(A[15]));
-  LUT3 #(
-    .INIT(8'hAC)) 
-    MultRes_reg_i_3
-       (.I0(\output_register.doutb_reg [14]),
-        .I1(DirectValue[14]),
-        .I2(DataPathSelect),
-        .O(A[14]));
-  LUT3 #(
-    .INIT(8'hAC)) 
-    MultRes_reg_i_4
-       (.I0(\output_register.doutb_reg [13]),
-        .I1(DirectValue[13]),
-        .I2(DataPathSelect),
-        .O(A[13]));
-  LUT3 #(
-    .INIT(8'hAC)) 
-    MultRes_reg_i_5
-       (.I0(\output_register.doutb_reg [12]),
-        .I1(DirectValue[12]),
-        .I2(DataPathSelect),
-        .O(A[12]));
-  LUT3 #(
-    .INIT(8'hAC)) 
-    MultRes_reg_i_6
-       (.I0(\output_register.doutb_reg [11]),
-        .I1(DirectValue[11]),
-        .I2(DataPathSelect),
-        .O(A[11]));
-  LUT3 #(
-    .INIT(8'hAC)) 
-    MultRes_reg_i_7
-       (.I0(\output_register.doutb_reg [10]),
-        .I1(DirectValue[10]),
-        .I2(DataPathSelect),
-        .O(A[10]));
-  LUT3 #(
-    .INIT(8'hAC)) 
-    MultRes_reg_i_8
-       (.I0(\output_register.doutb_reg [9]),
-        .I1(DirectValue[9]),
-        .I2(DataPathSelect),
-        .O(A[9]));
-  LUT3 #(
-    .INIT(8'hAC)) 
-    MultRes_reg_i_9
-       (.I0(\output_register.doutb_reg [8]),
-        .I1(DirectValue[8]),
-        .I2(DataPathSelect),
-        .O(A[8]));
+        .RSTP(p_0_in0),
+        .UNDERFLOW(NLW_MultRes0_UNDERFLOW_UNCONNECTED));
+  LUT1 #(
+    .INIT(2'h1)) 
+    MultRes0_i_1
+       (.I0(rst_n),
+        .O(p_0_in0));
+  LUT1 #(
+    .INIT(2'h1)) 
+    MultRes0_i_2
+       (.I0(DataPathSelect),
+        .O(MultRes0_i_2_n_0));
   CARRY4 PhaseAddress0_carry
        (.CI(1'b0),
         .CO({PhaseAddress0_carry_n_0,PhaseAddress0_carry_n_1,PhaseAddress0_carry_n_2,PhaseAddress0_carry_n_3}),
@@ -1002,454 +898,452 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_DDS
         .CE(1'b1),
         .D(PhaseAddress0[10]),
         .Q(\PhaseAddress_reg[10]_rep_n_0 ),
-        .R(RSTP));
+        .R(p_0_in0));
   (* ORIG_CELL_NAME = "PhaseAddress_reg[10]" *) 
   FDRE \PhaseAddress_reg[10]_rep__0 
        (.C(DAC_clk),
         .CE(1'b1),
         .D(PhaseAddress0[10]),
         .Q(\PhaseAddress_reg[10]_rep__0_n_0 ),
-        .R(RSTP));
+        .R(p_0_in0));
   (* ORIG_CELL_NAME = "PhaseAddress_reg[10]" *) 
   FDRE \PhaseAddress_reg[10]_rep__1 
        (.C(DAC_clk),
         .CE(1'b1),
         .D(PhaseAddress0[10]),
         .Q(\PhaseAddress_reg[10]_rep__1_n_0 ),
-        .R(RSTP));
+        .R(p_0_in0));
   (* ORIG_CELL_NAME = "PhaseAddress_reg[10]" *) 
   FDRE \PhaseAddress_reg[10]_rep__2 
        (.C(DAC_clk),
         .CE(1'b1),
         .D(PhaseAddress0[10]),
         .Q(\PhaseAddress_reg[10]_rep__2_n_0 ),
-        .R(RSTP));
+        .R(p_0_in0));
   (* ORIG_CELL_NAME = "PhaseAddress_reg[11]" *) 
   FDRE \PhaseAddress_reg[11]_rep 
        (.C(DAC_clk),
         .CE(1'b1),
         .D(PhaseAddress0[11]),
         .Q(\PhaseAddress_reg[11]_rep_n_0 ),
-        .R(RSTP));
+        .R(p_0_in0));
   (* ORIG_CELL_NAME = "PhaseAddress_reg[11]" *) 
   FDRE \PhaseAddress_reg[11]_rep__0 
        (.C(DAC_clk),
         .CE(1'b1),
         .D(PhaseAddress0[11]),
         .Q(\PhaseAddress_reg[11]_rep__0_n_0 ),
-        .R(RSTP));
+        .R(p_0_in0));
   (* ORIG_CELL_NAME = "PhaseAddress_reg[11]" *) 
   FDRE \PhaseAddress_reg[11]_rep__1 
        (.C(DAC_clk),
         .CE(1'b1),
         .D(PhaseAddress0[11]),
         .Q(\PhaseAddress_reg[11]_rep__1_n_0 ),
-        .R(RSTP));
+        .R(p_0_in0));
   (* ORIG_CELL_NAME = "PhaseAddress_reg[11]" *) 
   FDRE \PhaseAddress_reg[11]_rep__2 
        (.C(DAC_clk),
         .CE(1'b1),
         .D(PhaseAddress0[11]),
         .Q(\PhaseAddress_reg[11]_rep__2_n_0 ),
-        .R(RSTP));
+        .R(p_0_in0));
   (* ORIG_CELL_NAME = "PhaseAddress_reg[12]" *) 
   FDRE \PhaseAddress_reg[12]_rep 
        (.C(DAC_clk),
         .CE(1'b1),
         .D(PhaseAddress0[12]),
         .Q(\PhaseAddress_reg[12]_rep_n_0 ),
-        .R(RSTP));
+        .R(p_0_in0));
   (* ORIG_CELL_NAME = "PhaseAddress_reg[12]" *) 
   FDRE \PhaseAddress_reg[12]_rep__0 
        (.C(DAC_clk),
         .CE(1'b1),
         .D(PhaseAddress0[12]),
         .Q(\PhaseAddress_reg[12]_rep__0_n_0 ),
-        .R(RSTP));
+        .R(p_0_in0));
   (* ORIG_CELL_NAME = "PhaseAddress_reg[12]" *) 
   FDRE \PhaseAddress_reg[12]_rep__1 
        (.C(DAC_clk),
         .CE(1'b1),
         .D(PhaseAddress0[12]),
         .Q(\PhaseAddress_reg[12]_rep__1_n_0 ),
-        .R(RSTP));
+        .R(p_0_in0));
   (* ORIG_CELL_NAME = "PhaseAddress_reg[12]" *) 
   FDRE \PhaseAddress_reg[12]_rep__2 
        (.C(DAC_clk),
         .CE(1'b1),
         .D(PhaseAddress0[12]),
         .Q(\PhaseAddress_reg[12]_rep__2_n_0 ),
-        .R(RSTP));
+        .R(p_0_in0));
   (* ORIG_CELL_NAME = "PhaseAddress_reg[13]" *) 
   FDRE \PhaseAddress_reg[13]_rep 
        (.C(DAC_clk),
         .CE(1'b1),
         .D(PhaseAddress0[13]),
         .Q(\PhaseAddress_reg[13]_rep_n_0 ),
-        .R(RSTP));
+        .R(p_0_in0));
   (* ORIG_CELL_NAME = "PhaseAddress_reg[13]" *) 
   FDRE \PhaseAddress_reg[13]_rep__0 
        (.C(DAC_clk),
         .CE(1'b1),
         .D(PhaseAddress0[13]),
         .Q(\PhaseAddress_reg[13]_rep__0_n_0 ),
-        .R(RSTP));
+        .R(p_0_in0));
   (* ORIG_CELL_NAME = "PhaseAddress_reg[13]" *) 
   FDRE \PhaseAddress_reg[13]_rep__1 
        (.C(DAC_clk),
         .CE(1'b1),
         .D(PhaseAddress0[13]),
         .Q(\PhaseAddress_reg[13]_rep__1_n_0 ),
-        .R(RSTP));
+        .R(p_0_in0));
   (* ORIG_CELL_NAME = "PhaseAddress_reg[13]" *) 
   FDRE \PhaseAddress_reg[13]_rep__2 
        (.C(DAC_clk),
         .CE(1'b1),
         .D(PhaseAddress0[13]),
         .Q(\PhaseAddress_reg[13]_rep__2_n_0 ),
-        .R(RSTP));
+        .R(p_0_in0));
   (* ORIG_CELL_NAME = "PhaseAddress_reg[14]" *) 
   FDRE \PhaseAddress_reg[14]_rep 
        (.C(DAC_clk),
         .CE(1'b1),
         .D(PhaseAddress0[14]),
         .Q(\PhaseAddress_reg[14]_rep_n_0 ),
-        .R(RSTP));
+        .R(p_0_in0));
   (* ORIG_CELL_NAME = "PhaseAddress_reg[14]" *) 
   FDRE \PhaseAddress_reg[14]_rep__0 
        (.C(DAC_clk),
         .CE(1'b1),
         .D(PhaseAddress0[14]),
         .Q(\PhaseAddress_reg[14]_rep__0_n_0 ),
-        .R(RSTP));
+        .R(p_0_in0));
   (* ORIG_CELL_NAME = "PhaseAddress_reg[14]" *) 
   FDRE \PhaseAddress_reg[14]_rep__1 
        (.C(DAC_clk),
         .CE(1'b1),
         .D(PhaseAddress0[14]),
         .Q(\PhaseAddress_reg[14]_rep__1_n_0 ),
-        .R(RSTP));
+        .R(p_0_in0));
   (* ORIG_CELL_NAME = "PhaseAddress_reg[14]" *) 
   FDRE \PhaseAddress_reg[14]_rep__2 
        (.C(DAC_clk),
         .CE(1'b1),
         .D(PhaseAddress0[14]),
         .Q(\PhaseAddress_reg[14]_rep__2_n_0 ),
-        .R(RSTP));
+        .R(p_0_in0));
   (* ORIG_CELL_NAME = "PhaseAddress_reg[15]" *) 
   FDRE \PhaseAddress_reg[15]_rep 
        (.C(DAC_clk),
         .CE(1'b1),
         .D(PhaseAddress0[15]),
         .Q(\PhaseAddress_reg[15]_rep_n_0 ),
-        .R(RSTP));
+        .R(p_0_in0));
   (* ORIG_CELL_NAME = "PhaseAddress_reg[15]" *) 
   FDRE \PhaseAddress_reg[15]_rep__0 
        (.C(DAC_clk),
         .CE(1'b1),
         .D(PhaseAddress0[15]),
         .Q(\PhaseAddress_reg[15]_rep__0_n_0 ),
-        .R(RSTP));
+        .R(p_0_in0));
   (* ORIG_CELL_NAME = "PhaseAddress_reg[15]" *) 
   FDRE \PhaseAddress_reg[15]_rep__1 
        (.C(DAC_clk),
         .CE(1'b1),
         .D(PhaseAddress0[15]),
         .Q(\PhaseAddress_reg[15]_rep__1_n_0 ),
-        .R(RSTP));
+        .R(p_0_in0));
   (* ORIG_CELL_NAME = "PhaseAddress_reg[15]" *) 
   FDRE \PhaseAddress_reg[15]_rep__2 
        (.C(DAC_clk),
         .CE(1'b1),
         .D(PhaseAddress0[15]),
         .Q(\PhaseAddress_reg[15]_rep__2_n_0 ),
-        .R(RSTP));
+        .R(p_0_in0));
   (* ORIG_CELL_NAME = "PhaseAddress_reg[16]" *) 
   FDRE \PhaseAddress_reg[16]_rep 
        (.C(DAC_clk),
         .CE(1'b1),
         .D(PhaseAddress0[16]),
         .Q(\PhaseAddress_reg[16]_rep_n_0 ),
-        .R(RSTP));
+        .R(p_0_in0));
   (* ORIG_CELL_NAME = "PhaseAddress_reg[16]" *) 
   FDRE \PhaseAddress_reg[16]_rep__0 
        (.C(DAC_clk),
         .CE(1'b1),
         .D(PhaseAddress0[16]),
         .Q(\PhaseAddress_reg[16]_rep__0_n_0 ),
-        .R(RSTP));
+        .R(p_0_in0));
   (* ORIG_CELL_NAME = "PhaseAddress_reg[16]" *) 
   FDRE \PhaseAddress_reg[16]_rep__1 
        (.C(DAC_clk),
         .CE(1'b1),
         .D(PhaseAddress0[16]),
         .Q(\PhaseAddress_reg[16]_rep__1_n_0 ),
-        .R(RSTP));
+        .R(p_0_in0));
   (* ORIG_CELL_NAME = "PhaseAddress_reg[16]" *) 
   FDRE \PhaseAddress_reg[16]_rep__2 
        (.C(DAC_clk),
         .CE(1'b1),
         .D(PhaseAddress0[16]),
         .Q(\PhaseAddress_reg[16]_rep__2_n_0 ),
-        .R(RSTP));
+        .R(p_0_in0));
   (* ORIG_CELL_NAME = "PhaseAddress_reg[17]" *) 
   FDRE \PhaseAddress_reg[17]_rep 
        (.C(DAC_clk),
         .CE(1'b1),
         .D(PhaseAddress0[17]),
         .Q(\PhaseAddress_reg[17]_rep_n_0 ),
-        .R(RSTP));
+        .R(p_0_in0));
   (* ORIG_CELL_NAME = "PhaseAddress_reg[17]" *) 
   FDRE \PhaseAddress_reg[17]_rep__0 
        (.C(DAC_clk),
         .CE(1'b1),
         .D(PhaseAddress0[17]),
         .Q(\PhaseAddress_reg[17]_rep__0_n_0 ),
-        .R(RSTP));
+        .R(p_0_in0));
   (* ORIG_CELL_NAME = "PhaseAddress_reg[17]" *) 
   FDRE \PhaseAddress_reg[17]_rep__1 
        (.C(DAC_clk),
         .CE(1'b1),
         .D(PhaseAddress0[17]),
         .Q(\PhaseAddress_reg[17]_rep__1_n_0 ),
-        .R(RSTP));
+        .R(p_0_in0));
   (* ORIG_CELL_NAME = "PhaseAddress_reg[17]" *) 
   FDRE \PhaseAddress_reg[17]_rep__2 
        (.C(DAC_clk),
         .CE(1'b1),
         .D(PhaseAddress0[17]),
         .Q(\PhaseAddress_reg[17]_rep__2_n_0 ),
-        .R(RSTP));
+        .R(p_0_in0));
   (* ORIG_CELL_NAME = "PhaseAddress_reg[18]" *) 
   FDRE \PhaseAddress_reg[18]_rep 
        (.C(DAC_clk),
         .CE(1'b1),
         .D(PhaseAddress0[18]),
         .Q(\PhaseAddress_reg[18]_rep_n_0 ),
-        .R(RSTP));
+        .R(p_0_in0));
   (* ORIG_CELL_NAME = "PhaseAddress_reg[18]" *) 
   FDRE \PhaseAddress_reg[18]_rep__0 
        (.C(DAC_clk),
         .CE(1'b1),
         .D(PhaseAddress0[18]),
         .Q(\PhaseAddress_reg[18]_rep__0_n_0 ),
-        .R(RSTP));
+        .R(p_0_in0));
   (* ORIG_CELL_NAME = "PhaseAddress_reg[18]" *) 
   FDRE \PhaseAddress_reg[18]_rep__1 
        (.C(DAC_clk),
         .CE(1'b1),
         .D(PhaseAddress0[18]),
         .Q(\PhaseAddress_reg[18]_rep__1_n_0 ),
-        .R(RSTP));
+        .R(p_0_in0));
   (* ORIG_CELL_NAME = "PhaseAddress_reg[18]" *) 
   FDRE \PhaseAddress_reg[18]_rep__2 
        (.C(DAC_clk),
         .CE(1'b1),
         .D(PhaseAddress0[18]),
         .Q(\PhaseAddress_reg[18]_rep__2_n_0 ),
-        .R(RSTP));
+        .R(p_0_in0));
   (* ORIG_CELL_NAME = "PhaseAddress_reg[19]" *) 
   FDRE \PhaseAddress_reg[19]_rep 
        (.C(DAC_clk),
         .CE(1'b1),
         .D(PhaseAddress0[19]),
         .Q(\PhaseAddress_reg[19]_rep_n_0 ),
-        .R(RSTP));
+        .R(p_0_in0));
   (* ORIG_CELL_NAME = "PhaseAddress_reg[19]" *) 
   FDRE \PhaseAddress_reg[19]_rep__0 
        (.C(DAC_clk),
         .CE(1'b1),
         .D(PhaseAddress0[19]),
         .Q(\PhaseAddress_reg[19]_rep__0_n_0 ),
-        .R(RSTP));
+        .R(p_0_in0));
   (* ORIG_CELL_NAME = "PhaseAddress_reg[19]" *) 
   FDRE \PhaseAddress_reg[19]_rep__1 
        (.C(DAC_clk),
         .CE(1'b1),
         .D(PhaseAddress0[19]),
         .Q(\PhaseAddress_reg[19]_rep__1_n_0 ),
-        .R(RSTP));
+        .R(p_0_in0));
   (* ORIG_CELL_NAME = "PhaseAddress_reg[19]" *) 
   FDRE \PhaseAddress_reg[19]_rep__2 
        (.C(DAC_clk),
         .CE(1'b1),
         .D(PhaseAddress0[19]),
         .Q(\PhaseAddress_reg[19]_rep__2_n_0 ),
-        .R(RSTP));
+        .R(p_0_in0));
   (* ORIG_CELL_NAME = "PhaseAddress_reg[20]" *) 
   FDRE \PhaseAddress_reg[20]_rep 
        (.C(DAC_clk),
         .CE(1'b1),
         .D(PhaseAddress0[20]),
         .Q(\PhaseAddress_reg[20]_rep_n_0 ),
-        .R(RSTP));
+        .R(p_0_in0));
   (* ORIG_CELL_NAME = "PhaseAddress_reg[20]" *) 
   FDRE \PhaseAddress_reg[20]_rep__0 
        (.C(DAC_clk),
         .CE(1'b1),
         .D(PhaseAddress0[20]),
         .Q(\PhaseAddress_reg[20]_rep__0_n_0 ),
-        .R(RSTP));
+        .R(p_0_in0));
   (* ORIG_CELL_NAME = "PhaseAddress_reg[20]" *) 
   FDRE \PhaseAddress_reg[20]_rep__1 
        (.C(DAC_clk),
         .CE(1'b1),
         .D(PhaseAddress0[20]),
         .Q(\PhaseAddress_reg[20]_rep__1_n_0 ),
-        .R(RSTP));
+        .R(p_0_in0));
   (* ORIG_CELL_NAME = "PhaseAddress_reg[20]" *) 
   FDRE \PhaseAddress_reg[20]_rep__2 
        (.C(DAC_clk),
         .CE(1'b1),
         .D(PhaseAddress0[20]),
         .Q(\PhaseAddress_reg[20]_rep__2_n_0 ),
-        .R(RSTP));
+        .R(p_0_in0));
   (* ORIG_CELL_NAME = "PhaseAddress_reg[21]" *) 
   FDRE \PhaseAddress_reg[21]_rep 
        (.C(DAC_clk),
         .CE(1'b1),
         .D(PhaseAddress0[21]),
         .Q(\PhaseAddress_reg[21]_rep_n_0 ),
-        .R(RSTP));
+        .R(p_0_in0));
   (* ORIG_CELL_NAME = "PhaseAddress_reg[21]" *) 
   FDRE \PhaseAddress_reg[21]_rep__0 
        (.C(DAC_clk),
         .CE(1'b1),
         .D(PhaseAddress0[21]),
         .Q(\PhaseAddress_reg[21]_rep__0_n_0 ),
-        .R(RSTP));
+        .R(p_0_in0));
   (* ORIG_CELL_NAME = "PhaseAddress_reg[21]" *) 
   FDRE \PhaseAddress_reg[21]_rep__1 
        (.C(DAC_clk),
         .CE(1'b1),
         .D(PhaseAddress0[21]),
         .Q(\PhaseAddress_reg[21]_rep__1_n_0 ),
-        .R(RSTP));
+        .R(p_0_in0));
   (* ORIG_CELL_NAME = "PhaseAddress_reg[21]" *) 
   FDRE \PhaseAddress_reg[21]_rep__2 
        (.C(DAC_clk),
         .CE(1'b1),
         .D(PhaseAddress0[21]),
         .Q(\PhaseAddress_reg[21]_rep__2_n_0 ),
-        .R(RSTP));
+        .R(p_0_in0));
   (* ORIG_CELL_NAME = "PhaseAddress_reg[22]" *) 
   FDRE \PhaseAddress_reg[22]_rep 
        (.C(DAC_clk),
         .CE(1'b1),
         .D(PhaseAddress0[22]),
         .Q(\PhaseAddress_reg[22]_rep_n_0 ),
-        .R(RSTP));
+        .R(p_0_in0));
   (* ORIG_CELL_NAME = "PhaseAddress_reg[22]" *) 
   FDRE \PhaseAddress_reg[22]_rep__0 
        (.C(DAC_clk),
         .CE(1'b1),
         .D(PhaseAddress0[22]),
         .Q(\PhaseAddress_reg[22]_rep__0_n_0 ),
-        .R(RSTP));
+        .R(p_0_in0));
   (* ORIG_CELL_NAME = "PhaseAddress_reg[22]" *) 
   FDRE \PhaseAddress_reg[22]_rep__1 
        (.C(DAC_clk),
         .CE(1'b1),
         .D(PhaseAddress0[22]),
         .Q(\PhaseAddress_reg[22]_rep__1_n_0 ),
-        .R(RSTP));
+        .R(p_0_in0));
   (* ORIG_CELL_NAME = "PhaseAddress_reg[22]" *) 
   FDRE \PhaseAddress_reg[22]_rep__2 
        (.C(DAC_clk),
         .CE(1'b1),
         .D(PhaseAddress0[22]),
         .Q(\PhaseAddress_reg[22]_rep__2_n_0 ),
-        .R(RSTP));
+        .R(p_0_in0));
   (* ORIG_CELL_NAME = "PhaseAddress_reg[23]" *) 
   FDRE \PhaseAddress_reg[23]_rep 
        (.C(DAC_clk),
         .CE(1'b1),
         .D(PhaseAddress0[23]),
         .Q(\PhaseAddress_reg[23]_rep_n_0 ),
-        .R(RSTP));
+        .R(p_0_in0));
   (* ORIG_CELL_NAME = "PhaseAddress_reg[23]" *) 
   FDRE \PhaseAddress_reg[23]_rep__0 
        (.C(DAC_clk),
         .CE(1'b1),
         .D(PhaseAddress0[23]),
         .Q(\PhaseAddress_reg[23]_rep__0_n_0 ),
-        .R(RSTP));
+        .R(p_0_in0));
   (* ORIG_CELL_NAME = "PhaseAddress_reg[23]" *) 
   FDRE \PhaseAddress_reg[23]_rep__1 
        (.C(DAC_clk),
         .CE(1'b1),
         .D(PhaseAddress0[23]),
         .Q(\PhaseAddress_reg[23]_rep__1_n_0 ),
-        .R(RSTP));
+        .R(p_0_in0));
   (* ORIG_CELL_NAME = "PhaseAddress_reg[23]" *) 
   FDRE \PhaseAddress_reg[23]_rep__2 
        (.C(DAC_clk),
         .CE(1'b1),
         .D(PhaseAddress0[23]),
         .Q(\PhaseAddress_reg[23]_rep__2_n_0 ),
-        .R(RSTP));
+        .R(p_0_in0));
   (* ORIG_CELL_NAME = "PhaseAddress_reg[8]" *) 
   FDRE \PhaseAddress_reg[8]_rep 
        (.C(DAC_clk),
         .CE(1'b1),
         .D(PhaseAddress0[8]),
         .Q(\PhaseAddress_reg[8]_rep_n_0 ),
-        .R(RSTP));
+        .R(p_0_in0));
   (* ORIG_CELL_NAME = "PhaseAddress_reg[8]" *) 
   FDRE \PhaseAddress_reg[8]_rep__0 
        (.C(DAC_clk),
         .CE(1'b1),
         .D(PhaseAddress0[8]),
         .Q(\PhaseAddress_reg[8]_rep__0_n_0 ),
-        .R(RSTP));
+        .R(p_0_in0));
   (* ORIG_CELL_NAME = "PhaseAddress_reg[8]" *) 
   FDRE \PhaseAddress_reg[8]_rep__1 
        (.C(DAC_clk),
         .CE(1'b1),
         .D(PhaseAddress0[8]),
         .Q(\PhaseAddress_reg[8]_rep__1_n_0 ),
-        .R(RSTP));
+        .R(p_0_in0));
   (* ORIG_CELL_NAME = "PhaseAddress_reg[8]" *) 
   FDRE \PhaseAddress_reg[8]_rep__2 
        (.C(DAC_clk),
         .CE(1'b1),
         .D(PhaseAddress0[8]),
         .Q(\PhaseAddress_reg[8]_rep__2_n_0 ),
-        .R(RSTP));
+        .R(p_0_in0));
   (* ORIG_CELL_NAME = "PhaseAddress_reg[9]" *) 
   FDRE \PhaseAddress_reg[9]_rep 
        (.C(DAC_clk),
         .CE(1'b1),
         .D(PhaseAddress0[9]),
         .Q(\PhaseAddress_reg[9]_rep_n_0 ),
-        .R(RSTP));
+        .R(p_0_in0));
   (* ORIG_CELL_NAME = "PhaseAddress_reg[9]" *) 
   FDRE \PhaseAddress_reg[9]_rep__0 
        (.C(DAC_clk),
         .CE(1'b1),
         .D(PhaseAddress0[9]),
         .Q(\PhaseAddress_reg[9]_rep__0_n_0 ),
-        .R(RSTP));
+        .R(p_0_in0));
   (* ORIG_CELL_NAME = "PhaseAddress_reg[9]" *) 
   FDRE \PhaseAddress_reg[9]_rep__1 
        (.C(DAC_clk),
         .CE(1'b1),
         .D(PhaseAddress0[9]),
         .Q(\PhaseAddress_reg[9]_rep__1_n_0 ),
-        .R(RSTP));
+        .R(p_0_in0));
   (* ORIG_CELL_NAME = "PhaseAddress_reg[9]" *) 
   FDRE \PhaseAddress_reg[9]_rep__2 
        (.C(DAC_clk),
         .CE(1'b1),
         .D(PhaseAddress0[9]),
         .Q(\PhaseAddress_reg[9]_rep__2_n_0 ),
-        .R(RSTP));
+        .R(p_0_in0));
 endmodule
 
 module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_DualPortBRAM
-   (RSTP,
-    RAM_Data,
-    rst_n,
+   (RAM_Data,
     AXI_clk,
     DAC_clk,
     LUTAddress,
@@ -1459,9 +1353,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_DualPortBRAM
     RAM_reg_0_5_0,
     RAM_reg_0_10_0,
     RdAddress);
-  output RSTP;
   output [15:0]RAM_Data;
-  input rst_n;
   input AXI_clk;
   input DAC_clk;
   input [15:0]LUTAddress;
@@ -1513,9 +1405,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_DualPortBRAM
   wire RAM_reg_0_8_n_1;
   wire RAM_reg_0_9_n_0;
   wire RAM_reg_0_9_n_1;
-  wire RSTP;
   wire [15:0]RdAddress;
-  wire rst_n;
   wire NLW_RAM_reg_0_0_DBITERR_UNCONNECTED;
   wire NLW_RAM_reg_0_0_INJECTDBITERR_UNCONNECTED;
   wire NLW_RAM_reg_0_0_INJECTSBITERR_UNCONNECTED;
@@ -1933,11 +1823,6 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_DualPortBRAM
   wire [7:0]NLW_RAM_reg_1_9_ECCPARITY_UNCONNECTED;
   wire [8:0]NLW_RAM_reg_1_9_RDADDRECC_UNCONNECTED;
 
-  LUT1 #(
-    .INIT(2'h1)) 
-    MultRes_reg_i_1
-       (.I0(rst_n),
-        .O(RSTP));
   (* \MEM.PORTA.DATA_BIT_LAYOUT  = "p0_d1" *) 
   (* \MEM.PORTB.DATA_BIT_LAYOUT  = "p0_d1" *) 
   (* METHODOLOGY_DRC_VIOS = "" *) 
@@ -1953,7 +1838,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_DualPortBRAM
   (* ram_slice_end = "0" *) 
   RAMB36E1 #(
     .DOA_REG(0),
-    .DOB_REG(1),
+    .DOB_REG(0),
     .EN_ECC_READ("FALSE"),
     .EN_ECC_WRITE("FALSE"),
     .INITP_00(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -2143,11 +2028,11 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_DualPortBRAM
         .INJECTSBITERR(NLW_RAM_reg_0_0_INJECTSBITERR_UNCONNECTED),
         .RDADDRECC(NLW_RAM_reg_0_0_RDADDRECC_UNCONNECTED[8:0]),
         .REGCEAREGCE(1'b0),
-        .REGCEB(1'b1),
+        .REGCEB(1'b0),
         .RSTRAMARSTRAM(1'b0),
         .RSTRAMB(1'b0),
         .RSTREGARSTREG(1'b0),
-        .RSTREGB(RSTP),
+        .RSTREGB(1'b0),
         .SBITERR(NLW_RAM_reg_0_0_SBITERR_UNCONNECTED),
         .WEA({LUTWriteEn,LUTWriteEn,LUTWriteEn,LUTWriteEn}),
         .WEBWE({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}));
@@ -2166,7 +2051,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_DualPortBRAM
   (* ram_slice_end = "1" *) 
   RAMB36E1 #(
     .DOA_REG(0),
-    .DOB_REG(1),
+    .DOB_REG(0),
     .EN_ECC_READ("FALSE"),
     .EN_ECC_WRITE("FALSE"),
     .INITP_00(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -2356,11 +2241,11 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_DualPortBRAM
         .INJECTSBITERR(NLW_RAM_reg_0_1_INJECTSBITERR_UNCONNECTED),
         .RDADDRECC(NLW_RAM_reg_0_1_RDADDRECC_UNCONNECTED[8:0]),
         .REGCEAREGCE(1'b0),
-        .REGCEB(1'b1),
+        .REGCEB(1'b0),
         .RSTRAMARSTRAM(1'b0),
         .RSTRAMB(1'b0),
         .RSTREGARSTREG(1'b0),
-        .RSTREGB(RSTP),
+        .RSTREGB(1'b0),
         .SBITERR(NLW_RAM_reg_0_1_SBITERR_UNCONNECTED),
         .WEA({LUTWriteEn,LUTWriteEn,LUTWriteEn,LUTWriteEn}),
         .WEBWE({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}));
@@ -2379,7 +2264,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_DualPortBRAM
   (* ram_slice_end = "10" *) 
   RAMB36E1 #(
     .DOA_REG(0),
-    .DOB_REG(1),
+    .DOB_REG(0),
     .EN_ECC_READ("FALSE"),
     .EN_ECC_WRITE("FALSE"),
     .INITP_00(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -2569,11 +2454,11 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_DualPortBRAM
         .INJECTSBITERR(NLW_RAM_reg_0_10_INJECTSBITERR_UNCONNECTED),
         .RDADDRECC(NLW_RAM_reg_0_10_RDADDRECC_UNCONNECTED[8:0]),
         .REGCEAREGCE(1'b0),
-        .REGCEB(1'b1),
+        .REGCEB(1'b0),
         .RSTRAMARSTRAM(1'b0),
         .RSTRAMB(1'b0),
         .RSTREGARSTREG(1'b0),
-        .RSTREGB(RSTP),
+        .RSTREGB(1'b0),
         .SBITERR(NLW_RAM_reg_0_10_SBITERR_UNCONNECTED),
         .WEA({LUTWriteEn,LUTWriteEn,LUTWriteEn,LUTWriteEn}),
         .WEBWE({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}));
@@ -2592,7 +2477,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_DualPortBRAM
   (* ram_slice_end = "11" *) 
   RAMB36E1 #(
     .DOA_REG(0),
-    .DOB_REG(1),
+    .DOB_REG(0),
     .EN_ECC_READ("FALSE"),
     .EN_ECC_WRITE("FALSE"),
     .INITP_00(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -2782,11 +2667,11 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_DualPortBRAM
         .INJECTSBITERR(NLW_RAM_reg_0_11_INJECTSBITERR_UNCONNECTED),
         .RDADDRECC(NLW_RAM_reg_0_11_RDADDRECC_UNCONNECTED[8:0]),
         .REGCEAREGCE(1'b0),
-        .REGCEB(1'b1),
+        .REGCEB(1'b0),
         .RSTRAMARSTRAM(1'b0),
         .RSTRAMB(1'b0),
         .RSTREGARSTREG(1'b0),
-        .RSTREGB(RSTP),
+        .RSTREGB(1'b0),
         .SBITERR(NLW_RAM_reg_0_11_SBITERR_UNCONNECTED),
         .WEA({LUTWriteEn,LUTWriteEn,LUTWriteEn,LUTWriteEn}),
         .WEBWE({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}));
@@ -2805,7 +2690,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_DualPortBRAM
   (* ram_slice_end = "12" *) 
   RAMB36E1 #(
     .DOA_REG(0),
-    .DOB_REG(1),
+    .DOB_REG(0),
     .EN_ECC_READ("FALSE"),
     .EN_ECC_WRITE("FALSE"),
     .INITP_00(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -2995,11 +2880,11 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_DualPortBRAM
         .INJECTSBITERR(NLW_RAM_reg_0_12_INJECTSBITERR_UNCONNECTED),
         .RDADDRECC(NLW_RAM_reg_0_12_RDADDRECC_UNCONNECTED[8:0]),
         .REGCEAREGCE(1'b0),
-        .REGCEB(1'b1),
+        .REGCEB(1'b0),
         .RSTRAMARSTRAM(1'b0),
         .RSTRAMB(1'b0),
         .RSTREGARSTREG(1'b0),
-        .RSTREGB(RSTP),
+        .RSTREGB(1'b0),
         .SBITERR(NLW_RAM_reg_0_12_SBITERR_UNCONNECTED),
         .WEA({LUTWriteEn,LUTWriteEn,LUTWriteEn,LUTWriteEn}),
         .WEBWE({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}));
@@ -3018,7 +2903,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_DualPortBRAM
   (* ram_slice_end = "13" *) 
   RAMB36E1 #(
     .DOA_REG(0),
-    .DOB_REG(1),
+    .DOB_REG(0),
     .EN_ECC_READ("FALSE"),
     .EN_ECC_WRITE("FALSE"),
     .INITP_00(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -3208,11 +3093,11 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_DualPortBRAM
         .INJECTSBITERR(NLW_RAM_reg_0_13_INJECTSBITERR_UNCONNECTED),
         .RDADDRECC(NLW_RAM_reg_0_13_RDADDRECC_UNCONNECTED[8:0]),
         .REGCEAREGCE(1'b0),
-        .REGCEB(1'b1),
+        .REGCEB(1'b0),
         .RSTRAMARSTRAM(1'b0),
         .RSTRAMB(1'b0),
         .RSTREGARSTREG(1'b0),
-        .RSTREGB(RSTP),
+        .RSTREGB(1'b0),
         .SBITERR(NLW_RAM_reg_0_13_SBITERR_UNCONNECTED),
         .WEA({LUTWriteEn,LUTWriteEn,LUTWriteEn,LUTWriteEn}),
         .WEBWE({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}));
@@ -3231,7 +3116,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_DualPortBRAM
   (* ram_slice_end = "14" *) 
   RAMB36E1 #(
     .DOA_REG(0),
-    .DOB_REG(1),
+    .DOB_REG(0),
     .EN_ECC_READ("FALSE"),
     .EN_ECC_WRITE("FALSE"),
     .INITP_00(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -3421,11 +3306,11 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_DualPortBRAM
         .INJECTSBITERR(NLW_RAM_reg_0_14_INJECTSBITERR_UNCONNECTED),
         .RDADDRECC(NLW_RAM_reg_0_14_RDADDRECC_UNCONNECTED[8:0]),
         .REGCEAREGCE(1'b0),
-        .REGCEB(1'b1),
+        .REGCEB(1'b0),
         .RSTRAMARSTRAM(1'b0),
         .RSTRAMB(1'b0),
         .RSTREGARSTREG(1'b0),
-        .RSTREGB(RSTP),
+        .RSTREGB(1'b0),
         .SBITERR(NLW_RAM_reg_0_14_SBITERR_UNCONNECTED),
         .WEA({LUTWriteEn,LUTWriteEn,LUTWriteEn,LUTWriteEn}),
         .WEBWE({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}));
@@ -3444,7 +3329,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_DualPortBRAM
   (* ram_slice_end = "15" *) 
   RAMB36E1 #(
     .DOA_REG(0),
-    .DOB_REG(1),
+    .DOB_REG(0),
     .EN_ECC_READ("FALSE"),
     .EN_ECC_WRITE("FALSE"),
     .INITP_00(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -3634,11 +3519,11 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_DualPortBRAM
         .INJECTSBITERR(NLW_RAM_reg_0_15_INJECTSBITERR_UNCONNECTED),
         .RDADDRECC(NLW_RAM_reg_0_15_RDADDRECC_UNCONNECTED[8:0]),
         .REGCEAREGCE(1'b0),
-        .REGCEB(1'b1),
+        .REGCEB(1'b0),
         .RSTRAMARSTRAM(1'b0),
         .RSTRAMB(1'b0),
         .RSTREGARSTREG(1'b0),
-        .RSTREGB(RSTP),
+        .RSTREGB(1'b0),
         .SBITERR(NLW_RAM_reg_0_15_SBITERR_UNCONNECTED),
         .WEA({LUTWriteEn,LUTWriteEn,LUTWriteEn,LUTWriteEn}),
         .WEBWE({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}));
@@ -3657,7 +3542,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_DualPortBRAM
   (* ram_slice_end = "2" *) 
   RAMB36E1 #(
     .DOA_REG(0),
-    .DOB_REG(1),
+    .DOB_REG(0),
     .EN_ECC_READ("FALSE"),
     .EN_ECC_WRITE("FALSE"),
     .INITP_00(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -3847,11 +3732,11 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_DualPortBRAM
         .INJECTSBITERR(NLW_RAM_reg_0_2_INJECTSBITERR_UNCONNECTED),
         .RDADDRECC(NLW_RAM_reg_0_2_RDADDRECC_UNCONNECTED[8:0]),
         .REGCEAREGCE(1'b0),
-        .REGCEB(1'b1),
+        .REGCEB(1'b0),
         .RSTRAMARSTRAM(1'b0),
         .RSTRAMB(1'b0),
         .RSTREGARSTREG(1'b0),
-        .RSTREGB(RSTP),
+        .RSTREGB(1'b0),
         .SBITERR(NLW_RAM_reg_0_2_SBITERR_UNCONNECTED),
         .WEA({LUTWriteEn,LUTWriteEn,LUTWriteEn,LUTWriteEn}),
         .WEBWE({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}));
@@ -3870,7 +3755,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_DualPortBRAM
   (* ram_slice_end = "3" *) 
   RAMB36E1 #(
     .DOA_REG(0),
-    .DOB_REG(1),
+    .DOB_REG(0),
     .EN_ECC_READ("FALSE"),
     .EN_ECC_WRITE("FALSE"),
     .INITP_00(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -4060,11 +3945,11 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_DualPortBRAM
         .INJECTSBITERR(NLW_RAM_reg_0_3_INJECTSBITERR_UNCONNECTED),
         .RDADDRECC(NLW_RAM_reg_0_3_RDADDRECC_UNCONNECTED[8:0]),
         .REGCEAREGCE(1'b0),
-        .REGCEB(1'b1),
+        .REGCEB(1'b0),
         .RSTRAMARSTRAM(1'b0),
         .RSTRAMB(1'b0),
         .RSTREGARSTREG(1'b0),
-        .RSTREGB(RSTP),
+        .RSTREGB(1'b0),
         .SBITERR(NLW_RAM_reg_0_3_SBITERR_UNCONNECTED),
         .WEA({LUTWriteEn,LUTWriteEn,LUTWriteEn,LUTWriteEn}),
         .WEBWE({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}));
@@ -4083,7 +3968,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_DualPortBRAM
   (* ram_slice_end = "4" *) 
   RAMB36E1 #(
     .DOA_REG(0),
-    .DOB_REG(1),
+    .DOB_REG(0),
     .EN_ECC_READ("FALSE"),
     .EN_ECC_WRITE("FALSE"),
     .INITP_00(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -4273,11 +4158,11 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_DualPortBRAM
         .INJECTSBITERR(NLW_RAM_reg_0_4_INJECTSBITERR_UNCONNECTED),
         .RDADDRECC(NLW_RAM_reg_0_4_RDADDRECC_UNCONNECTED[8:0]),
         .REGCEAREGCE(1'b0),
-        .REGCEB(1'b1),
+        .REGCEB(1'b0),
         .RSTRAMARSTRAM(1'b0),
         .RSTRAMB(1'b0),
         .RSTREGARSTREG(1'b0),
-        .RSTREGB(RSTP),
+        .RSTREGB(1'b0),
         .SBITERR(NLW_RAM_reg_0_4_SBITERR_UNCONNECTED),
         .WEA({LUTWriteEn,LUTWriteEn,LUTWriteEn,LUTWriteEn}),
         .WEBWE({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}));
@@ -4296,7 +4181,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_DualPortBRAM
   (* ram_slice_end = "5" *) 
   RAMB36E1 #(
     .DOA_REG(0),
-    .DOB_REG(1),
+    .DOB_REG(0),
     .EN_ECC_READ("FALSE"),
     .EN_ECC_WRITE("FALSE"),
     .INITP_00(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -4486,11 +4371,11 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_DualPortBRAM
         .INJECTSBITERR(NLW_RAM_reg_0_5_INJECTSBITERR_UNCONNECTED),
         .RDADDRECC(NLW_RAM_reg_0_5_RDADDRECC_UNCONNECTED[8:0]),
         .REGCEAREGCE(1'b0),
-        .REGCEB(1'b1),
+        .REGCEB(1'b0),
         .RSTRAMARSTRAM(1'b0),
         .RSTRAMB(1'b0),
         .RSTREGARSTREG(1'b0),
-        .RSTREGB(RSTP),
+        .RSTREGB(1'b0),
         .SBITERR(NLW_RAM_reg_0_5_SBITERR_UNCONNECTED),
         .WEA({LUTWriteEn,LUTWriteEn,LUTWriteEn,LUTWriteEn}),
         .WEBWE({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}));
@@ -4509,7 +4394,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_DualPortBRAM
   (* ram_slice_end = "6" *) 
   RAMB36E1 #(
     .DOA_REG(0),
-    .DOB_REG(1),
+    .DOB_REG(0),
     .EN_ECC_READ("FALSE"),
     .EN_ECC_WRITE("FALSE"),
     .INITP_00(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -4699,11 +4584,11 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_DualPortBRAM
         .INJECTSBITERR(NLW_RAM_reg_0_6_INJECTSBITERR_UNCONNECTED),
         .RDADDRECC(NLW_RAM_reg_0_6_RDADDRECC_UNCONNECTED[8:0]),
         .REGCEAREGCE(1'b0),
-        .REGCEB(1'b1),
+        .REGCEB(1'b0),
         .RSTRAMARSTRAM(1'b0),
         .RSTRAMB(1'b0),
         .RSTREGARSTREG(1'b0),
-        .RSTREGB(RSTP),
+        .RSTREGB(1'b0),
         .SBITERR(NLW_RAM_reg_0_6_SBITERR_UNCONNECTED),
         .WEA({LUTWriteEn,LUTWriteEn,LUTWriteEn,LUTWriteEn}),
         .WEBWE({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}));
@@ -4722,7 +4607,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_DualPortBRAM
   (* ram_slice_end = "7" *) 
   RAMB36E1 #(
     .DOA_REG(0),
-    .DOB_REG(1),
+    .DOB_REG(0),
     .EN_ECC_READ("FALSE"),
     .EN_ECC_WRITE("FALSE"),
     .INITP_00(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -4912,11 +4797,11 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_DualPortBRAM
         .INJECTSBITERR(NLW_RAM_reg_0_7_INJECTSBITERR_UNCONNECTED),
         .RDADDRECC(NLW_RAM_reg_0_7_RDADDRECC_UNCONNECTED[8:0]),
         .REGCEAREGCE(1'b0),
-        .REGCEB(1'b1),
+        .REGCEB(1'b0),
         .RSTRAMARSTRAM(1'b0),
         .RSTRAMB(1'b0),
         .RSTREGARSTREG(1'b0),
-        .RSTREGB(RSTP),
+        .RSTREGB(1'b0),
         .SBITERR(NLW_RAM_reg_0_7_SBITERR_UNCONNECTED),
         .WEA({LUTWriteEn,LUTWriteEn,LUTWriteEn,LUTWriteEn}),
         .WEBWE({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}));
@@ -4935,7 +4820,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_DualPortBRAM
   (* ram_slice_end = "8" *) 
   RAMB36E1 #(
     .DOA_REG(0),
-    .DOB_REG(1),
+    .DOB_REG(0),
     .EN_ECC_READ("FALSE"),
     .EN_ECC_WRITE("FALSE"),
     .INITP_00(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -5125,11 +5010,11 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_DualPortBRAM
         .INJECTSBITERR(NLW_RAM_reg_0_8_INJECTSBITERR_UNCONNECTED),
         .RDADDRECC(NLW_RAM_reg_0_8_RDADDRECC_UNCONNECTED[8:0]),
         .REGCEAREGCE(1'b0),
-        .REGCEB(1'b1),
+        .REGCEB(1'b0),
         .RSTRAMARSTRAM(1'b0),
         .RSTRAMB(1'b0),
         .RSTREGARSTREG(1'b0),
-        .RSTREGB(RSTP),
+        .RSTREGB(1'b0),
         .SBITERR(NLW_RAM_reg_0_8_SBITERR_UNCONNECTED),
         .WEA({LUTWriteEn,LUTWriteEn,LUTWriteEn,LUTWriteEn}),
         .WEBWE({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}));
@@ -5148,7 +5033,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_DualPortBRAM
   (* ram_slice_end = "9" *) 
   RAMB36E1 #(
     .DOA_REG(0),
-    .DOB_REG(1),
+    .DOB_REG(0),
     .EN_ECC_READ("FALSE"),
     .EN_ECC_WRITE("FALSE"),
     .INITP_00(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -5338,17 +5223,17 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_DualPortBRAM
         .INJECTSBITERR(NLW_RAM_reg_0_9_INJECTSBITERR_UNCONNECTED),
         .RDADDRECC(NLW_RAM_reg_0_9_RDADDRECC_UNCONNECTED[8:0]),
         .REGCEAREGCE(1'b0),
-        .REGCEB(1'b1),
+        .REGCEB(1'b0),
         .RSTRAMARSTRAM(1'b0),
         .RSTRAMB(1'b0),
         .RSTREGARSTREG(1'b0),
-        .RSTREGB(RSTP),
+        .RSTREGB(1'b0),
         .SBITERR(NLW_RAM_reg_0_9_SBITERR_UNCONNECTED),
         .WEA({LUTWriteEn,LUTWriteEn,LUTWriteEn,LUTWriteEn}),
         .WEBWE({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}));
   (* \MEM.PORTA.DATA_BIT_LAYOUT  = "p0_d1" *) 
   (* \MEM.PORTB.DATA_BIT_LAYOUT  = "p0_d1" *) 
-  (* METHODOLOGY_DRC_VIOS = "" *) 
+  (* METHODOLOGY_DRC_VIOS = "{SYNTH-6 {cell *THIS*}}" *) 
   (* RTL_RAM_BITS = "1048576" *) 
   (* RTL_RAM_NAME = "RAM" *) 
   (* bram_addr_begin = "32768" *) 
@@ -5361,7 +5246,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_DualPortBRAM
   (* ram_slice_end = "0" *) 
   RAMB36E1 #(
     .DOA_REG(0),
-    .DOB_REG(1),
+    .DOB_REG(0),
     .EN_ECC_READ("FALSE"),
     .EN_ECC_WRITE("FALSE"),
     .INITP_00(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -5551,17 +5436,17 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_DualPortBRAM
         .INJECTSBITERR(NLW_RAM_reg_1_0_INJECTSBITERR_UNCONNECTED),
         .RDADDRECC(NLW_RAM_reg_1_0_RDADDRECC_UNCONNECTED[8:0]),
         .REGCEAREGCE(1'b0),
-        .REGCEB(1'b1),
+        .REGCEB(1'b0),
         .RSTRAMARSTRAM(1'b0),
         .RSTRAMB(1'b0),
         .RSTREGARSTREG(1'b0),
-        .RSTREGB(RSTP),
+        .RSTREGB(1'b0),
         .SBITERR(NLW_RAM_reg_1_0_SBITERR_UNCONNECTED),
         .WEA({LUTWriteEn,LUTWriteEn,LUTWriteEn,1'b1}),
         .WEBWE({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}));
   (* \MEM.PORTA.DATA_BIT_LAYOUT  = "p0_d1" *) 
   (* \MEM.PORTB.DATA_BIT_LAYOUT  = "p0_d1" *) 
-  (* METHODOLOGY_DRC_VIOS = "" *) 
+  (* METHODOLOGY_DRC_VIOS = "{SYNTH-6 {cell *THIS*}}" *) 
   (* RTL_RAM_BITS = "1048576" *) 
   (* RTL_RAM_NAME = "RAM" *) 
   (* bram_addr_begin = "32768" *) 
@@ -5574,7 +5459,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_DualPortBRAM
   (* ram_slice_end = "1" *) 
   RAMB36E1 #(
     .DOA_REG(0),
-    .DOB_REG(1),
+    .DOB_REG(0),
     .EN_ECC_READ("FALSE"),
     .EN_ECC_WRITE("FALSE"),
     .INITP_00(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -5764,17 +5649,17 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_DualPortBRAM
         .INJECTSBITERR(NLW_RAM_reg_1_1_INJECTSBITERR_UNCONNECTED),
         .RDADDRECC(NLW_RAM_reg_1_1_RDADDRECC_UNCONNECTED[8:0]),
         .REGCEAREGCE(1'b0),
-        .REGCEB(1'b1),
+        .REGCEB(1'b0),
         .RSTRAMARSTRAM(1'b0),
         .RSTRAMB(1'b0),
         .RSTREGARSTREG(1'b0),
-        .RSTREGB(RSTP),
+        .RSTREGB(1'b0),
         .SBITERR(NLW_RAM_reg_1_1_SBITERR_UNCONNECTED),
         .WEA({LUTWriteEn,LUTWriteEn,LUTWriteEn,1'b1}),
         .WEBWE({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}));
   (* \MEM.PORTA.DATA_BIT_LAYOUT  = "p0_d1" *) 
   (* \MEM.PORTB.DATA_BIT_LAYOUT  = "p0_d1" *) 
-  (* METHODOLOGY_DRC_VIOS = "" *) 
+  (* METHODOLOGY_DRC_VIOS = "{SYNTH-6 {cell *THIS*}}" *) 
   (* RTL_RAM_BITS = "1048576" *) 
   (* RTL_RAM_NAME = "RAM" *) 
   (* bram_addr_begin = "32768" *) 
@@ -5787,7 +5672,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_DualPortBRAM
   (* ram_slice_end = "10" *) 
   RAMB36E1 #(
     .DOA_REG(0),
-    .DOB_REG(1),
+    .DOB_REG(0),
     .EN_ECC_READ("FALSE"),
     .EN_ECC_WRITE("FALSE"),
     .INITP_00(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -5977,17 +5862,17 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_DualPortBRAM
         .INJECTSBITERR(NLW_RAM_reg_1_10_INJECTSBITERR_UNCONNECTED),
         .RDADDRECC(NLW_RAM_reg_1_10_RDADDRECC_UNCONNECTED[8:0]),
         .REGCEAREGCE(1'b0),
-        .REGCEB(1'b1),
+        .REGCEB(1'b0),
         .RSTRAMARSTRAM(1'b0),
         .RSTRAMB(1'b0),
         .RSTREGARSTREG(1'b0),
-        .RSTREGB(RSTP),
+        .RSTREGB(1'b0),
         .SBITERR(NLW_RAM_reg_1_10_SBITERR_UNCONNECTED),
         .WEA({LUTWriteEn,LUTWriteEn,LUTWriteEn,1'b1}),
         .WEBWE({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}));
   (* \MEM.PORTA.DATA_BIT_LAYOUT  = "p0_d1" *) 
   (* \MEM.PORTB.DATA_BIT_LAYOUT  = "p0_d1" *) 
-  (* METHODOLOGY_DRC_VIOS = "" *) 
+  (* METHODOLOGY_DRC_VIOS = "{SYNTH-6 {cell *THIS*}}" *) 
   (* RTL_RAM_BITS = "1048576" *) 
   (* RTL_RAM_NAME = "RAM" *) 
   (* bram_addr_begin = "32768" *) 
@@ -6000,7 +5885,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_DualPortBRAM
   (* ram_slice_end = "11" *) 
   RAMB36E1 #(
     .DOA_REG(0),
-    .DOB_REG(1),
+    .DOB_REG(0),
     .EN_ECC_READ("FALSE"),
     .EN_ECC_WRITE("FALSE"),
     .INITP_00(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -6190,17 +6075,17 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_DualPortBRAM
         .INJECTSBITERR(NLW_RAM_reg_1_11_INJECTSBITERR_UNCONNECTED),
         .RDADDRECC(NLW_RAM_reg_1_11_RDADDRECC_UNCONNECTED[8:0]),
         .REGCEAREGCE(1'b0),
-        .REGCEB(1'b1),
+        .REGCEB(1'b0),
         .RSTRAMARSTRAM(1'b0),
         .RSTRAMB(1'b0),
         .RSTREGARSTREG(1'b0),
-        .RSTREGB(RSTP),
+        .RSTREGB(1'b0),
         .SBITERR(NLW_RAM_reg_1_11_SBITERR_UNCONNECTED),
         .WEA({LUTWriteEn,LUTWriteEn,LUTWriteEn,1'b1}),
         .WEBWE({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}));
   (* \MEM.PORTA.DATA_BIT_LAYOUT  = "p0_d1" *) 
   (* \MEM.PORTB.DATA_BIT_LAYOUT  = "p0_d1" *) 
-  (* METHODOLOGY_DRC_VIOS = "" *) 
+  (* METHODOLOGY_DRC_VIOS = "{SYNTH-6 {cell *THIS*}}" *) 
   (* RTL_RAM_BITS = "1048576" *) 
   (* RTL_RAM_NAME = "RAM" *) 
   (* bram_addr_begin = "32768" *) 
@@ -6213,7 +6098,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_DualPortBRAM
   (* ram_slice_end = "12" *) 
   RAMB36E1 #(
     .DOA_REG(0),
-    .DOB_REG(1),
+    .DOB_REG(0),
     .EN_ECC_READ("FALSE"),
     .EN_ECC_WRITE("FALSE"),
     .INITP_00(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -6403,17 +6288,17 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_DualPortBRAM
         .INJECTSBITERR(NLW_RAM_reg_1_12_INJECTSBITERR_UNCONNECTED),
         .RDADDRECC(NLW_RAM_reg_1_12_RDADDRECC_UNCONNECTED[8:0]),
         .REGCEAREGCE(1'b0),
-        .REGCEB(1'b1),
+        .REGCEB(1'b0),
         .RSTRAMARSTRAM(1'b0),
         .RSTRAMB(1'b0),
         .RSTREGARSTREG(1'b0),
-        .RSTREGB(RSTP),
+        .RSTREGB(1'b0),
         .SBITERR(NLW_RAM_reg_1_12_SBITERR_UNCONNECTED),
         .WEA({LUTWriteEn,LUTWriteEn,LUTWriteEn,1'b1}),
         .WEBWE({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}));
   (* \MEM.PORTA.DATA_BIT_LAYOUT  = "p0_d1" *) 
   (* \MEM.PORTB.DATA_BIT_LAYOUT  = "p0_d1" *) 
-  (* METHODOLOGY_DRC_VIOS = "" *) 
+  (* METHODOLOGY_DRC_VIOS = "{SYNTH-6 {cell *THIS*}}" *) 
   (* RTL_RAM_BITS = "1048576" *) 
   (* RTL_RAM_NAME = "RAM" *) 
   (* bram_addr_begin = "32768" *) 
@@ -6426,7 +6311,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_DualPortBRAM
   (* ram_slice_end = "13" *) 
   RAMB36E1 #(
     .DOA_REG(0),
-    .DOB_REG(1),
+    .DOB_REG(0),
     .EN_ECC_READ("FALSE"),
     .EN_ECC_WRITE("FALSE"),
     .INITP_00(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -6616,17 +6501,17 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_DualPortBRAM
         .INJECTSBITERR(NLW_RAM_reg_1_13_INJECTSBITERR_UNCONNECTED),
         .RDADDRECC(NLW_RAM_reg_1_13_RDADDRECC_UNCONNECTED[8:0]),
         .REGCEAREGCE(1'b0),
-        .REGCEB(1'b1),
+        .REGCEB(1'b0),
         .RSTRAMARSTRAM(1'b0),
         .RSTRAMB(1'b0),
         .RSTREGARSTREG(1'b0),
-        .RSTREGB(RSTP),
+        .RSTREGB(1'b0),
         .SBITERR(NLW_RAM_reg_1_13_SBITERR_UNCONNECTED),
         .WEA({LUTWriteEn,LUTWriteEn,LUTWriteEn,1'b1}),
         .WEBWE({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}));
   (* \MEM.PORTA.DATA_BIT_LAYOUT  = "p0_d1" *) 
   (* \MEM.PORTB.DATA_BIT_LAYOUT  = "p0_d1" *) 
-  (* METHODOLOGY_DRC_VIOS = "" *) 
+  (* METHODOLOGY_DRC_VIOS = "{SYNTH-6 {cell *THIS*}}" *) 
   (* RTL_RAM_BITS = "1048576" *) 
   (* RTL_RAM_NAME = "RAM" *) 
   (* bram_addr_begin = "32768" *) 
@@ -6639,7 +6524,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_DualPortBRAM
   (* ram_slice_end = "14" *) 
   RAMB36E1 #(
     .DOA_REG(0),
-    .DOB_REG(1),
+    .DOB_REG(0),
     .EN_ECC_READ("FALSE"),
     .EN_ECC_WRITE("FALSE"),
     .INITP_00(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -6829,17 +6714,17 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_DualPortBRAM
         .INJECTSBITERR(NLW_RAM_reg_1_14_INJECTSBITERR_UNCONNECTED),
         .RDADDRECC(NLW_RAM_reg_1_14_RDADDRECC_UNCONNECTED[8:0]),
         .REGCEAREGCE(1'b0),
-        .REGCEB(1'b1),
+        .REGCEB(1'b0),
         .RSTRAMARSTRAM(1'b0),
         .RSTRAMB(1'b0),
         .RSTREGARSTREG(1'b0),
-        .RSTREGB(RSTP),
+        .RSTREGB(1'b0),
         .SBITERR(NLW_RAM_reg_1_14_SBITERR_UNCONNECTED),
         .WEA({LUTWriteEn,LUTWriteEn,LUTWriteEn,1'b1}),
         .WEBWE({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}));
   (* \MEM.PORTA.DATA_BIT_LAYOUT  = "p0_d1" *) 
   (* \MEM.PORTB.DATA_BIT_LAYOUT  = "p0_d1" *) 
-  (* METHODOLOGY_DRC_VIOS = "" *) 
+  (* METHODOLOGY_DRC_VIOS = "{SYNTH-6 {cell *THIS*}}" *) 
   (* RTL_RAM_BITS = "1048576" *) 
   (* RTL_RAM_NAME = "RAM" *) 
   (* bram_addr_begin = "32768" *) 
@@ -6852,7 +6737,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_DualPortBRAM
   (* ram_slice_end = "15" *) 
   RAMB36E1 #(
     .DOA_REG(0),
-    .DOB_REG(1),
+    .DOB_REG(0),
     .EN_ECC_READ("FALSE"),
     .EN_ECC_WRITE("FALSE"),
     .INITP_00(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -7042,17 +6927,17 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_DualPortBRAM
         .INJECTSBITERR(NLW_RAM_reg_1_15_INJECTSBITERR_UNCONNECTED),
         .RDADDRECC(NLW_RAM_reg_1_15_RDADDRECC_UNCONNECTED[8:0]),
         .REGCEAREGCE(1'b0),
-        .REGCEB(1'b1),
+        .REGCEB(1'b0),
         .RSTRAMARSTRAM(1'b0),
         .RSTRAMB(1'b0),
         .RSTREGARSTREG(1'b0),
-        .RSTREGB(RSTP),
+        .RSTREGB(1'b0),
         .SBITERR(NLW_RAM_reg_1_15_SBITERR_UNCONNECTED),
         .WEA({LUTWriteEn,LUTWriteEn,LUTWriteEn,1'b1}),
         .WEBWE({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}));
   (* \MEM.PORTA.DATA_BIT_LAYOUT  = "p0_d1" *) 
   (* \MEM.PORTB.DATA_BIT_LAYOUT  = "p0_d1" *) 
-  (* METHODOLOGY_DRC_VIOS = "" *) 
+  (* METHODOLOGY_DRC_VIOS = "{SYNTH-6 {cell *THIS*}}" *) 
   (* RTL_RAM_BITS = "1048576" *) 
   (* RTL_RAM_NAME = "RAM" *) 
   (* bram_addr_begin = "32768" *) 
@@ -7065,7 +6950,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_DualPortBRAM
   (* ram_slice_end = "2" *) 
   RAMB36E1 #(
     .DOA_REG(0),
-    .DOB_REG(1),
+    .DOB_REG(0),
     .EN_ECC_READ("FALSE"),
     .EN_ECC_WRITE("FALSE"),
     .INITP_00(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -7255,17 +7140,17 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_DualPortBRAM
         .INJECTSBITERR(NLW_RAM_reg_1_2_INJECTSBITERR_UNCONNECTED),
         .RDADDRECC(NLW_RAM_reg_1_2_RDADDRECC_UNCONNECTED[8:0]),
         .REGCEAREGCE(1'b0),
-        .REGCEB(1'b1),
+        .REGCEB(1'b0),
         .RSTRAMARSTRAM(1'b0),
         .RSTRAMB(1'b0),
         .RSTREGARSTREG(1'b0),
-        .RSTREGB(RSTP),
+        .RSTREGB(1'b0),
         .SBITERR(NLW_RAM_reg_1_2_SBITERR_UNCONNECTED),
         .WEA({LUTWriteEn,LUTWriteEn,LUTWriteEn,1'b1}),
         .WEBWE({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}));
   (* \MEM.PORTA.DATA_BIT_LAYOUT  = "p0_d1" *) 
   (* \MEM.PORTB.DATA_BIT_LAYOUT  = "p0_d1" *) 
-  (* METHODOLOGY_DRC_VIOS = "" *) 
+  (* METHODOLOGY_DRC_VIOS = "{SYNTH-6 {cell *THIS*}}" *) 
   (* RTL_RAM_BITS = "1048576" *) 
   (* RTL_RAM_NAME = "RAM" *) 
   (* bram_addr_begin = "32768" *) 
@@ -7278,7 +7163,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_DualPortBRAM
   (* ram_slice_end = "3" *) 
   RAMB36E1 #(
     .DOA_REG(0),
-    .DOB_REG(1),
+    .DOB_REG(0),
     .EN_ECC_READ("FALSE"),
     .EN_ECC_WRITE("FALSE"),
     .INITP_00(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -7468,17 +7353,17 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_DualPortBRAM
         .INJECTSBITERR(NLW_RAM_reg_1_3_INJECTSBITERR_UNCONNECTED),
         .RDADDRECC(NLW_RAM_reg_1_3_RDADDRECC_UNCONNECTED[8:0]),
         .REGCEAREGCE(1'b0),
-        .REGCEB(1'b1),
+        .REGCEB(1'b0),
         .RSTRAMARSTRAM(1'b0),
         .RSTRAMB(1'b0),
         .RSTREGARSTREG(1'b0),
-        .RSTREGB(RSTP),
+        .RSTREGB(1'b0),
         .SBITERR(NLW_RAM_reg_1_3_SBITERR_UNCONNECTED),
         .WEA({LUTWriteEn,LUTWriteEn,LUTWriteEn,1'b1}),
         .WEBWE({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}));
   (* \MEM.PORTA.DATA_BIT_LAYOUT  = "p0_d1" *) 
   (* \MEM.PORTB.DATA_BIT_LAYOUT  = "p0_d1" *) 
-  (* METHODOLOGY_DRC_VIOS = "" *) 
+  (* METHODOLOGY_DRC_VIOS = "{SYNTH-6 {cell *THIS*}}" *) 
   (* RTL_RAM_BITS = "1048576" *) 
   (* RTL_RAM_NAME = "RAM" *) 
   (* bram_addr_begin = "32768" *) 
@@ -7491,7 +7376,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_DualPortBRAM
   (* ram_slice_end = "4" *) 
   RAMB36E1 #(
     .DOA_REG(0),
-    .DOB_REG(1),
+    .DOB_REG(0),
     .EN_ECC_READ("FALSE"),
     .EN_ECC_WRITE("FALSE"),
     .INITP_00(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -7681,17 +7566,17 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_DualPortBRAM
         .INJECTSBITERR(NLW_RAM_reg_1_4_INJECTSBITERR_UNCONNECTED),
         .RDADDRECC(NLW_RAM_reg_1_4_RDADDRECC_UNCONNECTED[8:0]),
         .REGCEAREGCE(1'b0),
-        .REGCEB(1'b1),
+        .REGCEB(1'b0),
         .RSTRAMARSTRAM(1'b0),
         .RSTRAMB(1'b0),
         .RSTREGARSTREG(1'b0),
-        .RSTREGB(RSTP),
+        .RSTREGB(1'b0),
         .SBITERR(NLW_RAM_reg_1_4_SBITERR_UNCONNECTED),
         .WEA({LUTWriteEn,LUTWriteEn,LUTWriteEn,1'b1}),
         .WEBWE({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}));
   (* \MEM.PORTA.DATA_BIT_LAYOUT  = "p0_d1" *) 
   (* \MEM.PORTB.DATA_BIT_LAYOUT  = "p0_d1" *) 
-  (* METHODOLOGY_DRC_VIOS = "" *) 
+  (* METHODOLOGY_DRC_VIOS = "{SYNTH-6 {cell *THIS*}}" *) 
   (* RTL_RAM_BITS = "1048576" *) 
   (* RTL_RAM_NAME = "RAM" *) 
   (* bram_addr_begin = "32768" *) 
@@ -7704,7 +7589,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_DualPortBRAM
   (* ram_slice_end = "5" *) 
   RAMB36E1 #(
     .DOA_REG(0),
-    .DOB_REG(1),
+    .DOB_REG(0),
     .EN_ECC_READ("FALSE"),
     .EN_ECC_WRITE("FALSE"),
     .INITP_00(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -7894,17 +7779,17 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_DualPortBRAM
         .INJECTSBITERR(NLW_RAM_reg_1_5_INJECTSBITERR_UNCONNECTED),
         .RDADDRECC(NLW_RAM_reg_1_5_RDADDRECC_UNCONNECTED[8:0]),
         .REGCEAREGCE(1'b0),
-        .REGCEB(1'b1),
+        .REGCEB(1'b0),
         .RSTRAMARSTRAM(1'b0),
         .RSTRAMB(1'b0),
         .RSTREGARSTREG(1'b0),
-        .RSTREGB(RSTP),
+        .RSTREGB(1'b0),
         .SBITERR(NLW_RAM_reg_1_5_SBITERR_UNCONNECTED),
         .WEA({LUTWriteEn,LUTWriteEn,LUTWriteEn,1'b1}),
         .WEBWE({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}));
   (* \MEM.PORTA.DATA_BIT_LAYOUT  = "p0_d1" *) 
   (* \MEM.PORTB.DATA_BIT_LAYOUT  = "p0_d1" *) 
-  (* METHODOLOGY_DRC_VIOS = "" *) 
+  (* METHODOLOGY_DRC_VIOS = "{SYNTH-6 {cell *THIS*}}" *) 
   (* RTL_RAM_BITS = "1048576" *) 
   (* RTL_RAM_NAME = "RAM" *) 
   (* bram_addr_begin = "32768" *) 
@@ -7917,7 +7802,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_DualPortBRAM
   (* ram_slice_end = "6" *) 
   RAMB36E1 #(
     .DOA_REG(0),
-    .DOB_REG(1),
+    .DOB_REG(0),
     .EN_ECC_READ("FALSE"),
     .EN_ECC_WRITE("FALSE"),
     .INITP_00(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -8107,17 +7992,17 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_DualPortBRAM
         .INJECTSBITERR(NLW_RAM_reg_1_6_INJECTSBITERR_UNCONNECTED),
         .RDADDRECC(NLW_RAM_reg_1_6_RDADDRECC_UNCONNECTED[8:0]),
         .REGCEAREGCE(1'b0),
-        .REGCEB(1'b1),
+        .REGCEB(1'b0),
         .RSTRAMARSTRAM(1'b0),
         .RSTRAMB(1'b0),
         .RSTREGARSTREG(1'b0),
-        .RSTREGB(RSTP),
+        .RSTREGB(1'b0),
         .SBITERR(NLW_RAM_reg_1_6_SBITERR_UNCONNECTED),
         .WEA({LUTWriteEn,LUTWriteEn,LUTWriteEn,1'b1}),
         .WEBWE({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}));
   (* \MEM.PORTA.DATA_BIT_LAYOUT  = "p0_d1" *) 
   (* \MEM.PORTB.DATA_BIT_LAYOUT  = "p0_d1" *) 
-  (* METHODOLOGY_DRC_VIOS = "" *) 
+  (* METHODOLOGY_DRC_VIOS = "{SYNTH-6 {cell *THIS*}}" *) 
   (* RTL_RAM_BITS = "1048576" *) 
   (* RTL_RAM_NAME = "RAM" *) 
   (* bram_addr_begin = "32768" *) 
@@ -8130,7 +8015,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_DualPortBRAM
   (* ram_slice_end = "7" *) 
   RAMB36E1 #(
     .DOA_REG(0),
-    .DOB_REG(1),
+    .DOB_REG(0),
     .EN_ECC_READ("FALSE"),
     .EN_ECC_WRITE("FALSE"),
     .INITP_00(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -8320,17 +8205,17 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_DualPortBRAM
         .INJECTSBITERR(NLW_RAM_reg_1_7_INJECTSBITERR_UNCONNECTED),
         .RDADDRECC(NLW_RAM_reg_1_7_RDADDRECC_UNCONNECTED[8:0]),
         .REGCEAREGCE(1'b0),
-        .REGCEB(1'b1),
+        .REGCEB(1'b0),
         .RSTRAMARSTRAM(1'b0),
         .RSTRAMB(1'b0),
         .RSTREGARSTREG(1'b0),
-        .RSTREGB(RSTP),
+        .RSTREGB(1'b0),
         .SBITERR(NLW_RAM_reg_1_7_SBITERR_UNCONNECTED),
         .WEA({LUTWriteEn,LUTWriteEn,LUTWriteEn,1'b1}),
         .WEBWE({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}));
   (* \MEM.PORTA.DATA_BIT_LAYOUT  = "p0_d1" *) 
   (* \MEM.PORTB.DATA_BIT_LAYOUT  = "p0_d1" *) 
-  (* METHODOLOGY_DRC_VIOS = "" *) 
+  (* METHODOLOGY_DRC_VIOS = "{SYNTH-6 {cell *THIS*}}" *) 
   (* RTL_RAM_BITS = "1048576" *) 
   (* RTL_RAM_NAME = "RAM" *) 
   (* bram_addr_begin = "32768" *) 
@@ -8343,7 +8228,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_DualPortBRAM
   (* ram_slice_end = "8" *) 
   RAMB36E1 #(
     .DOA_REG(0),
-    .DOB_REG(1),
+    .DOB_REG(0),
     .EN_ECC_READ("FALSE"),
     .EN_ECC_WRITE("FALSE"),
     .INITP_00(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -8533,17 +8418,17 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_DualPortBRAM
         .INJECTSBITERR(NLW_RAM_reg_1_8_INJECTSBITERR_UNCONNECTED),
         .RDADDRECC(NLW_RAM_reg_1_8_RDADDRECC_UNCONNECTED[8:0]),
         .REGCEAREGCE(1'b0),
-        .REGCEB(1'b1),
+        .REGCEB(1'b0),
         .RSTRAMARSTRAM(1'b0),
         .RSTRAMB(1'b0),
         .RSTREGARSTREG(1'b0),
-        .RSTREGB(RSTP),
+        .RSTREGB(1'b0),
         .SBITERR(NLW_RAM_reg_1_8_SBITERR_UNCONNECTED),
         .WEA({LUTWriteEn,LUTWriteEn,LUTWriteEn,1'b1}),
         .WEBWE({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}));
   (* \MEM.PORTA.DATA_BIT_LAYOUT  = "p0_d1" *) 
   (* \MEM.PORTB.DATA_BIT_LAYOUT  = "p0_d1" *) 
-  (* METHODOLOGY_DRC_VIOS = "" *) 
+  (* METHODOLOGY_DRC_VIOS = "{SYNTH-6 {cell *THIS*}}" *) 
   (* RTL_RAM_BITS = "1048576" *) 
   (* RTL_RAM_NAME = "RAM" *) 
   (* bram_addr_begin = "32768" *) 
@@ -8556,7 +8441,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_DualPortBRAM
   (* ram_slice_end = "9" *) 
   RAMB36E1 #(
     .DOA_REG(0),
-    .DOB_REG(1),
+    .DOB_REG(0),
     .EN_ECC_READ("FALSE"),
     .EN_ECC_WRITE("FALSE"),
     .INITP_00(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -8746,11 +8631,11 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_DualPortBRAM
         .INJECTSBITERR(NLW_RAM_reg_1_9_INJECTSBITERR_UNCONNECTED),
         .RDADDRECC(NLW_RAM_reg_1_9_RDADDRECC_UNCONNECTED[8:0]),
         .REGCEAREGCE(1'b0),
-        .REGCEB(1'b1),
+        .REGCEB(1'b0),
         .RSTRAMARSTRAM(1'b0),
         .RSTRAMB(1'b0),
         .RSTREGARSTREG(1'b0),
-        .RSTREGB(RSTP),
+        .RSTREGB(1'b0),
         .SBITERR(NLW_RAM_reg_1_9_SBITERR_UNCONNECTED),
         .WEA({LUTWriteEn,LUTWriteEn,LUTWriteEn,1'b1}),
         .WEBWE({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}));

@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date             : Sun May 26 22:30:13 2019
+| Date             : Sun Nov  3 17:17:15 2019
 | Host             : ace-PC running 64-bit Service Pack 1  (build 7601)
 | Command          : report_power -file TopBlockDesign_wrapper_power_routed.rpt -pb TopBlockDesign_wrapper_power_summary_routed.pb -rpx TopBlockDesign_wrapper_power_routed.rpx
 | Design           : TopBlockDesign_wrapper
@@ -53,14 +53,14 @@ Table of Contents
 | On-Chip                 | Power (W) | Used     | Available | Utilization (%) |
 +-------------------------+-----------+----------+-----------+-----------------+
 | Clocks                  |     0.005 |        7 |       --- |             --- |
-| Slice Logic             |    <0.001 |     5645 |       --- |             --- |
-|   LUT as Logic          |    <0.001 |     1958 |     53200 |            3.68 |
+| Slice Logic             |    <0.001 |     5628 |       --- |             --- |
+|   LUT as Logic          |    <0.001 |     1941 |     53200 |            3.65 |
 |   CARRY4                |    <0.001 |       64 |     13300 |            0.48 |
 |   Register              |    <0.001 |     2819 |    106400 |            2.65 |
 |   F7/F8 Muxes           |    <0.001 |      185 |     53200 |            0.35 |
 |   LUT as Shift Register |    <0.001 |       62 |     17400 |            0.36 |
-|   Others                |     0.000 |      220 |       --- |             --- |
-| Signals                 |     0.002 |     4388 |       --- |             --- |
+|   Others                |     0.000 |      219 |       --- |             --- |
+| Signals                 |     0.002 |     4376 |       --- |             --- |
 | Block RAM               |     0.011 |       32 |       140 |           22.86 |
 | MMCM                    |     0.112 |        1 |         4 |           25.00 |
 | DSPs                    |     0.000 |        1 |       220 |            0.45 |

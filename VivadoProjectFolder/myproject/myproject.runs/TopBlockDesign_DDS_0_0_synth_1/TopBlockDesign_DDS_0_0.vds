@@ -2,51 +2,52 @@
 # Vivado v2018.3 (64-bit)
 # SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
 # IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
-# Start of session at: Sun May 26 22:18:41 2019
-# Process ID: 5160
+# Start of session at: Sun Nov  3 17:03:55 2019
+# Process ID: 7912
 # Current directory: D:/DIY/Radio_SW/VivadoProjectFolder/myproject/myproject.runs/TopBlockDesign_DDS_0_0_synth_1
 # Command line: vivado.exe -log TopBlockDesign_DDS_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source TopBlockDesign_DDS_0_0.tcl
 # Log file: D:/DIY/Radio_SW/VivadoProjectFolder/myproject/myproject.runs/TopBlockDesign_DDS_0_0_synth_1/TopBlockDesign_DDS_0_0.vds
 # Journal file: D:/DIY/Radio_SW/VivadoProjectFolder/myproject/myproject.runs/TopBlockDesign_DDS_0_0_synth_1\vivado.jou
 #-----------------------------------------------------------
 source TopBlockDesign_DDS_0_0.tcl -notrace
+create_project: Time (s): cpu = 00:00:00 ; elapsed = 00:00:16 . Memory (MB): peak = 225.273 ; gain = 2.641
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 CRITICAL WARNING: [IP_Flow 19-4648] Error loading IP definition ADC_AXIS_M_v1.0 (BOSCH.COM:user:ADC_AXIS_M:1.0): This component is not valid; it has a subcoreRef defined to be the same as its parent.
 INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/DIY/Radio_SW/IP_Repo'.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.3/data/ip'.
-update_ip_catalog: Time (s): cpu = 00:00:03 ; elapsed = 00:00:19 . Memory (MB): peak = 248.301 ; gain = 4.578
+update_ip_catalog: Time (s): cpu = 00:00:03 ; elapsed = 00:00:59 . Memory (MB): peak = 248.223 ; gain = 22.949
 Command: synth_design -top TopBlockDesign_DDS_0_0 -part xc7z020clg484-1 -mode out_of_context
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 3928 
+INFO: Helper process launched with PID 1988 
 WARNING: [Synth 8-2611] redeclaration of ansi port RdData is not allowed [D:/DIY/Radio_SW/VerilogModules/DualPortBRAM.v:39]
 WARNING: [Synth 8-2507] parameter declaration becomes local in DualPortBRAM with formal parameter declaration list [D:/DIY/Radio_SW/VerilogModules/DualPortBRAM.v:27]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 377.316 ; gain = 115.617
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:07 . Memory (MB): peak = 376.957 ; gain = 115.242
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'TopBlockDesign_DDS_0_0' [d:/DIY/Radio_SW/VivadoProjectFolder/myproject/myproject.srcs/sources_1/bd/TopBlockDesign/ip/TopBlockDesign_DDS_0_0/synth/TopBlockDesign_DDS_0_0.v:58]
 INFO: [Synth 8-6157] synthesizing module 'DDS' [D:/DIY/Radio_SW/VerilogModules/DDS.v:5]
 	Parameter RAM_WIDTH bound to: 16 - type: integer 
 	Parameter RAM_DEPTH bound to: 65536 - type: integer 
 	Parameter RAM_PERFORMANCE bound to: HIGH_PERFORMANCE - type: string 
-WARNING: [Synth 8-6104] Input port 'depth' has an internal driver [D:/DIY/Radio_SW/VerilogModules/DDS.v:163]
-WARNING: [Synth 8-6104] Input port 'depth' has an internal driver [D:/DIY/Radio_SW/VerilogModules/DDS.v:163]
-WARNING: [Synth 8-6104] Input port 'depth' has an internal driver [D:/DIY/Radio_SW/VerilogModules/DDS.v:163]
-WARNING: [Synth 8-6104] Input port 'depth' has an internal driver [D:/DIY/Radio_SW/VerilogModules/DDS.v:163]
-WARNING: [Synth 8-6104] Input port 'depth' has an internal driver [D:/DIY/Radio_SW/VerilogModules/DDS.v:163]
-WARNING: [Synth 8-6104] Input port 'depth' has an internal driver [D:/DIY/Radio_SW/VerilogModules/DDS.v:163]
-WARNING: [Synth 8-6104] Input port 'depth' has an internal driver [D:/DIY/Radio_SW/VerilogModules/DDS.v:163]
-WARNING: [Synth 8-6104] Input port 'depth' has an internal driver [D:/DIY/Radio_SW/VerilogModules/DDS.v:163]
-WARNING: [Synth 8-6104] Input port 'depth' has an internal driver [D:/DIY/Radio_SW/VerilogModules/DDS.v:163]
-WARNING: [Synth 8-6104] Input port 'depth' has an internal driver [D:/DIY/Radio_SW/VerilogModules/DDS.v:163]
-WARNING: [Synth 8-6104] Input port 'depth' has an internal driver [D:/DIY/Radio_SW/VerilogModules/DDS.v:163]
-WARNING: [Synth 8-6104] Input port 'depth' has an internal driver [D:/DIY/Radio_SW/VerilogModules/DDS.v:163]
-WARNING: [Synth 8-6104] Input port 'depth' has an internal driver [D:/DIY/Radio_SW/VerilogModules/DDS.v:163]
-WARNING: [Synth 8-6104] Input port 'depth' has an internal driver [D:/DIY/Radio_SW/VerilogModules/DDS.v:163]
-WARNING: [Synth 8-6104] Input port 'depth' has an internal driver [D:/DIY/Radio_SW/VerilogModules/DDS.v:163]
-WARNING: [Synth 8-6104] Input port 'depth' has an internal driver [D:/DIY/Radio_SW/VerilogModules/DDS.v:163]
+WARNING: [Synth 8-6104] Input port 'depth' has an internal driver [D:/DIY/Radio_SW/VerilogModules/DDS.v:147]
+WARNING: [Synth 8-6104] Input port 'depth' has an internal driver [D:/DIY/Radio_SW/VerilogModules/DDS.v:147]
+WARNING: [Synth 8-6104] Input port 'depth' has an internal driver [D:/DIY/Radio_SW/VerilogModules/DDS.v:147]
+WARNING: [Synth 8-6104] Input port 'depth' has an internal driver [D:/DIY/Radio_SW/VerilogModules/DDS.v:147]
+WARNING: [Synth 8-6104] Input port 'depth' has an internal driver [D:/DIY/Radio_SW/VerilogModules/DDS.v:147]
+WARNING: [Synth 8-6104] Input port 'depth' has an internal driver [D:/DIY/Radio_SW/VerilogModules/DDS.v:147]
+WARNING: [Synth 8-6104] Input port 'depth' has an internal driver [D:/DIY/Radio_SW/VerilogModules/DDS.v:147]
+WARNING: [Synth 8-6104] Input port 'depth' has an internal driver [D:/DIY/Radio_SW/VerilogModules/DDS.v:147]
+WARNING: [Synth 8-6104] Input port 'depth' has an internal driver [D:/DIY/Radio_SW/VerilogModules/DDS.v:147]
+WARNING: [Synth 8-6104] Input port 'depth' has an internal driver [D:/DIY/Radio_SW/VerilogModules/DDS.v:147]
+WARNING: [Synth 8-6104] Input port 'depth' has an internal driver [D:/DIY/Radio_SW/VerilogModules/DDS.v:147]
+WARNING: [Synth 8-6104] Input port 'depth' has an internal driver [D:/DIY/Radio_SW/VerilogModules/DDS.v:147]
+WARNING: [Synth 8-6104] Input port 'depth' has an internal driver [D:/DIY/Radio_SW/VerilogModules/DDS.v:147]
+WARNING: [Synth 8-6104] Input port 'depth' has an internal driver [D:/DIY/Radio_SW/VerilogModules/DDS.v:147]
+WARNING: [Synth 8-6104] Input port 'depth' has an internal driver [D:/DIY/Radio_SW/VerilogModules/DDS.v:147]
+WARNING: [Synth 8-6104] Input port 'depth' has an internal driver [D:/DIY/Radio_SW/VerilogModules/DDS.v:147]
 INFO: [Synth 8-6157] synthesizing module 'DualPortBRAM' [D:/DIY/Radio_SW/VerilogModules/DualPortBRAM.v:3]
 	Parameter RAM_WIDTH bound to: 16 - type: integer 
 	Parameter RAM_DEPTH bound to: 65536 - type: integer 
@@ -184,7 +185,7 @@ WARNING: [Synth 8-3331] design DDS has unconnected port LUTData[18]
 WARNING: [Synth 8-3331] design DDS has unconnected port LUTData[17]
 WARNING: [Synth 8-3331] design DDS has unconnected port LUTData[16]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:15 ; elapsed = 00:00:20 . Memory (MB): peak = 492.945 ; gain = 231.246
+Finished RTL Elaboration : Time (s): cpu = 00:00:14 ; elapsed = 00:00:18 . Memory (MB): peak = 492.098 ; gain = 230.383
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -197,10 +198,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:15 ; elapsed = 00:00:20 . Memory (MB): peak = 492.945 ; gain = 231.246
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:14 ; elapsed = 00:00:19 . Memory (MB): peak = 492.098 ; gain = 230.383
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:15 ; elapsed = 00:00:20 . Memory (MB): peak = 492.945 ; gain = 231.246
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:19 . Memory (MB): peak = 492.098 ; gain = 230.383
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7z020clg484-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -209,32 +210,32 @@ Processing XDC Constraints
 Initializing timing engine
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 760.578 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 759.324 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 760.578 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 759.324 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.899 . Memory (MB): peak = 762.094 ; gain = 1.516
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.808 . Memory (MB): peak = 761.027 ; gain = 1.703
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:30 ; elapsed = 00:00:55 . Memory (MB): peak = 762.094 ; gain = 500.395
+Finished Constraint Validation : Time (s): cpu = 00:00:29 ; elapsed = 00:00:44 . Memory (MB): peak = 761.027 ; gain = 499.313
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg484-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:30 ; elapsed = 00:00:55 . Memory (MB): peak = 762.094 ; gain = 500.395
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:29 ; elapsed = 00:00:44 . Memory (MB): peak = 761.027 ; gain = 499.313
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:30 ; elapsed = 00:00:55 . Memory (MB): peak = 762.094 ; gain = 500.395
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:29 ; elapsed = 00:00:44 . Memory (MB): peak = 761.027 ; gain = 499.313
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:31 ; elapsed = 00:00:57 . Memory (MB): peak = 762.094 ; gain = 500.395
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:30 ; elapsed = 00:00:45 . Memory (MB): peak = 761.027 ; gain = 499.313
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -249,12 +250,14 @@ Detailed RTL Component Info :
 +---Adders : 
 	   2 Input     24 Bit       Adders := 1     
 +---Registers : 
+	               32 Bit    Registers := 1     
 	               24 Bit    Registers := 1     
-	               16 Bit    Registers := 3     
+	               16 Bit    Registers := 2     
 +---RAMs : 
 	            1024K Bit         RAMs := 1     
 +---Muxes : 
-	   2 Input     16 Bit        Muxes := 1     
+	   2 Input     32 Bit        Muxes := 2     
+	   2 Input     17 Bit        Muxes := 1     
 	   2 Input      1 Bit        Muxes := 1     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
@@ -274,10 +277,11 @@ Detailed RTL Component Info :
 +---Adders : 
 	   2 Input     24 Bit       Adders := 1     
 +---Registers : 
+	               32 Bit    Registers := 1     
 	               24 Bit    Registers := 1     
-	               16 Bit    Registers := 1     
 +---Muxes : 
-	   2 Input     16 Bit        Muxes := 1     
+	   2 Input     32 Bit        Muxes := 2     
+	   2 Input     17 Bit        Muxes := 1     
 	   2 Input      1 Bit        Muxes := 1     
 ---------------------------------------------------------------------------------
 Finished RTL Hierarchical Component Statistics
@@ -295,10 +299,9 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
-DSP Report: Generating DSP inst/MultRes_reg, operation Mode is: (A2*B)'.
-DSP Report: register inst/SampleMux_reg is absorbed into DSP inst/MultRes_reg.
-DSP Report: register inst/MultRes_reg is absorbed into DSP inst/MultRes_reg.
-DSP Report: operator inst/MultRes0 is absorbed into DSP inst/MultRes_reg.
+DSP Report: Generating DSP inst/MultRes0, operation Mode is: (0 or C)+(A2*B or 0).
+DSP Report: register inst/LUT/output_register.doutb_reg_reg is absorbed into DSP inst/MultRes0.
+DSP Report: operator inst/MultRes0 is absorbed into DSP inst/MultRes0.
 WARNING: [Synth 8-3331] design TopBlockDesign_DDS_0_0 has unconnected port FreqCntrl[31]
 WARNING: [Synth 8-3331] design TopBlockDesign_DDS_0_0 has unconnected port FreqCntrl[30]
 WARNING: [Synth 8-3331] design TopBlockDesign_DDS_0_0 has unconnected port FreqCntrl[29]
@@ -338,7 +341,7 @@ WARNING: [Synth 8-3331] design TopBlockDesign_DDS_0_0 has unconnected port LUTAd
 INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 INFO: [Synth 8-4652] Swapped enable and write-enable on 16 RAM instances of RAM inst/LUT/RAM_reg to conserve power
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:33 ; elapsed = 00:01:01 . Memory (MB): peak = 762.094 ; gain = 500.395
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:32 ; elapsed = 00:00:47 . Memory (MB): peak = 761.027 ; gain = 499.313
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -354,16 +357,32 @@ Block RAM: Preliminary Mapping  Report (see note below)
 Note: The table above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. 
 
 DSP: Preliminary Mapping  Report (see note below)
-+------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
-|Module Name | DSP Mapping | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
-+------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
-|DDS         | (A2*B)'     | 16     | 16     | -      | -      | 32     | 1    | 0    | -    | -    | -     | 1    | 0    | 
-+------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
++-----------------------+----------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name            | DSP Mapping          | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++-----------------------+----------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|TopBlockDesign_DDS_0_0 | (0 or C)+(A2*B or 0) | 16     | 16     | 32     | -      | 32     | 1    | 0    | 0    | -    | -     | 0    | 0    | 
++-----------------------+----------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
 
 Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
 ---------------------------------------------------------------------------------
 Finished ROM, RAM, DSP and Shift Register Reporting
 ---------------------------------------------------------------------------------
+INFO: [Synth 8-6837] The timing for the instance insti_0/inst/LUT/RAM_reg_1_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance insti_0/inst/LUT/RAM_reg_1_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance insti_0/inst/LUT/RAM_reg_1_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance insti_0/inst/LUT/RAM_reg_1_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance insti_0/inst/LUT/RAM_reg_1_4 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance insti_0/inst/LUT/RAM_reg_1_5 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance insti_0/inst/LUT/RAM_reg_1_6 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance insti_0/inst/LUT/RAM_reg_1_7 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance insti_0/inst/LUT/RAM_reg_1_8 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance insti_0/inst/LUT/RAM_reg_1_9 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance insti_0/inst/LUT/RAM_reg_1_10 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance insti_0/inst/LUT/RAM_reg_1_11 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance insti_0/inst/LUT/RAM_reg_1_12 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance insti_0/inst/LUT/RAM_reg_1_13 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance insti_0/inst/LUT/RAM_reg_1_14 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance insti_0/inst/LUT/RAM_reg_1_15 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
@@ -374,13 +393,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:01 ; elapsed = 00:01:36 . Memory (MB): peak = 825.227 ; gain = 563.527
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:59 ; elapsed = 00:01:21 . Memory (MB): peak = 823.242 ; gain = 561.527
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:01:01 ; elapsed = 00:01:36 . Memory (MB): peak = 825.414 ; gain = 563.715
+Finished Timing Optimization : Time (s): cpu = 00:00:59 ; elapsed = 00:01:21 . Memory (MB): peak = 823.492 ; gain = 561.777
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -405,8 +424,24 @@ Report RTL Partitions:
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
+INFO: [Synth 8-6837] The timing for the instance inst/LUT/RAM_reg_1_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance inst/LUT/RAM_reg_1_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance inst/LUT/RAM_reg_1_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance inst/LUT/RAM_reg_1_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance inst/LUT/RAM_reg_1_4 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance inst/LUT/RAM_reg_1_5 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance inst/LUT/RAM_reg_1_6 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance inst/LUT/RAM_reg_1_7 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance inst/LUT/RAM_reg_1_8 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance inst/LUT/RAM_reg_1_9 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance inst/LUT/RAM_reg_1_10 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance inst/LUT/RAM_reg_1_11 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance inst/LUT/RAM_reg_1_12 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance inst/LUT/RAM_reg_1_13 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance inst/LUT/RAM_reg_1_14 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance inst/LUT/RAM_reg_1_15 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:01:02 ; elapsed = 00:01:36 . Memory (MB): peak = 834.477 ; gain = 572.777
+Finished Technology Mapping : Time (s): cpu = 00:00:59 ; elapsed = 00:01:22 . Memory (MB): peak = 832.871 ; gain = 571.156
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -446,7 +481,7 @@ INFO: [Synth 8-6064] Net \inst/RdAddress [15] is driving 32 big block pins (URAM
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:01:04 ; elapsed = 00:01:39 . Memory (MB): peak = 834.477 ; gain = 572.777
+Finished IO Insertion : Time (s): cpu = 00:01:01 ; elapsed = 00:01:25 . Memory (MB): peak = 832.871 ; gain = 571.156
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -459,7 +494,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:01:04 ; elapsed = 00:01:39 . Memory (MB): peak = 834.477 ; gain = 572.777
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:01 ; elapsed = 00:01:25 . Memory (MB): peak = 832.871 ; gain = 571.156
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -471,25 +506,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:04 ; elapsed = 00:01:39 . Memory (MB): peak = 834.477 ; gain = 572.777
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:01 ; elapsed = 00:01:26 . Memory (MB): peak = 832.871 ; gain = 571.156
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:01:04 ; elapsed = 00:01:39 . Memory (MB): peak = 834.477 ; gain = 572.777
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:01 ; elapsed = 00:01:26 . Memory (MB): peak = 832.871 ; gain = 571.156
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:01:04 ; elapsed = 00:01:39 . Memory (MB): peak = 834.477 ; gain = 572.777
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:02 ; elapsed = 00:01:26 . Memory (MB): peak = 832.871 ; gain = 571.156
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:01:04 ; elapsed = 00:01:39 . Memory (MB): peak = 834.477 ; gain = 572.777
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:02 ; elapsed = 00:01:26 . Memory (MB): peak = 832.871 ; gain = 571.156
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -506,50 +541,50 @@ Report Cell Usage:
 |      |Cell       |Count |
 +------+-----------+------+
 |1     |CARRY4     |    12|
-|2     |DSP48E1_1  |     1|
-|3     |LUT1       |     1|
+|2     |DSP48E1    |     1|
+|3     |LUT1       |     2|
 |4     |LUT2       |    49|
-|5     |LUT3       |    16|
-|6     |RAMB36E1   |    16|
-|7     |RAMB36E1_2 |    16|
-|8     |FDRE       |    88|
+|5     |RAMB36E1   |    16|
+|6     |RAMB36E1_1 |    16|
+|7     |FDRE       |    88|
 +------+-----------+------+
 
 Report Instance Areas: 
 +------+---------+-------------+------+
 |      |Instance |Module       |Cells |
 +------+---------+-------------+------+
-|1     |top      |             |   199|
-|2     |  inst   |DDS          |   199|
-|3     |    LUT  |DualPortBRAM |    33|
+|1     |top      |             |   184|
+|2     |  inst   |DDS          |   184|
+|3     |    LUT  |DualPortBRAM |    32|
 +------+---------+-------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:01:04 ; elapsed = 00:01:39 . Memory (MB): peak = 834.477 ; gain = 572.777
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:02 ; elapsed = 00:01:26 . Memory (MB): peak = 832.871 ; gain = 571.156
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 64 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:39 ; elapsed = 00:01:10 . Memory (MB): peak = 834.477 ; gain = 303.629
-Synthesis Optimization Complete : Time (s): cpu = 00:01:04 ; elapsed = 00:01:39 . Memory (MB): peak = 834.477 ; gain = 572.777
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:37 ; elapsed = 00:01:06 . Memory (MB): peak = 832.871 ; gain = 302.227
+Synthesis Optimization Complete : Time (s): cpu = 00:01:02 ; elapsed = 00:01:26 . Memory (MB): peak = 832.871 ; gain = 571.156
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 45 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 842.270 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 840.098 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-38 Infos, 183 Warnings, 1 Critical Warnings and 0 Errors encountered.
+70 Infos, 183 Warnings, 1 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:01:06 ; elapsed = 00:01:44 . Memory (MB): peak = 842.270 ; gain = 593.809
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 842.270 ; gain = 0.000
+synth_design: Time (s): cpu = 00:01:05 ; elapsed = 00:01:40 . Memory (MB): peak = 840.098 ; gain = 591.469
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 840.098 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint 'D:/DIY/Radio_SW/VivadoProjectFolder/myproject/myproject.runs/TopBlockDesign_DDS_0_0_synth_1/TopBlockDesign_DDS_0_0.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 840.098 ; gain = 0.000
 INFO: [Coretcl 2-1174] Renamed 2 cell refs.
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 842.270 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 840.098 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint 'D:/DIY/Radio_SW/VivadoProjectFolder/myproject/myproject.runs/TopBlockDesign_DDS_0_0_synth_1/TopBlockDesign_DDS_0_0.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file TopBlockDesign_DDS_0_0_utilization_synth.rpt -pb TopBlockDesign_DDS_0_0_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Sun May 26 22:21:04 2019...
+INFO: [Common 17-206] Exiting Vivado at Sun Nov  3 17:08:13 2019...

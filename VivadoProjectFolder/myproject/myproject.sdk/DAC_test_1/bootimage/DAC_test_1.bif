@@ -1,0 +1,7 @@
+//arch = zynq; split = false; format = MCS
+the_ROM_image:
+{
+	[bootloader]D:\DIY\Radio_SW\VivadoProjectFolder\myproject\myproject.sdk\fsbl\Debug\fsbl.elf
+	D:\DIY\Radio_SW\VivadoProjectFolder\myproject\myproject.sdk\TopBlockDesign_wrapper_hw_platform_0\TopBlockDesign_wrapper.bit
+	D:\DIY\Radio_SW\VivadoProjectFolder\myproject\myproject.sdk\DAC_test_1\Debug\DAC_test_1.elf
+}

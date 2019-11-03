@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7z020clg484-1" LaunchTime="1558901370">
+<GenRun Id="impl_1" LaunchPart="xc7z020clg484-1" LaunchTime="1572797024">
   <File Type="BITSTR-BMM" Name="TopBlockDesign_wrapper_bd.bmm"/>
   <File Type="OPT-METHODOLOGY-DRC" Name="TopBlockDesign_wrapper_methodology_drc_opted.rpt"/>
   <File Type="INIT-TIMING" Name="TopBlockDesign_wrapper_timing_summary_init.rpt"/>
@@ -164,9 +164,7 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018">
-      <Desc>Default settings for Implementation.</Desc>
-    </StratHandle>
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018"/>
     <Step Id="init_design"/>
     <Step Id="opt_design"/>
     <Step Id="power_opt_design"/>
@@ -182,7 +180,6 @@
   <BlockFileSet Type="BlockSrcs" Name="TopBlockDesign_axi_gpio_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="TopBlockDesign_DDS_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="TopBlockDesign_clk_wiz_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="TopBlockDesign_auto_pc_0"/>
   <BlockFileSet Type="BlockSrcs" Name="TopBlockDesign_DDS_Control_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="TopBlockDesign_xbar_0"/>
   <BlockFileSet Type="BlockSrcs" Name="TopBlockDesign_DAC_Control_0_0"/>

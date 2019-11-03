@@ -1,0 +1,7 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/DIY/Radio_SW/VerilogModules/DDS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DDS
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/DIY/Radio_SW/VerilogModules/DualPortBRAM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DualPortBRAM
+WARNING: [VRFC 10-3676] redeclaration of ansi port 'RdData' is not allowed [D:/DIY/Radio_SW/VerilogModules/DualPortBRAM.v:39]
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/DIY/Radio_SW/TestBenches/tb_DDS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_DDS

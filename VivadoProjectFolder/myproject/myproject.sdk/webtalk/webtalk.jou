@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Webtalk v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# 
+# Start of session at: Sun Nov  3 19:31:38 2019
+# Process ID: 6920
+# Current directory: D:/DIY/Radio_SW/VivadoProjectFolder/myproject/myproject.sdk/webtalk
+# Command line: wbtcv.exe -mode batch -source sdk_webtalk.tcl
+# Log file: D:/DIY/Radio_SW/VivadoProjectFolder/myproject/myproject.sdk/webtalk/webtalk.log
+# Journal file: D:/DIY/Radio_SW/VivadoProjectFolder/myproject/myproject.sdk/webtalk\webtalk.jou
+#-----------------------------------------------------------
+source sdk_webtalk.tcl

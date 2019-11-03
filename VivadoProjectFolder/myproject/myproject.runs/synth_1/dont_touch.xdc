@@ -21,9 +21,6 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==TopBlockDesign_
 # IP: bd/TopBlockDesign/ip/TopBlockDesign_xbar_0/TopBlockDesign_xbar_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==TopBlockDesign_xbar_0 || ORIG_REF_NAME==TopBlockDesign_xbar_0} -quiet] -quiet
 
-# IP: bd/TopBlockDesign/ip/TopBlockDesign_auto_pc_0/TopBlockDesign_auto_pc_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==TopBlockDesign_auto_pc_0 || ORIG_REF_NAME==TopBlockDesign_auto_pc_0} -quiet] -quiet
-
 # IP: bd/TopBlockDesign/ip/TopBlockDesign_axi_interconnect_0_0/TopBlockDesign_axi_interconnect_0_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==TopBlockDesign_axi_interconnect_0_0 || ORIG_REF_NAME==TopBlockDesign_axi_interconnect_0_0} -quiet] -quiet
 
@@ -38,5 +35,8 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==TopBlockDesign_
 
 # IP: bd/TopBlockDesign/ip/TopBlockDesign_xlslice_0_0/TopBlockDesign_xlslice_0_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==TopBlockDesign_xlslice_0_0 || ORIG_REF_NAME==TopBlockDesign_xlslice_0_0} -quiet] -quiet
+
+# IP: bd/TopBlockDesign/ip/TopBlockDesign_auto_pc_0/TopBlockDesign_auto_pc_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==TopBlockDesign_auto_pc_0 || ORIG_REF_NAME==TopBlockDesign_auto_pc_0} -quiet] -quiet
 
 # XDC: bd/TopBlockDesign/TopBlockDesign_ooc.xdc

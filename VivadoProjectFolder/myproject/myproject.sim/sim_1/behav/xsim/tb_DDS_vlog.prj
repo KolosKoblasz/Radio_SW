@@ -1,0 +1,11 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../myproject.srcs/sources_1/bd/TopBlockDesign/ipshared/ec67/hdl" --include "../../../../myproject.srcs/sources_1/bd/TopBlockDesign/ipshared/85a3" --include "../../../../myproject.srcs/sources_1/bd/TopBlockDesign/ipshared/70cf/hdl" --include "C:/Xilinx/Vivado/2018.3/data/xilinx_vip/include" \
+"../../../../../../VerilogModules/DDS.v" \
+"../../../../../../VerilogModules/DualPortBRAM.v" \
+"../../../../../../TestBenches/tb_DDS.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

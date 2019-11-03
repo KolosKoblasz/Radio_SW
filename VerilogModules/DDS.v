@@ -11,8 +11,8 @@ module DDS(
     input         [31:0] PhaseCntrl,   //This determines the initial phase of the Sine A
     input signed  [15:0] AmplCntrl,    //This determines the amplitude of the Sine A
     
-    input                DataPathSelect, //bit 0 equals 0 => Sine A from DirectValue[15:0]
-                                         //bit 0 equals 1 => Sine A from LUT
+    input                DataPathSelect, //equals 0 => SampleOut from DirectValue[15:0]
+                                         //equals 1 => SampleOut from LUT 
 
     input         [31:0] DirectValue,    //This value can be written from AXI registers,
                                          //directly sets DAC output value to a fix value
@@ -90,7 +90,7 @@ module DDS(
      LUT(
     .WrClk(AXI_clk),        // Write clock
     .RdClk(DAC_clk),        // Read clock
-    .WriteEn(LUTWriteEn),// Write enable     
+    .WriteEn(LUTWriteEn),   // Write enable     
     .rst_n(rst_n), 
     .WrAddress(LUTAddress[RAM_WIDTH-1:0]),  // Write address bus, width determined from RAM_DEPTH
     .RdAddress(RdAddress),                  // Read address bus, width determined from RAM_DEPTH
@@ -102,14 +102,18 @@ module DDS(
      /**********************************************************************/
      //Output multiplexer for signal selection 
      //See port header for selection logic description
-     reg [RAM_WIDTH-1:0]SampleMux;
-
+     wire signed [RAM_WIDTH-1:0]   LUT_Sample_s;
+     wire signed [2*RAM_WIDTH-1:0] DirectValue_s;
+     reg  signed [2*RAM_WIDTH-1:0] MultRes;
+      
+     assign LUT_Sample_s = RdData;
+     assign DirectValue_s = { DirectValue[RAM_WIDTH-1:0] , 16'b0 } ;
      
      always @ (posedge DAC_clk)
      begin 
          if (rst_n ==  0) 
          begin
-             SampleMux <= 0;              
+             MultRes <= 0;              
          end
         
          else 
@@ -117,12 +121,12 @@ module DDS(
             
             if(DataPathSelect == 0)
             begin
-                SampleMux <= DirectValue[RAM_WIDTH-1:0];
+                MultRes <= DirectValue_s ;//No multiplication in case of direct value
             end
             
             else                
             begin
-                SampleMux <= RdData;
+                 MultRes <= LUT_Sample_s * AmplCntrl;
             end       
             
          end
@@ -130,30 +134,10 @@ module DDS(
      
      /**********************************************************************/
      //Creating signed signals for multiplication
-     
-     wire signed [RAM_WIDTH-1:0] SampleMux_s;
- 
-     assign SampleMux_s = SampleMux;
-     
-     reg signed [2*RAM_WIDTH-1:0] MultRes;
-     
-     //Multipling The amplitude control word with the Multiplexers' output
-     
-     always @ (posedge DAC_clk)
-     begin 
-          if (rst_n ==  0)
-           begin
-              MultRes <= 0;       
-           end
          
-          else 
-           begin 
-             MultRes <= SampleMux_s * AmplCntrl;   
-           end 
-      end 
     
     //Selecting the top 16 bits of the sclaing's result
-    assign SampleOut = MultRes[2*RAM_WIDTH-1:RAM_WIDTH];
+    assign  SampleOut = MultRes[2*RAM_WIDTH-1:RAM_WIDTH ];
 
     
        //  The following function calculates the address width based on specified RAM depth

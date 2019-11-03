@@ -103,11 +103,21 @@ DDS DDS_inst(
     end 
     
     /*End of LUT initialization*/
+    
+    DataPathSelect = 0;
+    DirectValue = 32'h0000FFFF;
+    #100
+    DirectValue = 32'h0000ABCD;
+    #100
+    DirectValue = 32'h00000000;
+    
     #20;
     en = 1;
     
-    #20;
+    #20
+    
     DataPathSelect <= 1;
+    
     #20;
     
       
@@ -151,7 +161,16 @@ DDS DDS_inst(
     //FreqCntrl = 0;
     //PhaseCntrlA= 100;
     #200;
-        
+    
+    // Diract value assignments
+    
+    DataPathSelect <= 0;
+    DirectValue <= 32'h0000FFFF;
+    #100
+    DirectValue <= 32'h0000ABCD;
+    #100
+    DirectValue <= 32'h00000000;
+    
   end 
     
     always

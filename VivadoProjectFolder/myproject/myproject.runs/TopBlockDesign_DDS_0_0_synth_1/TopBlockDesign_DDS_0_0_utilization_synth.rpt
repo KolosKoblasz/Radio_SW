@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date         : Sun May 26 22:21:04 2019
+| Date         : Sun Nov  3 17:08:12 2019
 | Host         : ace-PC running 64-bit Service Pack 1  (build 7601)
 | Command      : report_utilization -file TopBlockDesign_DDS_0_0_utilization_synth.rpt -pb TopBlockDesign_DDS_0_0_utilization_synth.pb
 | Design       : TopBlockDesign_DDS_0_0
@@ -30,8 +30,8 @@ Table of Contents
 +-------------------------+------+-------+-----------+-------+
 |        Site Type        | Used | Fixed | Available | Util% |
 +-------------------------+------+-------+-----------+-------+
-| Slice LUTs*             |   66 |     0 |     53200 |  0.12 |
-|   LUT as Logic          |   66 |     0 |     53200 |  0.12 |
+| Slice LUTs*             |   51 |     0 |     53200 |  0.10 |
+|   LUT as Logic          |   51 |     0 |     53200 |  0.10 |
 |   LUT as Memory         |    0 |     0 |     17400 |  0.00 |
 | Slice Registers         |   88 |     0 |    106400 |  0.08 |
 |   Register as Flip Flop |   88 |     0 |    106400 |  0.08 |
@@ -151,9 +151,8 @@ Table of Contents
 | FDRE     |   88 |        Flop & Latch |
 | LUT2     |   49 |                 LUT |
 | RAMB36E1 |   32 |        Block Memory |
-| LUT3     |   16 |                 LUT |
 | CARRY4   |   12 |          CarryLogic |
-| LUT1     |    1 |                 LUT |
+| LUT1     |    2 |                 LUT |
 | DSP48E1  |    1 |    Block Arithmetic |
 +----------+------+---------------------+
 
